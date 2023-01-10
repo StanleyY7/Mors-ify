@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mors•ify</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="assets/ico.png" />
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <div class="cover">
+      <div>
+        <div class="cover-text-container">
+          <img id="cover-image" src="assets/logo.png" />
+        </div>
+      </div>
+    </div>
+
+    <div class="morse-grid-container">
+      <div class="morse-grid">
+        <div class="morse-grid-column">
+          <div class="input">
+            <h3>Text</h3>
+            <textarea
+              id="input-text"
+              maxlength="1000"
+              placeholder="Enter Some Text Here..."
+            ></textarea>
+            <div class="button-container">
+              <button id="text-submit" class="submit">To Morse</button>
+            </div>
+          </div>
+        </div>
+        <div class="morse-grid-column">
+          <div class="input">
+            <h3>Morse</h3>
+            <textarea
+              id="input-morse"
+              maxlength="1000"
+              placeholder="Enter Some Morse Here..."
+            ></textarea>
+            <div class="button-container">
+              <button id="morse-submit" class="submit">To Text</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="intro-container">
+      <img class="intro-image" src="assets/clara.png" />
+    </div>
+    <div class="draggable" id="output-container">
+      <h3>Hey<strong>!</strong> your input translated is<strong>:</strong></h3>
+      <textarea id="output" maxlength="1000"></textarea>
+      <div id="icon-container">
+        <img id="close" class="icon" src="assets/close.png" />
+        <img id="copy" class="icon" src="assets/copy.png" />
+        <img id="ok" class="icon" src="assets/ok.png" />
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>
