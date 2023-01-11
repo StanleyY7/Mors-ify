@@ -1,0 +1,22 @@
+body {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transition: 10s ease;
+
+  overflow: hidden;
+
+  img {
+    width: 48vw;
+    transition: 5s ease;
+    user-select: none;
+
+    &:hover {
+      filter: sepia(25%) contrast(80%) saturate(80%) hue-rotate(320deg)
+        saturate(80%) hue-rotate(120deg) sepia(25%);
+      filter: sepia(25%) contrast(80%) saturate(80%) hue-rotate(-320deg)
+        saturate(80%) hue-rotate(-120deg) sepia(25%);
+    }
+  }
+}

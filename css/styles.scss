@@ -50,8 +50,9 @@ strong {
   color: #101820;
 
   #cover-image {
-    width: 20.75rem;
+    width: 21rem;
     height: 6.5rem;
+    margin-right: 4rem;
   }
 }
 
@@ -65,9 +66,9 @@ strong {
 .intro-image {
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 35rem;
   height: 35rem;
-  display: none;
 }
 
 // Content
@@ -78,7 +79,7 @@ strong {
 }
 
 .morse-grid-column {
-  background-color: #e6e6fa;
+  background-color: #e6e6fab8;
 
   height: 38rem;
   width: 50rem;
@@ -120,13 +121,13 @@ strong {
 
   &:hover {
     transform: scale(1.05);
-    background-color: #918ef4;
+    background-color: $mainColor;
   }
 }
 
 #output-container {
   position: absolute;
-  top: 20%;
+  top: 15.5%;
   left: 20%;
   height: 72.5vh;
   width: 60vw;
@@ -135,6 +136,7 @@ strong {
   z-index: 101;
   border-radius: 1rem;
   border: 0.1rem groove rgba(0, 0, 0, 0.445);
+  display: none;
 
   > h3 {
     margin-top: 2rem;
@@ -144,6 +146,9 @@ strong {
   }
   > textarea {
     margin: 1rem 6rem 1rem 6rem;
+    z-index: 120;
+    cursor: default;
+    overflow-y: scroll;
   }
 }
 
@@ -155,6 +160,10 @@ strong {
 .icon {
   width: 2.25rem;
   padding: 0rem 1rem;
+  transition: 0.2s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 // End
@@ -163,4 +172,29 @@ footer {
   width: 100vw;
   height: 12vh;
   background-color: #918ef4;
+}
+
+#clara-next {
+  height: 35rem;
+  width: 35rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+
+// Effects
+
+.fade-in-up {
+  animation: fade-in-up 3.25s ease backwards;
+}
+@keyframes fade-in-up {
+  0% {
+    transform: translate(0px, 100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0);
+    opacity: 1;
+  }
 }
