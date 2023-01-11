@@ -4,13 +4,17 @@ Link
 
 Repo Link
 
-![morsifyCapture](https://user-images.githubusercontent.com/119549394/211529406-4c2087b4-54f8-4092-a0cb-601dbb80ee08.PNG)
+![image](https://user-images.githubusercontent.com/119549394/211766257-dadbbf7e-8b4a-46ee-a051-7193ee958c1b.png)
 
 ## Outline
 
 The main aim of this project was to expand on previous knowledge around HTML & SCSS/CSS whilst also building upon newly aquired knowledge in Javascript. This project involved creating a Morse Code Translator from scratch and designing the front-end for it with no reference images provided. This project required the front-end to be scalable, responsive and useable on a variety of devices/viewports.
 
 ### Features
+
+- A responsive UI.
+- Ability to translate text to morse code (with proper spacing).
+- Ability to translate morse code to text (with proper spacing).
 
 ## MVP
 
