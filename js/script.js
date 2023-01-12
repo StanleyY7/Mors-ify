@@ -4,7 +4,15 @@ window.addEventListener("DOMContentLoaded", () => {
   const morseSubmit = document.querySelector("#morse-submit");
   const closeIcon = document.querySelector("#close");
   const outputContainer = document.getElementById("output-container");
+  const outputContainerForMorse = document.getElementById(
+    "output-container-for-morse"
+  );
   const body = document.querySelector("body");
+  const copyMorseButton = document.querySelector("#copy-morse-button");
+  const copyTextButton = document.querySelector("#copy-text-button");
+  const closeMorse = document.querySelector("#close-morse");
+
+  const footer = document.querySelector("footer");
 
   const mapping = {
     A: ".-",
@@ -28,6 +36,7 @@ window.addEventListener("DOMContentLoaded", () => {
     S: "...",
     T: "-",
     U: "..-",
+    V: "...-",
     W: ".--",
     X: "-..-",
     Y: "-.--",
@@ -86,8 +95,41 @@ window.addEventListener("DOMContentLoaded", () => {
 
   /* Functions */
 
+  /* Clara Random Quotes */
+  const claraRandom = document.querySelector("#clara-random");
+  const claraProfile = document.querySelector("#clara-profile");
+  const claraRandomText = document.querySelector("#clara-random-text");
+
+  const randomQuoteArray = [
+    "Hello World!",
+    "MORS•IFY!!!",
+    "Exterminate!",
+    "Testing...",
+  ];
+
+  const randomSpeech = () => {
+    const randomNumber = Math.floor(Math.random() * 15) + 1;
+    const randomElement = Math.floor(Math.random() * randomQuoteArray.length);
+
+    if (randomNumber <= 15) {
+      claraRandomText.textContent = randomQuoteArray[randomElement];
+      claraRandom.style.display = "block";
+      claraProfile.style.transform = "scale(1.04)";
+      claraProfile.style.filter = "brightness(110%)";
+
+      setTimeout(() => {
+        claraRandom.classList.add(".fade-out");
+        claraRandom.style.display = "none";
+        claraProfile.style.transform = "scale(1)";
+      }, 4000);
+    }
+  };
+
   let textToMorse = () => {
     outputContainer.style.display = "block";
+
+    randomSpeech();
+
     let input = document.getElementById("input-text").value.toUpperCase();
 
     let arr1 = input.split("");
@@ -102,13 +144,20 @@ window.addEventListener("DOMContentLoaded", () => {
 
     let code = arr2.join(" ");
 
+    const morseBeingCopied = code;
+
     document.getElementById("output").value = code;
+
+    return morseBeingCopied;
   };
 
   let morseToText = () => {
-    outputContainer.style.display = "block";
+    outputContainerForMorse.style.display = "block";
+
+    randomSpeech();
+
     let trueInput = document.getElementById("input-morse").value;
-    let trueInputArr = [trueInput];
+
     let input = trueInput.toUpperCase();
 
     let morseArr = input.split("");
@@ -117,16 +166,38 @@ window.addEventListener("DOMContentLoaded", () => {
       if (opposite[y]) {
         return opposite[y];
       } else {
-        return trueInputArr[trueInputArr.length - 1];
+        return y;
       }
     });
 
     let codeMorse = mappedMorseArr.join(" ");
-    document.getElementById("output").value = codeMorse;
+    const textBeingcopied = codeMorse;
+    document.getElementById("output-morse").value = codeMorse;
+    return textBeingcopied;
   };
 
   const hideOutput = () => {
     outputContainer.style.display = "none";
+  };
+  const hideOutputMorse = () => {
+    outputContainerForMorse.style.display = "none";
+  };
+  let copyOutputMorse = () => {
+    let morseBeingCopied = textToMorse();
+
+    navigator.clipboard.writeText(morseBeingCopied);
+    setTimeout(() => {
+      alert("Morse code copied!");
+    }, 5000);
+  };
+
+  let copyOutputText = () => {
+    let textBeingCopied = morseToText();
+    navigator.clipboard.writeText(textBeingCopied);
+
+    setTimeout(() => {
+      alert("Text copied!");
+    }, 5000);
   };
 
   const displayOutputText = () => {
@@ -138,26 +209,56 @@ window.addEventListener("DOMContentLoaded", () => {
   };
 
   closeIcon.addEventListener("click", hideOutput);
+  closeMorse.addEventListener("click", hideOutputMorse);
   textSubmit.addEventListener("click", displayOutputText);
   morseSubmit.addEventListener("click", displayOutputMorse);
+  copyMorseButton.addEventListener("click", copyOutputMorse);
+  copyTextButton.addEventListener("click", copyOutputText);
 
   /* Clara Intro */
 
   const claraStart = document.querySelector("#clara-start");
   const claraNext = document.querySelector("#clara-next");
+  const claraMiddle = document.querySelector("#clara-middle");
+  const endPromptClose = document.querySelector("#end-prompt-close");
+  const endPrompt = document.querySelector(".end-prompt");
+  const claraMin = document.querySelector(".clara-minimised-container");
+
   const startClara = (event) => {
     if (event.key === "Enter") {
-      claraStart.style.display = "none";
+      claraStart.remove();
       claraNext.style.display = "block";
       body.addEventListener("keypress", (event) => {
-        if (event.key === "Enter") claraNext.style.display = "none";
+        if (event.key === "Enter") {
+          claraNext.remove();
+          claraMiddle.style.display = "block";
+          body.addEventListener("keypress", (event) => {
+            if (event.key === "Enter") {
+              claraMiddle.remove();
+              endPrompt.style.display = "block";
+              body.addEventListener("keypress", (event) => {
+                if (event.key === "Enter") {
+                  endPrompt.remove();
+                  claraMin.style.display = "block";
+                }
+              });
+            }
+          });
+        }
       });
     } else if (event.key === "s") {
       claraStart.remove();
+      claraMin.style.display = "block";
     }
   };
 
+  const hideEndPrompt = () => {
+    endPrompt.remove();
+    claraMin.style.display = "block";
+  };
+
   body.addEventListener("keypress", startClara);
+  endPromptClose.addEventListener("click", hideEndPrompt);
 
   /* Draggable Output Container*/
 

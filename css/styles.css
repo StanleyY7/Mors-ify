@@ -11,6 +11,10 @@ body {
   overflow: hidden;
 }
 
+a {
+  cursor: default;
+}
+
 textarea {
   padding: 1rem;
   width: 75%;
@@ -50,6 +54,11 @@ strong {
   width: 21rem;
   height: 6.5rem;
   margin-right: 4rem;
+  transition: 3s ease-in-out;
+}
+.cover-text-container #cover-image:hover {
+  transform: rotateZ(-7deg);
+  filter: sepia(25%) contrast(80%) saturate(80%) hue-rotate(320deg);
 }
 
 #cover-text {
@@ -58,12 +67,10 @@ strong {
   transition: 20s ease;
 }
 
-.intro-image {
+.intro-image, #clara-middle {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 35rem;
-  height: 35rem;
 }
 
 .morse-grid {
@@ -119,7 +126,7 @@ strong {
   background-color: #918ef4;
 }
 
-#output-container {
+#output-container, .end-prompt, #output-container-for-morse {
   position: absolute;
   top: 15.5%;
   left: 20%;
@@ -133,20 +140,20 @@ strong {
   border: 0.1rem groove rgba(0, 0, 0, 0.445);
   display: none;
 }
-#output-container > h3 {
+#output-container > h3, .end-prompt > h3, #output-container-for-morse > h3 {
   margin-top: 2rem;
   padding-bottom: 0.4rem;
   font-size: 2.75rem;
   text-align: center;
 }
-#output-container > textarea {
+#output-container > textarea, .end-prompt > textarea, #output-container-for-morse > textarea {
   margin: 1rem 6rem 1rem 6rem;
   z-index: 120;
   cursor: default;
   overflow-y: scroll;
 }
 
-#icon-container {
+#icon-container, #icon-container-morse {
   display: flex;
   justify-content: center;
   margin-right: 3rem;
@@ -161,6 +168,11 @@ strong {
   transform: scale(1.1);
 }
 
+.clara {
+  width: 35rem;
+  height: 35rem;
+}
+
 footer {
   width: 100vw;
   height: 12vh;
@@ -168,17 +180,83 @@ footer {
 }
 
 #clara-next {
-  height: 35rem;
-  width: 35rem;
   position: fixed;
   bottom: 0;
   right: 0;
   display: none;
 }
 
+#clara-middle {
+  display: none;
+}
+
+.end-prompt {
+  display: block;
+  height: 15rem;
+  width: 45rem;
+  text-align: center;
+  display: none;
+}
+.end-prompt #end-prompt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.end-prompt #end-prompt-grid > img {
+  width: 15rem;
+  height: 15rem;
+  margin-left: 4.5rem;
+}
+.end-prompt #end-prompt-grid #end-prompt-close {
+  padding: 0.5rem;
+}
+
+#clara-random {
+  background-image: url("../assets/blankSpeech.png");
+  background-size: cover;
+  width: 10rem;
+  right: 0.5%;
+  position: fixed;
+  bottom: 3%;
+  height: 10rem;
+  display: none;
+}
+#clara-random #clara-random-text {
+  margin-top: 3.5rem;
+  margin-left: 2.5rem;
+  color: white;
+}
+
+.clara-minimised-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+.clara-minimised-container > img {
+  width: 2rem;
+  height: 2rem;
+  padding-right: 0.5rem;
+  transition: 1s;
+  filter: grayscale(40%);
+}
+.clara-minimised-container > img:hover {
+  transform: scale(1.04);
+  filter: grayscale(0%) brightness(110%);
+}
+
+#end-prompt-text-container {
+  margin: 2rem;
+}
+#end-prompt-text-container > h3 {
+  padding: 0.5rem;
+}
+#end-prompt-text-container > p {
+  padding: 0.5rem;
+}
+
 .fade-in-up {
-  -webkit-animation: fade-in-up 3.25s ease backwards;
-          animation: fade-in-up 3.25s ease backwards;
+  -webkit-animation: fade-in-up 2.75s ease backwards;
+          animation: fade-in-up 2.75s ease backwards;
 }
 
 @-webkit-keyframes fade-in-up {
@@ -200,5 +278,535 @@ footer {
   100% {
     transform: translate(0px, 0);
     opacity: 1;
+  }
+}
+.fade-in-right {
+  -webkit-animation: fade-in-right 2.5s ease-in-out;
+          animation: fade-in-right 2.5s ease-in-out;
+}
+
+@-webkit-keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translate(0px, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translate(0px, 0);
+    opacity: 1;
+  }
+}
+.fade-out {
+  -webkit-animation: fade-out 1.5s ease-in-out;
+          animation: fade-out 1.5s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(1.5rem);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(1.5rem);
+  }
+}
+/* Media Queries */
+@media screen and (max-width: 280px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+  }
+  .cover #cover-image {
+    width: 9.25rem;
+    height: 2.75rem;
+    margin-top: -1.25rem;
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+    margin-bottom: -2rem;
+  }
+  .input > h3 {
+    font-size: 3.25rem;
+    margin-right: 1rem;
+  }
+  .input > textarea {
+    padding-bottom: 0.5rem;
+  }
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+  }
+  .end-prompt #end-prompt-grid {
+    grid-template-columns: 1fr;
+  }
+  .end-prompt #end-prompt-grid > img {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: -2rem;
+  }
+  .end-prompt #end-prompt-grid #end-prompt-close {
+    margin-top: -0.7rem;
+  }
+  #output-container, #output-container-for-morse, .end-prompt {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 52vh;
+    top: 25%;
+    left: 1%;
+    z-index: 1;
+  }
+  #output-container > h3, #output-container-for-morse > h3, .end-prompt > h3 {
+    font-size: 1rem;
+    margin: 1rem 2rem;
+  }
+  #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
+    margin-top: -1rem;
+    width: 70%;
+    height: 62.5%;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+  }
+  #output-container #icon-container, #output-container-for-morse #icon-container, .end-prompt #icon-container, #output-container #icon-container-morse, #output-container-for-morse #icon-container-morse, .end-prompt #icon-container-morse {
+    margin-left: 2rem;
+  }
+  #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
+    width: 1rem;
+  }
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+@media screen and (min-width: 1900px) and (max-width: 2000px) and (max-height: 1320px) {
+  .cover {
+    width: 102vw;
+  }
+  #cover-image {
+    margin-left: 4rem;
+  }
+  .morse-grid-container {
+    margin-top: -10rem;
+  }
+  .morse-grid-column {
+    margin-top: 15rem;
+    transform: scale(1.1);
+    margin-left: 5rem;
+    margin-right: 3rem;
+  }
+  .clara {
+    z-index: 20;
+    width: 55rem;
+    height: 55rem;
+  }
+  .clara-minimised-container > img {
+    width: 4rem;
+    height: 4rem;
+  }
+  #clara-next {
+    right: 1%;
+  }
+  #output-container, #output-container-for-morse, .end-prompt {
+    height: 70vh;
+    width: 63vw;
+  }
+  #output-container > h3, #output-container-for-morse > h3, .end-prompt > h3 {
+    font-size: 4rem;
+    margin-left: 3rem;
+  }
+  #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
+    height: 75%;
+    width: 86.75%;
+  }
+  #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
+    width: 3rem;
+  }
+  .end-prompt {
+    height: 25vh;
+    width: 40vw;
+    top: 20%;
+    left: 30%;
+  }
+  .end-prompt > #end-prompt-grid > img {
+    margin-left: 7rem;
+    width: 17rem;
+    height: 17rem;
+  }
+  #end-prompt-text-container {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+  #end-prompt-close {
+    width: 2.25rem;
+  }
+  footer {
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 110vw;
+  }
+}
+@media screen and (min-width: 2000px) and (max-width: 2119px) and (max-height: 1320px) {
+  .cover {
+    width: 102vw;
+  }
+  #cover-image {
+    margin-left: 4rem;
+  }
+  .morse-grid-container {
+    margin-top: -8rem;
+  }
+  .morse-grid-column {
+    margin-top: 15rem;
+    transform: scale(1.2);
+    margin-left: 9rem;
+    margin-right: 5rem;
+  }
+  .clara {
+    z-index: 20;
+    width: 55rem;
+    height: 55rem;
+  }
+  .clara-minimised-container > img {
+    width: 4rem;
+    height: 4rem;
+  }
+  #clara-next {
+    right: 1%;
+  }
+  #output-container, #output-container-for-morse, .end-prompt {
+    height: 70vh;
+    width: 63vw;
+  }
+  #output-container > h3, #output-container-for-morse > h3, .end-prompt > h3 {
+    font-size: 4rem;
+    margin-left: 3rem;
+  }
+  #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
+    height: 75%;
+    width: 86.75%;
+  }
+  #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
+    width: 3rem;
+  }
+  .end-prompt {
+    height: 25vh;
+    width: 40vw;
+    top: 20%;
+    left: 30%;
+  }
+  .end-prompt > #end-prompt-grid > img {
+    margin-left: 7rem;
+    width: 17rem;
+    height: 17rem;
+  }
+  #end-prompt-text-container {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+  #end-prompt-close {
+    width: 2.25rem;
+  }
+  footer {
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 110vw;
+  }
+}
+@media screen and (min-width: 2000px) and (max-width: 2119px) and (min-height: 1321px) {
+  .cover {
+    width: 102vw;
+  }
+  #cover-image {
+    margin-left: 4rem;
+  }
+  .morse-grid-column {
+    margin-top: 15rem;
+    transform: scale(1.225);
+    margin-left: 9rem;
+    margin-right: 5rem;
+  }
+  .clara {
+    z-index: 20;
+    width: 55rem;
+    height: 55rem;
+  }
+  .clara-minimised-container > img {
+    width: 4rem;
+    height: 4rem;
+  }
+  #clara-next {
+    right: 1%;
+  }
+  #output-container, #output-container-for-morse, .end-prompt {
+    height: 70vh;
+    width: 63vw;
+  }
+  #output-container > h3, #output-container-for-morse > h3, .end-prompt > h3 {
+    font-size: 4rem;
+    margin-left: 3rem;
+  }
+  #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
+    height: 75%;
+    width: 86.75%;
+  }
+  #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
+    width: 3rem;
+  }
+  .end-prompt {
+    height: 25vh;
+    width: 40vw;
+    top: 20%;
+    left: 30%;
+  }
+  .end-prompt > #end-prompt-grid > img {
+    margin-left: 7rem;
+    width: 20rem;
+    height: 20rem;
+  }
+  #end-prompt-text-container {
+    margin-top: 4rem;
+    font-size: 1.5rem;
+  }
+  footer {
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 110vw;
+  }
+}
+@media screen and (min-width: 2119px) and (max-width: 2312px) {
+  .cover {
+    width: 101vw;
+  }
+  #cover-image {
+    margin-left: 4rem;
+  }
+  .morse-grid-column {
+    margin-top: 15rem;
+    transform: scale(1.3);
+    margin-left: 10.5rem;
+    margin-right: 6.5rem;
+  }
+  .clara {
+    z-index: 20;
+    width: 55rem;
+    height: 55rem;
+  }
+  .clara-minimised-container > img {
+    width: 4rem;
+    height: 4rem;
+  }
+  #clara-next {
+    right: 1%;
+  }
+  #output-container, #output-container-for-morse, .end-prompt {
+    height: 70vh;
+    width: 63vw;
+  }
+  #output-container > h3, #output-container-for-morse > h3, .end-prompt > h3 {
+    font-size: 4rem;
+    margin-left: 3rem;
+  }
+  #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
+    height: 75%;
+    width: 86.75%;
+  }
+  #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
+    width: 3rem;
+  }
+  .end-prompt {
+    height: 25vh;
+    width: 40vw;
+    top: 20%;
+    left: 30%;
+  }
+  .end-prompt > #end-prompt-grid > img {
+    margin-left: 7rem;
+    width: 20rem;
+    height: 20rem;
+  }
+  #end-prompt-text-container {
+    margin-top: 4rem;
+    font-size: 1.5rem;
+  }
+  footer {
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 110vw;
+  }
+}
+@media screen and (min-width: 2312px) and (max-width: 2500px) {
+  #cover-image {
+    margin-left: 4rem;
+  }
+  .morse-grid-column {
+    margin-top: 15rem;
+    transform: scale(1.4);
+    margin-left: 13rem;
+    margin-right: 9rem;
+  }
+  .clara {
+    z-index: 20;
+    width: 55rem;
+    height: 55rem;
+  }
+  #clara-next {
+    right: 1%;
+  }
+  .clara-minimised-container > img {
+    width: 4rem;
+    height: 4rem;
+  }
+  #output-container, #output-container-for-morse, .end-prompt {
+    height: 70vh;
+    width: 63vw;
+  }
+  #output-container > h3, #output-container-for-morse > h3, .end-prompt > h3 {
+    font-size: 4rem;
+    margin-left: 3rem;
+  }
+  #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
+    height: 75%;
+    width: 86.75%;
+  }
+  #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
+    width: 3rem;
+  }
+  .end-prompt {
+    height: 25vh;
+    width: 40vw;
+    top: 20%;
+    left: 30%;
+  }
+  .end-prompt > #end-prompt-grid > img {
+    margin-left: 7rem;
+    width: 20rem;
+    height: 20rem;
+  }
+  #end-prompt-text-container {
+    margin-top: 4rem;
+    font-size: 1.5rem;
+  }
+  footer {
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 110vw;
+  }
+}
+@media screen and (min-width: 2500px) {
+  #cover-image {
+    margin-left: 4rem;
+  }
+  .morse-grid-column {
+    margin-top: 15rem;
+    transform: scale(1.54);
+    margin-left: 16.5rem;
+    margin-right: 12.5rem;
+  }
+  .clara {
+    z-index: 20;
+    width: 55rem;
+    height: 55rem;
+  }
+  .clara-minimised-container > img {
+    width: 4rem;
+    height: 4rem;
+  }
+  #clara-next {
+    right: 1%;
+  }
+  #output-container, #output-container-for-morse, .end-prompt {
+    height: 70vh;
+    width: 63vw;
+  }
+  #output-container > h3, #output-container-for-morse > h3, .end-prompt > h3 {
+    font-size: 4rem;
+    margin-left: 3rem;
+  }
+  #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
+    height: 75%;
+    width: 86.75%;
+  }
+  #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
+    width: 3rem;
+  }
+  .end-prompt {
+    height: 25vh;
+    width: 40vw;
+    top: 20%;
+    left: 30%;
+  }
+  .end-prompt > #end-prompt-grid > img {
+    margin-left: 7rem;
+    width: 20rem;
+    height: 20rem;
+  }
+  #end-prompt-text-container {
+    margin-top: 4rem;
+    font-size: 1.5rem;
+  }
+  footer {
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 105vw;
   }
 }/*# sourceMappingURL=styles.css.map */
