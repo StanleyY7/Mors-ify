@@ -170,12 +170,16 @@ window.addEventListener("DOMContentLoaded", () => {
     let morseArr = trueInput.split(" ");
 
     let mappedMorseArr = morseArr
-      .map((a) =>
-        a
-          .split(" ")
-          .map((b) => opposite[b])
-          .join("")
-      )
+      .map((x) => {
+        if (opposite[x]) {
+          return x
+            .split(" ")
+            .map((b) => opposite[b])
+            .join("");
+        } else {
+          return x;
+        }
+      })
       .join(" ");
 
     let text = mappedMorseArr.toLowerCase();
