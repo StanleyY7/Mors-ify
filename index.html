@@ -19,9 +19,9 @@
 
     <div class="morse-grid-container">
       <div class="morse-grid">
-        <div class="morse-grid-column">
+        <div class="morse-grid-column" id="morse-grid-column-one">
           <div class="input">
-            <h3>Text</h3>
+            <h3>Text<strong>i</strong></h3>
             <textarea
               id="input-text"
               maxlength="1000"
@@ -33,7 +33,7 @@
             </div>
           </div>
         </div>
-        <div class="morse-grid-column">
+        <div class="morse-grid-column" id="morse-grid-column-two">
           <div class="input">
             <h3>Morse</h3>
             <textarea
@@ -65,26 +65,17 @@
         src="assets/claraMiddle.png"
       />
     </div>
+
     <div class="draggable" id="output-container">
       <h3>Hey<strong>!</strong> your input translated is<strong>:</strong></h3>
       <textarea id="output" maxlength="1000" value="" readonly></textarea>
       <div id="icon-container">
         <img id="close" class="icon" src="assets/close.png" />
-        <img id="copy-morse-button" class="icon" src="assets/copy.png" />
-        <a href="mailto:example@example.com"
-          ><img id="ok" class="icon" src="assets/ok.png"
-        /></a>
-      </div>
-    </div>
-
-    <div class="draggable" id="output-container-for-morse">
-      <h3>Hey<strong>!</strong> your input translated is<strong>:</strong></h3>
-      <textarea id="output-morse" maxlength="1000" value="" readonly></textarea>
-      <div id="icon-container-morse">
-        <img id="close-morse" class="icon" src="assets/close.png" />
         <img id="copy-text-button" class="icon" src="assets/copy.png" />
-        <a href="mailto:example@example.com"
-          ><img id="ok-morse" class="icon" src="assets/ok.png"
+        <img id="copy-morse-button" class="icon" src="assets/copy.png" />
+        <a
+          href="mailto:?subject=What hath god wrought?!&body=Check out Mors•ify! It is a morse code translator that can convert text into morse code and vice-versa. The website link is:"
+          ><img id="ok" class="icon" src="assets/ok.png"
         /></a>
       </div>
     </div>
@@ -105,12 +96,14 @@
     </div>
 
     <div class="fade-in-up" id="clara-random">
-      <p id="clara-random-text"></p>
+      <div>
+        <p id="clara-random-text"></p>
+      </div>
     </div>
 
     <footer>
       <div class="clara-minimised-container fade-in-right">
-        <img id="clara-profile" src="assets/claraMin.png" />
+        <img id="clara-min" src="assets/claraMin.png" />
       </div>
     </footer>
     <script src="js/script.js"></script>

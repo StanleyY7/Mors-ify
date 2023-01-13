@@ -4,13 +4,10 @@ window.addEventListener("DOMContentLoaded", () => {
   const morseSubmit = document.querySelector("#morse-submit");
   const closeIcon = document.querySelector("#close");
   const outputContainer = document.getElementById("output-container");
-  const outputContainerForMorse = document.getElementById(
-    "output-container-for-morse"
-  );
+
   const body = document.querySelector("body");
   const copyMorseButton = document.querySelector("#copy-morse-button");
   const copyTextButton = document.querySelector("#copy-text-button");
-  const closeMorse = document.querySelector("#close-morse");
 
   const footer = document.querySelector("footer");
 
@@ -77,6 +74,7 @@ window.addEventListener("DOMContentLoaded", () => {
     "-": "T",
     "..-": "U",
     ".--": "W",
+    "...-": "V",
     "-..-": "X",
     "-.--": "Y",
     "--..": "Z",
@@ -97,44 +95,53 @@ window.addEventListener("DOMContentLoaded", () => {
 
   /* Clara Random Quotes */
   const claraRandom = document.querySelector("#clara-random");
-  const claraProfile = document.querySelector("#clara-profile");
+  const claraMin = document.querySelector("#clara-min");
   const claraRandomText = document.querySelector("#clara-random-text");
 
   const randomQuoteArray = [
     "Hello World!",
     "MORS•IFY!!!",
     "Exterminate!",
-    "Testing...",
+    "Testing....",
+    "Excelsior!!!",
+    "Rosebud....",
+    "Schwing!!!",
   ];
 
   const randomSpeech = () => {
-    const randomNumber = Math.floor(Math.random() * 15) + 1;
+    const randomNumber = Math.floor(Math.random() * 4) + 1;
     const randomElement = Math.floor(Math.random() * randomQuoteArray.length);
 
-    if (randomNumber <= 15) {
+    if (randomNumber === 4) {
+      claraMin.style.transform = "scale(1.08)";
+      claraMin.style.filter = "brightness(120%)";
+
       claraRandomText.textContent = randomQuoteArray[randomElement];
       claraRandom.style.display = "block";
-      claraProfile.style.transform = "scale(1.04)";
-      claraProfile.style.filter = "brightness(110%)";
 
       setTimeout(() => {
         claraRandom.classList.add(".fade-out");
         claraRandom.style.display = "none";
-        claraProfile.style.transform = "scale(1)";
+        claraMin.style.transform = "scale(1)";
+        claraMin.style.filter = "brightness(100%)";
       }, 4000);
     }
   };
 
+  /* Ouput */
+
   let textToMorse = () => {
+    copyTextButton.style.display = "none";
+    copyMorseButton.style.display = "block";
     outputContainer.style.display = "block";
 
     randomSpeech();
 
     let input = document.getElementById("input-text").value.toUpperCase();
 
-    let arr1 = input.split("");
+    let textArr = input.split("");
 
-    let arr2 = arr1.map((x) => {
+    let mappedTextArr = textArr.map((x) => {
       if (mapping[x]) {
         return mapping[x];
       } else {
@@ -142,7 +149,7 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    let code = arr2.join(" ");
+    let code = mappedTextArr.join(" ");
 
     const morseBeingCopied = code;
 
@@ -152,52 +159,34 @@ window.addEventListener("DOMContentLoaded", () => {
   };
 
   let morseToText = () => {
-    outputContainerForMorse.style.display = "block";
+    copyMorseButton.style.display = "none";
+    copyTextButton.style.display = "block";
+    outputContainer.style.display = "block";
 
     randomSpeech();
 
     let trueInput = document.getElementById("input-morse").value;
 
-    let input = trueInput.toUpperCase();
+    let morseArr = trueInput.split(" ");
 
-    let morseArr = input.split("");
+    let mappedMorseArr = morseArr
+      .map((a) =>
+        a
+          .split(" ")
+          .map((b) => opposite[b])
+          .join("")
+      )
+      .join(" ");
 
-    let mappedMorseArr = morseArr.map((y) => {
-      if (opposite[y]) {
-        return opposite[y];
-      } else {
-        return y;
-      }
-    });
+    let text = mappedMorseArr.toLowerCase();
+    const textBeingcopied = text;
 
-    let codeMorse = mappedMorseArr.join(" ");
-    const textBeingcopied = codeMorse;
-    document.getElementById("output-morse").value = codeMorse;
+    document.getElementById("output").value = text;
     return textBeingcopied;
   };
 
   const hideOutput = () => {
     outputContainer.style.display = "none";
-  };
-  const hideOutputMorse = () => {
-    outputContainerForMorse.style.display = "none";
-  };
-  let copyOutputMorse = () => {
-    let morseBeingCopied = textToMorse();
-
-    navigator.clipboard.writeText(morseBeingCopied);
-    setTimeout(() => {
-      alert("Morse code copied!");
-    }, 5000);
-  };
-
-  let copyOutputText = () => {
-    let textBeingCopied = morseToText();
-    navigator.clipboard.writeText(textBeingCopied);
-
-    setTimeout(() => {
-      alert("Text copied!");
-    }, 5000);
   };
 
   const displayOutputText = () => {
@@ -209,9 +198,63 @@ window.addEventListener("DOMContentLoaded", () => {
   };
 
   closeIcon.addEventListener("click", hideOutput);
-  closeMorse.addEventListener("click", hideOutputMorse);
+
   textSubmit.addEventListener("click", displayOutputText);
   morseSubmit.addEventListener("click", displayOutputMorse);
+
+  /* Copy Button */
+  const copyingPopUp = () => {
+    claraMin.style.transform = "scale(1.08)";
+    claraMin.style.filter = "brightness(120%)";
+
+    claraRandom.style.display = "block";
+    claraRandomText.textContent = "Copying!!!!";
+
+    setTimeout(() => {
+      claraRandom.classList.add(".fade-out");
+      claraRandom.style.display = "none";
+      claraMin.style.transform = "scale(1)";
+      claraMin.style.filter = "brightness(100%)";
+    }, 4000);
+  };
+
+  const copiedPopUp = () => {
+    setTimeout(() => {
+      claraMin.style.transform = "scale(1.08)";
+      claraMin.style.filter = "brightness(120%)";
+
+      claraRandom.style.display = "block";
+      claraRandomText.textContent = "Copied!!!!";
+
+      setTimeout(() => {
+        claraRandom.classList.add(".fade-out");
+        claraRandom.style.display = "none";
+        claraMin.style.transform = "scale(1)";
+        claraMin.style.filter = "brightness(100%)";
+      }, 4000);
+    }, 5000);
+  };
+
+  let copyOutputMorse = () => {
+    let morseBeingCopied = textToMorse();
+
+    copyingPopUp();
+
+    navigator.clipboard.writeText(morseBeingCopied);
+
+    copiedPopUp();
+  };
+
+  let copyOutputText = () => {
+    let textBeingCopied = morseToText();
+
+    copyingPopUp();
+
+    navigator.clipboard.writeText(textBeingCopied);
+
+    copiedPopUp();
+  };
+
   copyMorseButton.addEventListener("click", copyOutputMorse);
   copyTextButton.addEventListener("click", copyOutputText);
 
@@ -222,7 +265,9 @@ window.addEventListener("DOMContentLoaded", () => {
   const claraMiddle = document.querySelector("#clara-middle");
   const endPromptClose = document.querySelector("#end-prompt-close");
   const endPrompt = document.querySelector(".end-prompt");
-  const claraMin = document.querySelector(".clara-minimised-container");
+  const claraMinContainer = document.querySelector(
+    ".clara-minimised-container"
+  );
 
   const startClara = (event) => {
     if (event.key === "Enter") {
@@ -239,7 +284,7 @@ window.addEventListener("DOMContentLoaded", () => {
               body.addEventListener("keypress", (event) => {
                 if (event.key === "Enter") {
                   endPrompt.remove();
-                  claraMin.style.display = "block";
+                  claraMinContainer.style.display = "block";
                 }
               });
             }
@@ -248,19 +293,19 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     } else if (event.key === "s") {
       claraStart.remove();
-      claraMin.style.display = "block";
+      claraMinContainer.style.display = "block";
     }
   };
 
   const hideEndPrompt = () => {
     endPrompt.remove();
-    claraMin.style.display = "block";
+    claraMinContainer.style.display = "block";
   };
 
   body.addEventListener("keypress", startClara);
   endPromptClose.addEventListener("click", hideEndPrompt);
 
-  /* Draggable Output Container*/
+  /* Draggable Elements */
 
   const draggableElements = document.querySelectorAll(".draggable");
 

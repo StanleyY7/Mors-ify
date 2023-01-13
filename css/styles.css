@@ -24,7 +24,7 @@ textarea {
   overflow: hidden;
   border-radius: 0.5rem;
   border: none;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 strong {
@@ -95,6 +95,9 @@ strong {
 .input > h3 {
   padding-bottom: 0.4rem;
   font-size: 3.5rem;
+}
+.input > h3 > strong {
+  color: transparent;
 }
 
 .morse-grid-container {
@@ -240,8 +243,8 @@ footer {
   filter: grayscale(40%);
 }
 .clara-minimised-container > img:hover {
-  transform: scale(1.04);
-  filter: grayscale(0%) brightness(110%);
+  transform: scale(1.08);
+  filter: grayscale(0%) brightness(120%);
 }
 
 #end-prompt-text-container {
@@ -353,7 +356,7 @@ footer {
   }
   .morse-grid-container {
     overflow: hidden;
-    margin-top: -2rem;
+    margin-top: -3.25rem;
   }
   .morse-grid {
     grid-template-columns: 1fr;
@@ -367,9 +370,12 @@ footer {
     overflow: hidden;
     margin-bottom: -2rem;
   }
+  #morse-grid-column-two {
+    margin-top: -13.25rem;
+    margin-bottom: -3rem;
+  }
   .input > h3 {
     font-size: 3.25rem;
-    margin-right: 1rem;
   }
   .input > textarea {
     padding-bottom: 0.5rem;
@@ -419,6 +425,892 @@ footer {
   #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
     width: 1rem;
   }
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  #clara-random > div {
+    margin-top: -0.85rem;
+    margin-left: -0.75rem;
+  }
+  #clara-random #clara-random-text {
+    font-size: 1rem;
+  }
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+@media screen and (min-width: 281px) and (max-width: 304px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+  }
+  .cover #cover-image {
+    width: 9.25rem;
+    height: 2.75rem;
+    margin-top: -1.25rem;
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -3.25rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+  #morse-grid-column-two {
+    margin-top: -13.25rem;
+    margin-bottom: -3rem;
+  }
+  .input > h3 {
+    font-size: 3.25rem;
+  }
+  .input > textarea {
+    padding-bottom: 0.5rem;
+  }
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+  }
+  .end-prompt #end-prompt-grid {
+    grid-template-columns: 1fr;
+  }
+  .end-prompt #end-prompt-grid > img {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: -2rem;
+  }
+  .end-prompt #end-prompt-grid #end-prompt-close {
+    margin-top: -0.7rem;
+  }
+  #output-container, #output-container-for-morse, .end-prompt {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+    z-index: 1;
+  }
+  #output-container > h3, #output-container-for-morse > h3, .end-prompt > h3 {
+    font-size: 1rem;
+    margin: 1rem 2rem;
+  }
+  #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
+    margin-top: -1rem;
+    width: 70%;
+    height: 65%;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+  }
+  #output-container #icon-container, #output-container-for-morse #icon-container, .end-prompt #icon-container, #output-container #icon-container-morse, #output-container-for-morse #icon-container-morse, .end-prompt #icon-container-morse {
+    margin-top: -0.25rem;
+    margin-left: 2.26rem;
+  }
+  #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
+    width: 1rem;
+  }
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  #clara-random > div {
+    margin-top: -0.85rem;
+    margin-left: -0.75rem;
+  }
+  #clara-random #clara-random-text {
+    font-size: 1rem;
+  }
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+@media screen and (min-width: 304px) and (max-width: 331px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+  }
+  .cover #cover-image {
+    width: 9.25rem;
+    height: 2.75rem;
+    margin-top: -1.25rem;
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+  .input > h3 {
+    font-size: 3.25rem;
+  }
+  .input > textarea {
+    padding-bottom: 0.5rem;
+  }
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+  }
+  .end-prompt #end-prompt-grid {
+    grid-template-columns: 1fr;
+  }
+  .end-prompt #end-prompt-grid > img {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: -2rem;
+  }
+  .end-prompt #end-prompt-grid #end-prompt-close {
+    margin-top: -0.7rem;
+  }
+  #output-container, #output-container-for-morse, .end-prompt {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+    z-index: 1;
+  }
+  #output-container > h3, #output-container-for-morse > h3, .end-prompt > h3 {
+    font-size: 1rem;
+    margin: 1rem 2rem;
+  }
+  #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
+    margin-top: -1rem;
+    width: 73%;
+    height: 65%;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+  }
+  #output-container #icon-container, #output-container-for-morse #icon-container, .end-prompt #icon-container, #output-container #icon-container-morse, #output-container-for-morse #icon-container-morse, .end-prompt #icon-container-morse {
+    margin-top: -0.25rem;
+    margin-left: 2.26rem;
+  }
+  #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
+    width: 1rem;
+  }
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  #clara-random > div {
+    margin-top: -0.85rem;
+    margin-left: -0.75rem;
+  }
+  #clara-random #clara-random-text {
+    font-size: 1rem;
+  }
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+@media screen and (min-width: 331px) and (max-width: 351px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+  }
+  .cover #cover-image {
+    width: 9.25rem;
+    height: 2.75rem;
+    margin-top: -1.25rem;
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+  .input > h3 {
+    font-size: 3.25rem;
+  }
+  .input > textarea {
+    padding-bottom: 0.5rem;
+  }
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+  }
+  .end-prompt #end-prompt-grid {
+    grid-template-columns: 1fr;
+  }
+  .end-prompt #end-prompt-grid > img {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: -2rem;
+  }
+  .end-prompt #end-prompt-grid #end-prompt-close {
+    margin-top: -0.7rem;
+  }
+  #output-container, #output-container-for-morse, .end-prompt {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+    z-index: 1;
+  }
+  #output-container > h3, #output-container-for-morse > h3, .end-prompt > h3 {
+    font-size: 1rem;
+    margin: 1rem 2rem;
+  }
+  #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
+    margin-top: -1rem;
+    width: 74%;
+    height: 65%;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+  }
+  #output-container #icon-container, #output-container-for-morse #icon-container, .end-prompt #icon-container, #output-container #icon-container-morse, #output-container-for-morse #icon-container-morse, .end-prompt #icon-container-morse {
+    margin-top: -0.25rem;
+    margin-left: 2.26rem;
+  }
+  #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
+    width: 1rem;
+  }
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  #clara-random > div {
+    margin-top: -0.85rem;
+    margin-left: -0.75rem;
+  }
+  #clara-random #clara-random-text {
+    font-size: 1rem;
+  }
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+@media screen and (min-width: 351px) and (max-width: 381px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+  }
+  .cover #cover-image {
+    width: 9.25rem;
+    height: 2.75rem;
+    margin-top: -1.25rem;
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+  .input > h3 {
+    font-size: 3.25rem;
+  }
+  .input > textarea {
+    padding-bottom: 0.5rem;
+  }
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+  }
+  .end-prompt #end-prompt-grid {
+    grid-template-columns: 1fr;
+  }
+  .end-prompt #end-prompt-grid > img {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: -2rem;
+  }
+  .end-prompt #end-prompt-grid #end-prompt-close {
+    margin-top: -0.7rem;
+  }
+  #output-container, #output-container-for-morse, .end-prompt {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+    z-index: 1;
+  }
+  #output-container > h3, #output-container-for-morse > h3, .end-prompt > h3 {
+    font-size: 1rem;
+    margin: 1rem 2rem;
+  }
+  #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
+    margin-top: -1rem;
+    width: 76%;
+    height: 65%;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+  }
+  #output-container #icon-container, #output-container-for-morse #icon-container, .end-prompt #icon-container, #output-container #icon-container-morse, #output-container-for-morse #icon-container-morse, .end-prompt #icon-container-morse {
+    margin-top: -0.25rem;
+    margin-left: 2.26rem;
+  }
+  #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
+    width: 1rem;
+  }
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  #clara-random > div {
+    margin-top: -0.85rem;
+    margin-left: -0.75rem;
+  }
+  #clara-random #clara-random-text {
+    font-size: 1rem;
+  }
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+@media screen and (min-width: 351px) and (max-width: 385px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+  }
+  .cover #cover-image {
+    width: 9.25rem;
+    height: 2.75rem;
+    margin-top: -1.25rem;
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+  .input > h3 {
+    font-size: 3.25rem;
+  }
+  .input > textarea {
+    padding-bottom: 0.5rem;
+  }
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+  }
+  .end-prompt #end-prompt-grid {
+    grid-template-columns: 1fr;
+  }
+  .end-prompt #end-prompt-grid > img {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: -2rem;
+  }
+  .end-prompt #end-prompt-grid #end-prompt-close {
+    margin-top: -0.7rem;
+  }
+  #output-container, #output-container-for-morse, .end-prompt {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+    z-index: 1;
+  }
+  #output-container > h3, #output-container-for-morse > h3, .end-prompt > h3 {
+    font-size: 1rem;
+    margin: 1rem 2rem;
+  }
+  #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
+    margin-top: -1rem;
+    width: 76%;
+    height: 65%;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+  }
+  #output-container #icon-container, #output-container-for-morse #icon-container, .end-prompt #icon-container, #output-container #icon-container-morse, #output-container-for-morse #icon-container-morse, .end-prompt #icon-container-morse {
+    margin-top: -0.25rem;
+    margin-left: 2.26rem;
+  }
+  #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
+    width: 1rem;
+  }
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  #clara-random > div {
+    margin-top: -0.85rem;
+    margin-left: -0.75rem;
+  }
+  #clara-random #clara-random-text {
+    font-size: 1rem;
+  }
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+@media screen and (min-width: 385px) and (max-width: 435px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+  }
+  .cover #cover-image {
+    width: 9.25rem;
+    height: 2.75rem;
+    margin-top: -1.25rem;
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+  .input > h3 {
+    font-size: 3.5rem;
+  }
+  .input > textarea {
+    padding-bottom: 0.5rem;
+  }
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+  }
+  .end-prompt #end-prompt-grid {
+    grid-template-columns: 1fr;
+  }
+  .end-prompt #end-prompt-grid > img {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: -2rem;
+  }
+  .end-prompt #end-prompt-grid #end-prompt-close {
+    margin-top: -0.7rem;
+  }
+  #output-container, #output-container-for-morse, .end-prompt {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+    z-index: 1;
+  }
+  #output-container > h3, #output-container-for-morse > h3, .end-prompt > h3 {
+    font-size: 1rem;
+    margin: 1rem 2rem;
+  }
+  #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
+    margin-top: -1rem;
+    width: 79%;
+    height: 65%;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+  }
+  #output-container #icon-container, #output-container-for-morse #icon-container, .end-prompt #icon-container, #output-container #icon-container-morse, #output-container-for-morse #icon-container-morse, .end-prompt #icon-container-morse {
+    margin-top: -0.25rem;
+    margin-left: 2.26rem;
+  }
+  #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
+    width: 1rem;
+  }
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  #clara-random > div {
+    margin-top: -0.85rem;
+    margin-left: -0.75rem;
+  }
+  #clara-random #clara-random-text {
+    font-size: 1rem;
+  }
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+@media screen and (min-width: 435px) and (max-width: 456px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+  }
+  .cover #cover-image {
+    width: 9.25rem;
+    height: 2.75rem;
+    margin-top: -1.25rem;
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+  .input > h3 {
+    font-size: 3.5rem;
+  }
+  .input > textarea {
+    padding-bottom: 0.5rem;
+  }
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+  }
+  .end-prompt #end-prompt-grid {
+    grid-template-columns: 1fr;
+  }
+  .end-prompt #end-prompt-grid > img {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: -2rem;
+  }
+  .end-prompt #end-prompt-grid #end-prompt-close {
+    margin-top: -0.7rem;
+  }
+  #output-container, #output-container-for-morse, .end-prompt {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+    z-index: 1;
+  }
+  #output-container > h3, #output-container-for-morse > h3, .end-prompt > h3 {
+    font-size: 1rem;
+    margin: 1rem 2rem;
+  }
+  #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
+    margin-top: -1rem;
+    width: 80.5%;
+    height: 65%;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+  }
+  #output-container #icon-container, #output-container-for-morse #icon-container, .end-prompt #icon-container, #output-container #icon-container-morse, #output-container-for-morse #icon-container-morse, .end-prompt #icon-container-morse {
+    margin-top: -0.25rem;
+    margin-left: 2.26rem;
+  }
+  #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
+    width: 1rem;
+  }
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  #clara-random > div {
+    margin-top: -0.85rem;
+    margin-left: -0.75rem;
+  }
+  #clara-random #clara-random-text {
+    font-size: 1rem;
+  }
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+@media screen and (min-width: 456px) and (max-width: 500px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+  }
+  .cover #cover-image {
+    width: 9.25rem;
+    height: 2.75rem;
+    margin-top: -1.25rem;
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+  .input > h3 {
+    font-size: 3.5rem;
+  }
+  .input > textarea {
+    padding-bottom: 0.5rem;
+  }
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+  }
+  .end-prompt #end-prompt-grid {
+    grid-template-columns: 1fr;
+  }
+  .end-prompt #end-prompt-grid > img {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: -2rem;
+  }
+  .end-prompt #end-prompt-grid #end-prompt-close {
+    margin-top: -0.7rem;
+  }
+  #output-container, #output-container-for-morse, .end-prompt {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+    z-index: 1;
+  }
+  #output-container > h3, #output-container-for-morse > h3, .end-prompt > h3 {
+    font-size: 1rem;
+    margin: 1rem 2rem;
+  }
+  #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
+    margin-top: -1rem;
+    width: 80.5%;
+    height: 65%;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+  }
+  #output-container #icon-container, #output-container-for-morse #icon-container, .end-prompt #icon-container, #output-container #icon-container-morse, #output-container-for-morse #icon-container-morse, .end-prompt #icon-container-morse {
+    margin-top: -0.25rem;
+    margin-left: 2.26rem;
+  }
+  #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
+    width: 1rem;
+  }
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  #clara-random > div {
+    margin-top: -0.85rem;
+    margin-left: -0.75rem;
+  }
+  #clara-random #clara-random-text {
+    font-size: 1rem;
+  }
   footer {
     height: 2.5rem;
     position: fixed;
@@ -451,6 +1343,12 @@ footer {
     width: 4rem;
     height: 4rem;
   }
+  #copy-morse-button {
+    display: none;
+  }
+  #copy-text-button {
+    display: none;
+  }
   #clara-next {
     right: 1%;
   }
@@ -459,15 +1357,15 @@ footer {
     width: 63vw;
   }
   #output-container > h3, #output-container-for-morse > h3, .end-prompt > h3 {
-    font-size: 4rem;
+    font-size: 3.75rem;
     margin-left: 3rem;
   }
   #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
     height: 75%;
-    width: 86.75%;
+    width: 82%;
   }
   #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
-    width: 3rem;
+    width: 2.5rem;
   }
   .end-prompt {
     height: 25vh;
@@ -486,6 +1384,18 @@ footer {
   }
   #end-prompt-close {
     width: 2.25rem;
+  }
+  #clara-random {
+    bottom: 5%;
+    width: 17rem;
+    height: 17rem;
+  }
+  #clara-random > div {
+    margin-top: 5.5rem;
+    margin-left: 1.25rem;
+  }
+  #clara-random #clara-random-text {
+    font-size: 2.25rem;
   }
   footer {
     height: 5rem;
@@ -556,6 +1466,18 @@ footer {
   #end-prompt-close {
     width: 2.25rem;
   }
+  #clara-random {
+    bottom: 5%;
+    width: 18rem;
+    height: 18rem;
+  }
+  #clara-random > div {
+    margin-top: 5.75rem;
+    margin-left: 1.25rem;
+  }
+  #clara-random #clara-random-text {
+    font-size: 2.25rem;
+  }
   footer {
     height: 5rem;
     position: fixed;
@@ -599,7 +1521,7 @@ footer {
   }
   #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
     height: 75%;
-    width: 86.75%;
+    width: 82.9%;
   }
   #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
     width: 3rem;
@@ -618,6 +1540,18 @@ footer {
   #end-prompt-text-container {
     margin-top: 4rem;
     font-size: 1.5rem;
+  }
+  #clara-random {
+    bottom: 5%;
+    width: 18rem;
+    height: 18rem;
+  }
+  #clara-random > div {
+    margin-top: 5.75rem;
+    margin-left: 1.25rem;
+  }
+  #clara-random #clara-random-text {
+    font-size: 2.25rem;
   }
   footer {
     height: 5rem;
@@ -662,7 +1596,7 @@ footer {
   }
   #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
     height: 75%;
-    width: 86.75%;
+    width: 83.7%;
   }
   #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
     width: 3rem;
@@ -681,6 +1615,18 @@ footer {
   #end-prompt-text-container {
     margin-top: 4rem;
     font-size: 1.5rem;
+  }
+  #clara-random {
+    bottom: 5%;
+    width: 18rem;
+    height: 18rem;
+  }
+  #clara-random > div {
+    margin-top: 5.75rem;
+    margin-left: 1.25rem;
+  }
+  #clara-random #clara-random-text {
+    font-size: 2.25rem;
   }
   footer {
     height: 5rem;
@@ -722,7 +1668,7 @@ footer {
   }
   #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
     height: 75%;
-    width: 86.75%;
+    width: 84.55%;
   }
   #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
     width: 3rem;
@@ -741,6 +1687,18 @@ footer {
   #end-prompt-text-container {
     margin-top: 4rem;
     font-size: 1.5rem;
+  }
+  #clara-random {
+    bottom: 5%;
+    width: 18rem;
+    height: 18rem;
+  }
+  #clara-random > div {
+    margin-top: 5.75rem;
+    margin-left: 1.25rem;
+  }
+  #clara-random #clara-random-text {
+    font-size: 2.25rem;
   }
   footer {
     height: 5rem;
@@ -782,7 +1740,7 @@ footer {
   }
   #output-container > textarea, #output-container-for-morse > textarea, .end-prompt > textarea {
     height: 75%;
-    width: 86.75%;
+    width: 86.25%;
   }
   #output-container .icon, #output-container-for-morse .icon, .end-prompt .icon {
     width: 3rem;
@@ -801,6 +1759,18 @@ footer {
   #end-prompt-text-container {
     margin-top: 4rem;
     font-size: 1.5rem;
+  }
+  #clara-random {
+    bottom: 5%;
+    width: 18rem;
+    height: 18rem;
+  }
+  #clara-random > div {
+    margin-top: 5.75rem;
+    margin-left: 1.25rem;
+  }
+  #clara-random #clara-random-text {
+    font-size: 2.25rem;
   }
   footer {
     height: 5rem;
