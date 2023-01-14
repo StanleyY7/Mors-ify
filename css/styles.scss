@@ -12,9 +12,11 @@ body {
   position: relative;
   overflow: hidden;
 }
+
 a {
   cursor: default;
 }
+
 textarea {
   padding: 1rem;
   width: 75%;
@@ -25,7 +27,7 @@ textarea {
   overflow: hidden;
   border-radius: 0.5rem;
   border: none;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 strong {
@@ -102,6 +104,9 @@ strong {
   > h3 {
     padding-bottom: 0.4rem;
     font-size: 3.5rem;
+    > strong {
+      color: transparent;
+    }
   }
 }
 
@@ -218,10 +223,13 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    > img {
-      width: 15rem;
-      height: 15rem;
-      margin-left: 4.5rem;
+    > #clara-profile-container {
+      display: flex;
+      justify-content: center;
+      > img {
+        width: 15rem;
+        height: 15rem;
+      }
     }
 
     #end-prompt-close {
@@ -236,7 +244,7 @@ footer {
   width: 10rem;
   right: 0.5%;
   position: fixed;
-  bottom: 3%;
+  bottom: 4%;
   height: 10rem;
   display: none;
 
@@ -262,8 +270,8 @@ footer {
     filter: grayscale(40%);
 
     &:hover {
-      transform: scale(1.04);
-      filter: grayscale(0%) brightness(110%);
+      transform: scale(1.08);
+      filter: grayscale(0%) brightness(120%);
     }
   }
 }
@@ -346,7 +354,7 @@ footer {
   }
   .morse-grid-container {
     overflow: hidden;
-    margin-top: -2rem;
+    margin-top: -3.25rem;
   }
   .morse-grid {
     grid-template-columns: 1fr;
@@ -361,10 +369,14 @@ footer {
     margin-bottom: -2rem;
   }
 
+  #morse-grid-column-two {
+    margin-top: -13.25rem;
+    margin-bottom: -3rem;
+  }
+
   .input {
     > h3 {
       font-size: 3.25rem;
-      margin-right: 1rem;
     }
 
     > textarea {
@@ -379,17 +391,23 @@ footer {
   }
   .end-prompt {
     position: fixed;
+    height: 25rem !important;
     #end-prompt-grid {
       grid-template-columns: 1fr;
 
-      > img {
-        width: 8rem;
-        height: 8rem;
-        margin-bottom: -2rem;
+      > #clara-profile-container {
+        margin-top: 1rem;
+        margin-bottom: -1rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
       }
 
       #end-prompt-close {
-        margin-top: -0.7rem;
+        margin-top: 0.25rem;
+        width: 1.75rem;
       }
     }
   }
@@ -422,6 +440,23 @@ footer {
     }
   }
 
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
   footer {
     height: 2.5rem;
     position: fixed;
@@ -431,13 +466,4453 @@ footer {
 }
 
 // Small Devices like mobile phones
+@media screen and (min-width: 281px) and (max-width: 304px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -3.25rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -13.25rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.25rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    #end-prompt-grid {
+      grid-template-columns: 1fr;
+
+      > #clara-profile-container {
+        margin-top: 3.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.25rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 70%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 1rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 304px) and (max-width: 331px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.25rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    #end-prompt-grid {
+      grid-template-columns: 1fr;
+      > #clara-profile-container {
+        margin-top: 2rem;
+        margin-bottom: -1rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 73%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 1rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+@media screen and (min-width: 331px) and (max-width: 351px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.25rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    #end-prompt-grid {
+      grid-template-columns: 1fr;
+
+      > #clara-profile-container {
+        margin-top: 2rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.25rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 74%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 1rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 351px) and (max-width: 381px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.25rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    #end-prompt-grid {
+      grid-template-columns: 1fr;
+
+      > #clara-profile-container {
+        margin-top: 2rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.25rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 76%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 1rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 351px) and (max-width: 385px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.25rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    #end-prompt-grid {
+      grid-template-columns: 1fr;
+
+      > #clara-profile-container {
+        margin-top: 2rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.25rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 76%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 1rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 385px) and (max-width: 435px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    #end-prompt-grid {
+      grid-template-columns: 1fr;
+
+      > #clara-profile-container {
+        margin-top: 2rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.25rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 79%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 1rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
 
 // Small to Medium Devices like large phones to tablets
+@media screen and (min-width: 435px) and (max-width: 456px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    #end-prompt-grid {
+      grid-template-columns: 1fr;
+
+      > #clara-profile-container {
+        margin-top: 2rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.25rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 80.5%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 1rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+@media screen and (min-width: 456px) and (max-width: 500px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    #end-prompt-grid {
+      grid-template-columns: 1fr;
+
+      > #clara-profile-container {
+        margin-top: 2rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.25rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 80.5%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 1rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 540px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    #end-prompt-grid {
+      margin-top: 4rem;
+      grid-template-columns: 1fr;
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.25rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 82.75%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 2rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 4%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 540px) and (max-width: 571px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    #end-prompt-grid {
+      margin-top: 4rem;
+      grid-template-columns: 1fr;
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.25rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 84.5%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 2rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 4%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 571px) and (max-width: 605px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    #end-prompt-grid {
+      margin-top: 4rem;
+      grid-template-columns: 1fr;
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.25rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 85.1%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 2rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 4%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 605px) and (max-width: 630px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    height: 30rem !important;
+    #end-prompt-grid {
+      margin-top: 8rem;
+      grid-template-columns: 1fr;
+      transform: scale(1.4);
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      > #end-prompt-text-container {
+        padding: 0rem 6rem;
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.1rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 85.8%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 2rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 4%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 630px) and (max-width: 652px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    height: 30rem !important;
+    #end-prompt-grid {
+      margin-top: 8rem;
+      grid-template-columns: 1fr;
+      transform: scale(1.4);
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      > #end-prompt-text-container {
+        padding: 0rem 6rem;
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.1rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 86.5%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 2rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 4%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 652px) and (max-width: 672px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    height: 30rem !important;
+    #end-prompt-grid {
+      margin-top: 8rem;
+      grid-template-columns: 1fr;
+      transform: scale(1.4);
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      > #end-prompt-text-container {
+        padding: 0rem 6rem;
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.1rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 86.85%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 2rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 4%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 672px) and (max-width: 700px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    height: 30rem !important;
+    #end-prompt-grid {
+      margin-top: 8rem;
+      grid-template-columns: 1fr;
+      transform: scale(1.4);
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      > #end-prompt-text-container {
+        padding: 0rem 6rem;
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.1rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 87.35%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 2rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 4%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 730px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    height: 30rem !important;
+    #end-prompt-grid {
+      margin-top: 8rem;
+      grid-template-columns: 1fr;
+      transform: scale(1.4);
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      > #end-prompt-text-container {
+        padding: 0rem 6rem;
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.1rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 88.15%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 2rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 4%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
 
 // Medium to Large Devices like tablets to laptops.
+@media screen and (min-width: 730px) and (max-width: 770px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    height: 30rem !important;
+    #end-prompt-grid {
+      margin-top: 8rem;
+      grid-template-columns: 1fr;
+      transform: scale(1.4);
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      > #end-prompt-text-container {
+        padding: 0rem 6rem;
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.1rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 88.15%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 2rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 3.5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 770px) and (max-width: 800px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    height: 30rem !important;
+    #end-prompt-grid {
+      margin-top: 8rem;
+      grid-template-columns: 1fr;
+      transform: scale(1.4);
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      > #end-prompt-text-container {
+        padding: 0rem 6rem;
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.1rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 88.15%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 2rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 4%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 850px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    height: 30rem !important;
+    #end-prompt-grid {
+      margin-top: 8rem;
+      grid-template-columns: 1fr;
+      transform: scale(1.4);
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      > #end-prompt-text-container {
+        padding: 0rem 6rem;
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.1rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 89%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 2rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 4%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 850px) and (max-width: 900px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    height: 30rem !important;
+    #end-prompt-grid {
+      margin-top: 8rem;
+      grid-template-columns: 1fr;
+      transform: scale(1.4);
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      > #end-prompt-text-container {
+        padding: 0rem 6rem;
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.1rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 90%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 2rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 4%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 950px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    height: 30rem !important;
+    #end-prompt-grid {
+      margin-top: 8rem;
+      grid-template-columns: 1fr;
+      transform: scale(1.4);
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      > #end-prompt-text-container {
+        padding: 0rem 6rem;
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.1rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 90.5%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 2rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 4%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 950px) and (max-width: 1000px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    height: 30rem !important;
+    #end-prompt-grid {
+      margin-top: 8rem;
+      grid-template-columns: 1fr;
+      transform: scale(1.4);
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      > #end-prompt-text-container {
+        padding: 0rem 6rem;
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.1rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 91%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 2rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 4%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1050px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    height: 30rem !important;
+    #end-prompt-grid {
+      margin-top: 8rem;
+      grid-template-columns: 1fr;
+      transform: scale(1.4);
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      > #end-prompt-text-container {
+        padding: 0rem 6rem;
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.1rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 91.5%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 2rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 4%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1100px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    height: 30rem !important;
+    #end-prompt-grid {
+      margin-top: 8rem;
+      grid-template-columns: 1fr;
+      transform: scale(1.4);
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      > #end-prompt-text-container {
+        padding: 0rem 6rem;
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.1rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 92%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 2rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 4%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1150px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    height: 30rem !important;
+    #end-prompt-grid {
+      margin-top: 8rem;
+      grid-template-columns: 1fr;
+      transform: scale(1.4);
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      > #end-prompt-text-container {
+        padding: 0rem 6rem;
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.1rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 92.5%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 2rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 4%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 1150px) and (max-width: 1200px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 27rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    height: 30rem !important;
+    #end-prompt-grid {
+      margin-top: 8rem;
+      grid-template-columns: 1fr;
+      transform: scale(1.4);
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      > #end-prompt-text-container {
+        padding: 0rem 6rem;
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.1rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 45vh;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 92.75%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 2rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 4%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
 
 // Large Devices like desktop monitors
-@media screen and (min-width: 1900px) and (max-width: 2000px) and (max-height: 1320px) {
+@media screen and (min-width: 1200px) and (max-width: 1250px) and (max-height: 1250px) {
+  .cover {
+    width: 102vw;
+  }
+  #cover-image {
+    margin-left: 4rem;
+  }
+
+  .morse-grid-container {
+    margin-top: -13rem;
+    margin-left: 4rem;
+    transform: scale(0.75);
+  }
+
+  .morse-grid-column {
+    margin-top: 15rem;
+    margin-left: 1rem;
+  }
+
+  .clara {
+    z-index: 120;
+    width: 55rem;
+    height: 55rem;
+  }
+
+  .clara-minimised-container {
+    > img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  #copy-morse-button {
+    display: none;
+  }
+  #copy-text-button {
+    display: none;
+  }
+  #clara-next {
+    right: 1%;
+  }
+
+  #output-container {
+    height: 65vh;
+    width: 63vw;
+
+    > h3 {
+      font-size: 2.75rem;
+      margin-left: 3rem;
+    }
+
+    > textarea {
+      height: 71.5%;
+      width: 84.75%;
+      margin-left: 3rem;
+    }
+    .icon {
+      width: 2.5rem;
+    }
+  }
+
+  .end-prompt {
+    height: 25vh;
+    width: 45vw;
+    top: 20%;
+    left: 30%;
+    > #end-prompt-grid > #clara-profile-container > img {
+      margin-left: 7rem;
+
+      width: 17rem;
+      height: 17rem;
+    }
+  }
+  #end-prompt-text-container {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+
+  #end-prompt-close {
+    width: 2.25rem;
+  }
+
+  #clara-random {
+    margin-right: 0.5rem;
+    bottom: 5%;
+
+    width: 14rem;
+    height: 14rem;
+
+    > div {
+      margin-top: 4.75rem;
+      margin-left: 0.85rem;
+    }
+
+    #clara-random-text {
+      font-size: 1.6rem;
+    }
+  }
+
+  footer {
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 110vw;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1250px) and (min-height: 1250px) {
+  .cover {
+    width: 102vw;
+  }
+  #cover-image {
+    margin-left: 4rem;
+  }
+
+  .morse-grid-container {
+    margin-top: -13rem;
+    margin-left: 4rem;
+    transform: scale(0.75);
+  }
+
+  .morse-grid-column {
+    margin-top: 15rem;
+    margin-left: 2rem;
+  }
+
+  .clara {
+    z-index: 120;
+    width: 55rem;
+    height: 55rem;
+  }
+
+  .clara-minimised-container {
+    > img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  #copy-morse-button {
+    display: none;
+  }
+  #copy-text-button {
+    display: none;
+  }
+  #clara-next {
+    right: 1%;
+  }
+
+  #output-container {
+    height: 65vh;
+    width: 63vw;
+
+    > h3 {
+      font-size: 2.75rem;
+      margin-left: 3rem;
+    }
+
+    > textarea {
+      height: 74%;
+      width: 84.75%;
+      margin-left: 3rem;
+    }
+    .icon {
+      width: 2.5rem;
+    }
+  }
+
+  .end-prompt {
+    height: 25vh;
+    width: 45vw;
+    top: 20%;
+    left: 30%;
+    > #end-prompt-grid > #clara-profile-container > img {
+      margin-left: 7rem;
+      width: 17rem;
+      height: 17rem;
+    }
+  }
+  #end-prompt-text-container {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+
+  #end-prompt-close {
+    width: 2.25rem;
+  }
+
+  #clara-random {
+    margin-right: 0.75rem;
+    bottom: 5%;
+    width: 14rem;
+    height: 14rem;
+
+    > div {
+      margin-top: 4.75rem;
+      margin-left: 0.85rem;
+    }
+
+    #clara-random-text {
+      font-size: 1.6rem;
+    }
+  }
+
+  footer {
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 110vw;
+  }
+}
+
+@media screen and (min-width: 1250px) and (max-width: 1450px) and (max-height: 1250px) {
+  .cover {
+    width: 102vw;
+  }
+  #cover-image {
+    margin-left: 4rem;
+  }
+
+  .morse-grid-container {
+    margin-top: -13rem;
+    margin-left: 4rem;
+    transform: scale(0.825);
+  }
+
+  .morse-grid-column {
+    margin-top: 15rem;
+    margin-left: 1rem;
+  }
+
+  .clara {
+    z-index: 120;
+    width: 55rem;
+    height: 55rem;
+  }
+
+  .clara-minimised-container {
+    > img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  #copy-morse-button {
+    display: none;
+  }
+  #copy-text-button {
+    display: none;
+  }
+  #clara-next {
+    right: 1%;
+  }
+
+  #output-container {
+    height: 65vh;
+    width: 63vw;
+
+    > h3 {
+      font-size: 2.75rem;
+      margin-left: 3rem;
+    }
+
+    > textarea {
+      height: 71.5%;
+      width: 84.75%;
+      margin-left: 3rem;
+    }
+    .icon {
+      width: 2.5rem;
+    }
+  }
+
+  .end-prompt {
+    height: 25vh;
+    width: 45vw;
+    top: 20%;
+    left: 30%;
+    > #end-prompt-grid > #clara-profile-container > img {
+      margin-left: 7rem;
+
+      width: 17rem;
+      height: 17rem;
+    }
+  }
+  #end-prompt-text-container {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+
+  #end-prompt-close {
+    width: 2.25rem;
+  }
+
+  #clara-random {
+    margin-right: 0.5rem;
+    bottom: 5%;
+
+    width: 14rem;
+    height: 14rem;
+
+    > div {
+      margin-top: 4.75rem;
+      margin-left: 0.85rem;
+    }
+
+    #clara-random-text {
+      font-size: 1.6rem;
+    }
+  }
+
+  footer {
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 110vw;
+  }
+}
+
+@media screen and (min-width: 1250px) and (max-width: 1450px) and (min-height: 1250px) {
+  .cover {
+    width: 102vw;
+  }
+  #cover-image {
+    margin-left: 4rem;
+  }
+
+  .morse-grid-container {
+    margin-top: -13rem;
+    margin-left: 4rem;
+    transform: scale(0.825);
+  }
+
+  .morse-grid-column {
+    margin-top: 15rem;
+    margin-left: 2rem;
+  }
+
+  .clara {
+    z-index: 120;
+    width: 55rem;
+    height: 55rem;
+  }
+
+  .clara-minimised-container {
+    > img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  #copy-morse-button {
+    display: none;
+  }
+  #copy-text-button {
+    display: none;
+  }
+  #clara-next {
+    right: 1%;
+  }
+
+  #output-container {
+    height: 65vh;
+    width: 63vw;
+
+    > h3 {
+      font-size: 3rem;
+      margin-left: 3rem;
+    }
+
+    > textarea {
+      height: 74%;
+      width: 84.75%;
+      margin-left: 3rem;
+    }
+    .icon {
+      width: 2.5rem;
+    }
+  }
+
+  .end-prompt {
+    height: 25vh;
+    width: 45vw;
+    top: 20%;
+    left: 30%;
+    > #end-prompt-grid > #clara-profile-container > img {
+      margin-left: 7rem;
+      width: 17rem;
+      height: 17rem;
+    }
+  }
+  #end-prompt-text-container {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+
+  #end-prompt-close {
+    width: 2.25rem;
+  }
+
+  #clara-random {
+    margin-right: 0.75rem;
+    bottom: 5%;
+    width: 14rem;
+    height: 14rem;
+
+    > div {
+      margin-top: 4.75rem;
+      margin-left: 0.85rem;
+    }
+
+    #clara-random-text {
+      font-size: 1.6rem;
+    }
+  }
+
+  footer {
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 110vw;
+  }
+}
+@media screen and (min-width: 1450px) and (max-width: 1570px) and (max-height: 1250px) {
+  .cover {
+    width: 102vw;
+  }
+  #cover-image {
+    margin-left: 4rem;
+  }
+
+  .morse-grid-container {
+    margin-top: -13rem;
+    margin-left: 4rem;
+    transform: scale(0.9);
+  }
+
+  .morse-grid-column {
+    margin-top: 15rem;
+    margin-left: 1rem;
+  }
+
+  .clara {
+    z-index: 120;
+    width: 55rem;
+    height: 55rem;
+  }
+
+  .clara-minimised-container {
+    > img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  #copy-morse-button {
+    display: none;
+  }
+  #copy-text-button {
+    display: none;
+  }
+  #clara-next {
+    right: 1%;
+  }
+
+  #output-container {
+    height: 65vh;
+    width: 63vw;
+
+    > h3 {
+      font-size: 3rem;
+      margin-left: 3rem;
+    }
+
+    > textarea {
+      height: 72.5%;
+      width: 84.75%;
+      margin-left: 4rem;
+    }
+    .icon {
+      width: 2.5rem;
+    }
+  }
+
+  .end-prompt {
+    height: 25vh;
+    width: 45vw;
+    top: 20%;
+    left: 30%;
+    > #end-prompt-grid > #clara-profile-container > img {
+      margin-left: 7rem;
+
+      width: 17rem;
+      height: 17rem;
+    }
+  }
+  #end-prompt-text-container {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+
+  #end-prompt-close {
+    width: 2.25rem;
+  }
+
+  #clara-random {
+    margin-right: 0.5rem;
+    bottom: 5%;
+
+    width: 14rem;
+    height: 14rem;
+
+    > div {
+      margin-top: 4.75rem;
+      margin-left: 0.85rem;
+    }
+
+    #clara-random-text {
+      font-size: 1.6rem;
+    }
+  }
+
+  footer {
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 110vw;
+  }
+}
+
+@media screen and (min-width: 1450px) and (max-width: 1570px) and (min-height: 1250px) {
+  .cover {
+    width: 102vw;
+  }
+  #cover-image {
+    margin-left: 4rem;
+  }
+
+  .morse-grid-container {
+    transform: scale(0.9);
+    margin-top: -13rem;
+    margin-left: 4rem;
+  }
+
+  .morse-grid-column {
+    margin-top: 15rem;
+    margin-left: 2rem;
+  }
+
+  .clara {
+    z-index: 120;
+    width: 55rem;
+    height: 55rem;
+  }
+
+  .clara-minimised-container {
+    > img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  #copy-morse-button {
+    display: none;
+  }
+  #copy-text-button {
+    display: none;
+  }
+  #clara-next {
+    right: 1%;
+  }
+
+  #output-container {
+    height: 65vh;
+    width: 63vw;
+
+    > h3 {
+      font-size: 3rem;
+      margin-left: 3rem;
+    }
+
+    > textarea {
+      height: 72.5%;
+      width: 84.5%;
+      margin-left: 4rem;
+    }
+    .icon {
+      width: 2.5rem;
+    }
+  }
+
+  .end-prompt {
+    height: 25vh;
+    width: 45vw;
+    top: 20%;
+    left: 30%;
+    > #end-prompt-grid > #clara-profile-container > img {
+      margin-left: 7rem;
+      width: 17rem;
+      height: 17rem;
+    }
+  }
+  #end-prompt-text-container {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+
+  #end-prompt-close {
+    width: 2.25rem;
+  }
+
+  #clara-random {
+    margin-right: 0.75rem;
+    bottom: 5%;
+    width: 14rem;
+    height: 14rem;
+
+    > div {
+      margin-top: 4.75rem;
+      margin-left: 0.85rem;
+    }
+
+    #clara-random-text {
+      font-size: 1.6rem;
+    }
+  }
+
+  footer {
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 110vw;
+  }
+}
+@media screen and (min-width: 1570px) and (max-width: 1700px) and (max-height: 1250px) {
+  .cover {
+    width: 102vw;
+  }
+  #cover-image {
+    margin-left: 4rem;
+  }
+
+  .morse-grid-container {
+    margin-top: -13rem;
+    margin-left: 4rem;
+  }
+
+  .morse-grid-column {
+    margin-top: 15rem;
+    margin-left: 1rem;
+  }
+
+  .clara {
+    z-index: 120;
+    width: 55rem;
+    height: 55rem;
+  }
+
+  .clara-minimised-container {
+    > img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  #copy-morse-button {
+    display: none;
+  }
+  #copy-text-button {
+    display: none;
+  }
+  #clara-next {
+    right: 1%;
+  }
+
+  #output-container {
+    height: 65vh;
+    width: 63vw;
+
+    > h3 {
+      font-size: 3.25rem;
+      margin-left: 3rem;
+    }
+
+    > textarea {
+      height: 72.5%;
+      width: 84.75%;
+      margin-left: 4rem;
+    }
+    .icon {
+      width: 2.5rem;
+    }
+  }
+
+  .end-prompt {
+    height: 25vh;
+    width: 45vw;
+    top: 20%;
+    left: 30%;
+    > #end-prompt-grid > #clara-profile-container > img {
+      margin-left: 7rem;
+
+      width: 17rem;
+      height: 17rem;
+    }
+  }
+  #end-prompt-text-container {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+
+  #end-prompt-close {
+    width: 2.25rem;
+  }
+
+  #clara-random {
+    margin-right: 0.5rem;
+    bottom: 5%;
+
+    width: 14rem;
+    height: 14rem;
+
+    > div {
+      margin-top: 4.75rem;
+      margin-left: 0.85rem;
+    }
+
+    #clara-random-text {
+      font-size: 1.8rem;
+    }
+  }
+
+  footer {
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 110vw;
+  }
+}
+
+@media screen and (min-width: 1570px) and (max-width: 1700px) and (min-height: 1250px) {
+  .cover {
+    width: 102vw;
+  }
+  #cover-image {
+    margin-left: 4rem;
+  }
+
+  .morse-grid-container {
+    margin-top: -13rem;
+    margin-left: 4rem;
+  }
+
+  .morse-grid-column {
+    margin-top: 15rem;
+    margin-left: 2rem;
+  }
+
+  .clara {
+    z-index: 120;
+    width: 55rem;
+    height: 55rem;
+  }
+
+  .clara-minimised-container {
+    > img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  #copy-morse-button {
+    display: none;
+  }
+  #copy-text-button {
+    display: none;
+  }
+  #clara-next {
+    right: 1%;
+  }
+
+  #output-container {
+    height: 65vh;
+    width: 63vw;
+
+    > h3 {
+      font-size: 3rem;
+      margin-left: 3rem;
+    }
+
+    > textarea {
+      height: 72.5%;
+      width: 84.5%;
+      margin-left: 4rem;
+    }
+    .icon {
+      width: 2.5rem;
+    }
+  }
+
+  .end-prompt {
+    height: 25vh;
+    width: 45vw;
+    top: 20%;
+    left: 30%;
+    > #end-prompt-grid > #clara-profile-container > img {
+      margin-left: 7rem;
+      width: 17rem;
+      height: 17rem;
+    }
+  }
+  #end-prompt-text-container {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+
+  #end-prompt-close {
+    width: 2.25rem;
+  }
+
+  #clara-random {
+    margin-right: 0.75rem;
+    bottom: 5%;
+    width: 14rem;
+    height: 14rem;
+
+    > div {
+      margin-top: 4.75rem;
+      margin-left: 0.85rem;
+    }
+
+    #clara-random-text {
+      font-size: 1.8rem;
+    }
+  }
+
+  footer {
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 110vw;
+  }
+}
+
+@media screen and (min-width: 1700px) and (max-width: 1830px) and (max-height: 1250px) {
+  .cover {
+    width: 102vw;
+  }
+  #cover-image {
+    margin-left: 4rem;
+  }
+
+  .morse-grid-container {
+    margin-top: -13rem;
+    margin-left: 4rem;
+  }
+
+  .morse-grid-column {
+    margin-top: 15rem;
+    margin-left: 2rem;
+  }
+
+  .clara {
+    z-index: 20;
+    width: 55rem;
+    height: 55rem;
+  }
+
+  .clara-minimised-container {
+    > img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  #copy-morse-button {
+    display: none;
+  }
+  #copy-text-button {
+    display: none;
+  }
+  #clara-next {
+    right: 1%;
+  }
+
+  #output-container {
+    height: 65vh;
+    width: 63vw;
+
+    > h3 {
+      font-size: 3.25rem;
+      margin-left: 3rem;
+    }
+
+    > textarea {
+      height: 70%;
+      width: 84.5%;
+      margin-left: 4rem;
+    }
+    .icon {
+      width: 2.5rem;
+    }
+  }
+
+  .end-prompt {
+    height: 25vh;
+    width: 40vw;
+    top: 20%;
+    left: 30%;
+    > #end-prompt-grid > #clara-profile-container > img {
+      margin-left: 7rem;
+      width: 17rem;
+      height: 17rem;
+    }
+  }
+  #end-prompt-text-container {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+
+  #end-prompt-close {
+    width: 2.25rem;
+  }
+
+  #clara-random {
+    margin-right: 0.5rem;
+    bottom: 7%;
+    width: 14rem;
+    height: 14rem;
+
+    > div {
+      margin-top: 4.75rem;
+      margin-left: 0.85rem;
+    }
+
+    #clara-random-text {
+      font-size: 1.8rem;
+    }
+  }
+
+  footer {
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 110vw;
+  }
+}
+
+@media screen and (min-width: 1700px) and (max-width: 1830px) and (min-height: 1250px) {
   .cover {
     width: 102vw;
   }
@@ -447,6 +4922,112 @@ footer {
 
   .morse-grid-container {
     margin-top: -10rem;
+    margin-left: 4rem;
+  }
+
+  .morse-grid-column {
+    margin-top: 15rem;
+
+    margin-left: 2rem;
+  }
+
+  .clara {
+    z-index: 20;
+    width: 55rem;
+    height: 55rem;
+  }
+
+  .clara-minimised-container {
+    > img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  #copy-morse-button {
+    display: none;
+  }
+  #copy-text-button {
+    display: none;
+  }
+  #clara-next {
+    right: 1%;
+  }
+
+  #output-container {
+    height: 70vh;
+    width: 63vw;
+
+    > h3 {
+      font-size: 3.75rem;
+      margin-left: 3rem;
+    }
+
+    > textarea {
+      height: 75%;
+      width: 84.75%;
+      margin-left: 4rem;
+    }
+    .icon {
+      width: 2.5rem;
+    }
+  }
+
+  .end-prompt {
+    height: 25vh;
+    width: 40vw;
+    top: 20%;
+    left: 30%;
+    > #end-prompt-grid > #clara-profile-container > img {
+      margin-left: 7rem;
+      width: 17rem;
+      height: 17rem;
+    }
+  }
+  #end-prompt-text-container {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+
+  #end-prompt-close {
+    width: 2.25rem;
+  }
+
+  #clara-random {
+    bottom: 5%;
+    width: 17rem;
+    height: 17rem;
+
+    > div {
+      margin-top: 5.5rem;
+      margin-left: 1.25rem;
+    }
+
+    #clara-random-text {
+      font-size: 2.25rem;
+    }
+  }
+
+  footer {
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 110vw;
+  }
+}
+
+@media screen and (min-width: 1830px) and (max-width: 2000px) and (min-height: 1250px) {
+  .cover {
+    width: 102vw;
+  }
+  #cover-image {
+    margin-left: 4rem;
+  }
+
+  .morse-grid-container {
+    margin-top: -10rem;
+    margin-left: 4rem;
   }
 
   .morse-grid-column {
@@ -461,6 +5042,7 @@ footer {
     width: 55rem;
     height: 55rem;
   }
+
   .clara-minimised-container {
     > img {
       width: 4rem;
@@ -468,6 +5050,12 @@ footer {
     }
   }
 
+  #copy-morse-button {
+    display: none;
+  }
+  #copy-text-button {
+    display: none;
+  }
   #clara-next {
     right: 1%;
   }
@@ -477,16 +5065,16 @@ footer {
     width: 63vw;
 
     > h3 {
-      font-size: 4rem;
+      font-size: 3.75rem;
       margin-left: 3rem;
     }
 
     > textarea {
       height: 75%;
-      width: 86.75%;
+      width: 82%;
     }
     .icon {
-      width: 3rem;
+      width: 2.5rem;
     }
   }
 
@@ -495,7 +5083,7 @@ footer {
     width: 40vw;
     top: 20%;
     left: 30%;
-    > #end-prompt-grid > img {
+    > #end-prompt-grid > #clara-profile-container > img {
       margin-left: 7rem;
       width: 17rem;
       height: 17rem;
@@ -509,6 +5097,22 @@ footer {
   #end-prompt-close {
     width: 2.25rem;
   }
+
+  #clara-random {
+    bottom: 5%;
+    width: 17rem;
+    height: 17rem;
+
+    > div {
+      margin-top: 5.5rem;
+      margin-left: 1.25rem;
+    }
+
+    #clara-random-text {
+      font-size: 2.25rem;
+    }
+  }
+
   footer {
     height: 5rem;
     position: fixed;
@@ -517,6 +5121,7 @@ footer {
     width: 110vw;
   }
 }
+
 // 4k
 
 @media screen and (min-width: 2000px) and (max-width: 2119px) and (max-height: 1320px) {
@@ -591,6 +5196,22 @@ footer {
   #end-prompt-close {
     width: 2.25rem;
   }
+
+  #clara-random {
+    bottom: 5%;
+    width: 18rem;
+    height: 18rem;
+
+    > div {
+      margin-top: 5.75rem;
+      margin-left: 1.25rem;
+    }
+
+    #clara-random-text {
+      font-size: 2.25rem;
+    }
+  }
+
   footer {
     height: 5rem;
     position: fixed;
@@ -643,7 +5264,7 @@ footer {
 
     > textarea {
       height: 75%;
-      width: 86.75%;
+      width: 82.9%;
     }
     .icon {
       width: 3rem;
@@ -665,6 +5286,22 @@ footer {
     margin-top: 4rem;
     font-size: 1.5rem;
   }
+
+  #clara-random {
+    bottom: 5%;
+    width: 18rem;
+    height: 18rem;
+
+    > div {
+      margin-top: 5.75rem;
+      margin-left: 1.25rem;
+    }
+
+    #clara-random-text {
+      font-size: 2.25rem;
+    }
+  }
+
   footer {
     height: 5rem;
     position: fixed;
@@ -715,7 +5352,7 @@ footer {
 
     > textarea {
       height: 75%;
-      width: 86.75%;
+      width: 83.7%;
     }
     .icon {
       width: 3rem;
@@ -736,6 +5373,21 @@ footer {
   #end-prompt-text-container {
     margin-top: 4rem;
     font-size: 1.5rem;
+  }
+
+  #clara-random {
+    bottom: 5%;
+    width: 18rem;
+    height: 18rem;
+
+    > div {
+      margin-top: 5.75rem;
+      margin-left: 1.25rem;
+    }
+
+    #clara-random-text {
+      font-size: 2.25rem;
+    }
   }
   footer {
     height: 5rem;
@@ -786,7 +5438,7 @@ footer {
 
     > textarea {
       height: 75%;
-      width: 86.75%;
+      width: 84.55%;
     }
     .icon {
       width: 3rem;
@@ -807,6 +5459,21 @@ footer {
   #end-prompt-text-container {
     margin-top: 4rem;
     font-size: 1.5rem;
+  }
+
+  #clara-random {
+    bottom: 5%;
+    width: 18rem;
+    height: 18rem;
+
+    > div {
+      margin-top: 5.75rem;
+      margin-left: 1.25rem;
+    }
+
+    #clara-random-text {
+      font-size: 2.25rem;
+    }
   }
   footer {
     height: 5rem;
@@ -857,7 +5524,7 @@ footer {
 
     > textarea {
       height: 75%;
-      width: 86.75%;
+      width: 86.25%;
     }
     .icon {
       width: 3rem;
@@ -879,6 +5546,22 @@ footer {
     margin-top: 4rem;
     font-size: 1.5rem;
   }
+
+  #clara-random {
+    bottom: 5%;
+    width: 18rem;
+    height: 18rem;
+
+    > div {
+      margin-top: 5.75rem;
+      margin-left: 1.25rem;
+    }
+
+    #clara-random-text {
+      font-size: 2.25rem;
+    }
+  }
+
   footer {
     height: 5rem;
     position: fixed;
