@@ -309,6 +309,46 @@ window.addEventListener("DOMContentLoaded", () => {
   body.addEventListener("keypress", startClara);
   endPromptClose.addEventListener("click", hideEndPrompt);
 
+  /* Touch Buttons */
+  const enterButton = document.querySelector("#enter-button");
+  const sButton = document.querySelector("#s-button");
+
+  const startClaraViaTouchButtons = (event) => {
+    sButton.remove();
+    claraStart.remove();
+    claraNext.style.display = "block";
+    enterButton.addEventListener("click", (event) => {
+      if (event.type === "click") {
+        claraNext.remove();
+        claraMiddle.style.display = "block";
+        enterButton.addEventListener("click", (event) => {
+          if (event.type === "click") {
+            claraMiddle.remove();
+            endPrompt.style.display = "block";
+            sButton.remove();
+            enterButton.remove();
+            enterButton.addEventListener("click", (event) => {
+              if (event.type === "click") {
+                endPrompt.remove();
+                claraMinContainer.style.display = "block";
+              }
+            });
+          }
+        });
+      }
+    });
+  };
+
+  const endClaraViaTouchButtons = () => {
+    claraStart.remove();
+    claraMinContainer.style.display = "block";
+    enterButton.remove();
+    sButton.remove();
+  };
+
+  enterButton.addEventListener("click", startClaraViaTouchButtons);
+  sButton.addEventListener("click", endClaraViaTouchButtons);
+
   /* Draggable Elements */
 
   const draggableElements = document.querySelectorAll(".draggable");
