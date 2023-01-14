@@ -1432,11 +1432,10 @@ footer {
 }
 
 // Small to Medium Devices like large phones to tablets
+
 @media screen and (min-width: 435px) and (max-width: 456px) {
-  body {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
+  /* Top/Cover */
+
   .cover {
     position: fixed;
     top: 0;
@@ -1449,6 +1448,14 @@ footer {
       margin-top: -1.25rem;
     }
   }
+
+  /* Body */
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   .morse-grid-container {
     overflow: hidden;
     margin-top: -2rem;
@@ -1459,7 +1466,7 @@ footer {
     gap: 0;
   }
   .morse-grid-column {
-    width: 27rem;
+    width: 40rem;
     height: 40rem;
     transform: scale(0.6);
     margin-left: -0.25rem;
@@ -1511,13 +1518,13 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 45vh;
+    height: 50vh;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1rem;
+      font-size: 1.25rem;
       margin: 1rem 2rem;
     }
 
@@ -1529,7 +1536,7 @@ footer {
       font-size: 1rem;
     }
     #icon-container {
-      margin-top: -0.25rem;
+      margin-top: -0.5rem;
       margin-left: 2.26rem;
     }
     .icon {
@@ -1553,6 +1560,35 @@ footer {
       font-size: 1rem;
     }
   }
+
+  /* Touch Button */
+
+  .touch-button-container {
+    #enter-button {
+      width: 5.75rem;
+      height: 5.75rem;
+      display: block;
+      position: fixed;
+      top: 12%;
+      right: 7%;
+    }
+    #s-button {
+      width: 4rem;
+      height: 4rem;
+      display: block;
+      position: fixed;
+      top: 28%;
+      right: 3%;
+    }
+  }
+
+  /* Help Modal */
+  .help-container {
+    left: 10%;
+    width: 21rem;
+  }
+
+  /* Footer */
 
   footer {
     height: 2.5rem;
@@ -1561,11 +1597,10 @@ footer {
     z-index: 20;
   }
 }
+
 @media screen and (min-width: 456px) and (max-width: 500px) {
-  body {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
+  /* Top/Cover */
+
   .cover {
     position: fixed;
     top: 0;
@@ -1578,6 +1613,12 @@ footer {
       margin-top: -1.25rem;
     }
   }
+
+  /* Body */
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
   .morse-grid-container {
     overflow: hidden;
     margin-top: -2rem;
@@ -1588,7 +1629,7 @@ footer {
     gap: 0;
   }
   .morse-grid-column {
-    width: 27rem;
+    width: 43rem;
     height: 40rem;
     transform: scale(0.6);
     margin-left: -0.25rem;
@@ -1615,8 +1656,10 @@ footer {
     height: 20rem;
     z-index: 100;
   }
+
   .end-prompt {
     position: fixed;
+    height: 56vh !important;
     #end-prompt-grid {
       grid-template-columns: 1fr;
 
@@ -1636,17 +1679,18 @@ footer {
       }
     }
   }
+
   #output-container {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 45vh;
+    height: 52vh;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1rem;
+      font-size: 1.25rem;
       margin: 1rem 2rem;
     }
 
@@ -1682,6 +1726,35 @@ footer {
       font-size: 1rem;
     }
   }
+
+  /* Touch Button */
+
+  .touch-button-container {
+    #enter-button {
+      width: 5.75rem;
+      height: 5.75rem;
+      display: block;
+      position: fixed;
+      top: 12%;
+      right: 7%;
+    }
+    #s-button {
+      width: 4rem;
+      height: 4rem;
+      display: block;
+      position: fixed;
+      top: 28%;
+      right: 3%;
+    }
+  }
+
+  /* Help Modal */
+  .help-container {
+    left: 9%;
+    width: 23rem;
+  }
+
+  /* Footer */
 
   footer {
     height: 2.5rem;
@@ -1692,10 +1765,8 @@ footer {
 }
 
 @media screen and (min-width: 500px) and (max-width: 540px) {
-  body {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
+  /* Top/Cover */
+
   .cover {
     position: fixed;
     top: 0;
@@ -1708,6 +1779,14 @@ footer {
       margin-top: -1.25rem;
     }
   }
+
+  /* Body */
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   .morse-grid-container {
     overflow: hidden;
     margin-top: -2rem;
@@ -1718,7 +1797,7 @@ footer {
     gap: 0;
   }
   .morse-grid-column {
-    width: 27rem;
+    width: 46rem;
     height: 40rem;
     transform: scale(0.6);
     margin-left: -0.25rem;
@@ -1747,8 +1826,9 @@ footer {
   }
   .end-prompt {
     position: fixed;
+    height: 55vh !important;
     #end-prompt-grid {
-      margin-top: 4rem;
+      margin-top: 3rem;
       grid-template-columns: 1fr;
 
       > #clara-profile-container {
@@ -1771,13 +1851,13 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 45vh;
+    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       margin: 1rem 2rem;
     }
 
@@ -1793,7 +1873,7 @@ footer {
       margin-left: 2.26rem;
     }
     .icon {
-      width: 2rem;
+      width: 1.5rem;
     }
   }
 
@@ -1814,6 +1894,34 @@ footer {
     }
   }
 
+  /* Touch Button */
+
+  .touch-button-container {
+    #enter-button {
+      width: 5.75rem;
+      height: 5.75rem;
+      display: block;
+      position: fixed;
+      top: 12%;
+      right: 7%;
+    }
+    #s-button {
+      width: 4rem;
+      height: 4rem;
+      display: block;
+      position: fixed;
+      top: 28%;
+      right: 3%;
+    }
+  }
+
+  /* Help Modal */
+  .help-container {
+    left: 9%;
+    width: 25rem;
+  }
+
+  /* Footer */
   footer {
     height: 2.5rem;
     position: fixed;
@@ -1823,10 +1931,8 @@ footer {
 }
 
 @media screen and (min-width: 540px) and (max-width: 571px) {
-  body {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
+  /* Top/Cover */
+
   .cover {
     position: fixed;
     top: 0;
@@ -1839,6 +1945,14 @@ footer {
       margin-top: -1.25rem;
     }
   }
+
+  /* Body */
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   .morse-grid-container {
     overflow: hidden;
     margin-top: -2rem;
@@ -1849,7 +1963,7 @@ footer {
     gap: 0;
   }
   .morse-grid-column {
-    width: 27rem;
+    width: 49rem !important;
     height: 40rem;
     transform: scale(0.6);
     margin-left: -0.25rem;
@@ -1878,8 +1992,9 @@ footer {
   }
   .end-prompt {
     position: fixed;
+    height: 55vh !important;
     #end-prompt-grid {
-      margin-top: 4rem;
+      margin-top: 3.5rem;
       grid-template-columns: 1fr;
 
       > #clara-profile-container {
@@ -1902,13 +2017,13 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 45vh;
+    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       margin: 1rem 2rem;
     }
 
@@ -1924,13 +2039,13 @@ footer {
       margin-left: 2.26rem;
     }
     .icon {
-      width: 2rem;
+      width: 1.5rem;
     }
   }
 
   #clara-random {
     position: fixed;
-    bottom: 4%;
+    bottom: 5%;
     margin-right: 0.68rem;
     width: 8rem;
     height: 8rem;
@@ -1945,6 +2060,35 @@ footer {
     }
   }
 
+  /* Touch Button */
+
+  .touch-button-container {
+    #enter-button {
+      width: 5.75rem;
+      height: 5.75rem;
+      display: block;
+      position: fixed;
+      top: 12%;
+      right: 7%;
+    }
+    #s-button {
+      width: 4rem;
+      height: 4rem;
+      display: block;
+      position: fixed;
+      top: 28%;
+      right: 3%;
+    }
+  }
+
+  /* Help Modal */
+  .help-container {
+    left: 9%;
+    width: 28rem;
+  }
+
+  /* Footer */
+
   footer {
     height: 2.5rem;
     position: fixed;
@@ -1954,10 +2098,8 @@ footer {
 }
 
 @media screen and (min-width: 571px) and (max-width: 605px) {
-  body {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
+  /* Top/Cover */
+
   .cover {
     position: fixed;
     top: 0;
@@ -1970,6 +2112,14 @@ footer {
       margin-top: -1.25rem;
     }
   }
+
+  /* Body */
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   .morse-grid-container {
     overflow: hidden;
     margin-top: -2rem;
@@ -1980,7 +2130,7 @@ footer {
     gap: 0;
   }
   .morse-grid-column {
-    width: 27rem;
+    width: 52rem !important;
     height: 40rem;
     transform: scale(0.6);
     margin-left: -0.25rem;
@@ -2009,8 +2159,9 @@ footer {
   }
   .end-prompt {
     position: fixed;
+    height: 55vh !important;
     #end-prompt-grid {
-      margin-top: 4rem;
+      margin-top: 3.5rem;
       grid-template-columns: 1fr;
 
       > #clara-profile-container {
@@ -2033,150 +2184,13 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 45vh;
+    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.75rem;
-      margin: 1rem 2rem;
-    }
-
-    > textarea {
-      margin-top: -1rem;
-      width: 85.1%;
-      height: 65%;
-      margin-left: 1.5rem;
-      font-size: 1rem;
-    }
-    #icon-container {
-      margin-top: -0.25rem;
-      margin-left: 2.26rem;
-    }
-    .icon {
-      width: 2rem;
-    }
-  }
-
-  #clara-random {
-    position: fixed;
-    bottom: 4%;
-    margin-right: 0.68rem;
-    width: 8rem;
-    height: 8rem;
-
-    > div {
-      margin-top: -0.85rem;
-      margin-left: -0.75rem;
-    }
-
-    #clara-random-text {
-      font-size: 1rem;
-    }
-  }
-
-  footer {
-    height: 2.5rem;
-    position: fixed;
-    bottom: 0;
-    z-index: 20;
-  }
-}
-
-@media screen and (min-width: 605px) and (max-width: 630px) {
-  body {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-  .cover {
-    position: fixed;
-    top: 0;
-    z-index: 120;
-    height: 0.1rem;
-
-    #cover-image {
-      width: 9.25rem;
-      height: 2.75rem;
-      margin-top: -1.25rem;
-    }
-  }
-  .morse-grid-container {
-    overflow: hidden;
-    margin-top: -2rem;
-  }
-  .morse-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.25fr;
-    gap: 0;
-  }
-  .morse-grid-column {
-    width: 27rem;
-    height: 40rem;
-    transform: scale(0.6);
-    margin-left: -0.25rem;
-    overflow: hidden;
-  }
-
-  #morse-grid-column-two {
-    margin-top: -14rem;
-    margin-bottom: -3rem;
-  }
-
-  .input {
-    > h3 {
-      font-size: 3.5rem;
-    }
-
-    > textarea {
-      padding-bottom: 0.5rem;
-    }
-  }
-
-  .clara {
-    width: 20rem;
-    height: 20rem;
-    z-index: 100;
-  }
-  .end-prompt {
-    position: fixed;
-    height: 30rem !important;
-    #end-prompt-grid {
-      margin-top: 8rem;
-      grid-template-columns: 1fr;
-      transform: scale(1.4);
-
-      > #clara-profile-container {
-        margin-top: -1.5rem;
-        margin-bottom: -1.5rem;
-
-        > img {
-          width: 8rem;
-          height: 8rem;
-        }
-      }
-
-      > #end-prompt-text-container {
-        padding: 0rem 6rem;
-      }
-
-      #end-prompt-close {
-        margin-top: 0.25rem;
-        width: 2.1rem;
-      }
-    }
-  }
-  #output-container {
-    transform: scale(0.98);
-    position: fixed;
-    width: 95vw;
-    height: 45vh;
-    top: 25%;
-    left: 1%;
-
-    z-index: 1;
-    > h3 {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       margin: 1rem 2rem;
     }
 
@@ -2192,13 +2206,13 @@ footer {
       margin-left: 2.26rem;
     }
     .icon {
-      width: 2rem;
+      width: 1.5rem;
     }
   }
 
   #clara-random {
     position: fixed;
-    bottom: 4%;
+    bottom: 5%;
     margin-right: 0.68rem;
     width: 8rem;
     height: 8rem;
@@ -2212,6 +2226,202 @@ footer {
       font-size: 1rem;
     }
   }
+
+  /* Touch Button */
+
+  .touch-button-container {
+    #enter-button {
+      width: 5.75rem;
+      height: 5.75rem;
+      display: block;
+      position: fixed;
+      top: 12%;
+      right: 7%;
+    }
+    #s-button {
+      width: 4rem;
+      height: 4rem;
+      display: block;
+      position: fixed;
+      top: 28%;
+      right: 3%;
+    }
+  }
+
+  /* Help Modal */
+  .help-container {
+    left: 9%;
+    width: 30rem;
+  }
+
+  /* Footer */
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 605px) and (max-width: 630px) {
+  /* Top/Cover */
+
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+
+  /* Body */
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 55rem !important;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    height: 55vh !important;
+    #end-prompt-grid {
+      margin-top: 3.5rem;
+      grid-template-columns: 1fr;
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.25rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 60vh !important;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.5rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 85.8%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -0.25rem;
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 1.5rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  /* Touch Button */
+
+  .touch-button-container {
+    #enter-button {
+      width: 5.75rem;
+      height: 5.75rem;
+      display: block;
+      position: fixed;
+      top: 12%;
+      right: 7%;
+    }
+    #s-button {
+      width: 4rem;
+      height: 4rem;
+      display: block;
+      position: fixed;
+      top: 28%;
+      right: 3%;
+    }
+  }
+
+  /* Help Modal */
+  .help-container {
+    left: 9%;
+    width: 30rem;
+  }
+
+  /* Footer */
 
   footer {
     height: 2.5rem;
@@ -2222,10 +2432,8 @@ footer {
 }
 
 @media screen and (min-width: 630px) and (max-width: 652px) {
-  body {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
+  /* Top/Cover */
+
   .cover {
     position: fixed;
     top: 0;
@@ -2238,6 +2446,14 @@ footer {
       margin-top: -1.25rem;
     }
   }
+
+  /* Body */
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   .morse-grid-container {
     overflow: hidden;
     margin-top: -2rem;
@@ -2248,7 +2464,7 @@ footer {
     gap: 0;
   }
   .morse-grid-column {
-    width: 27rem;
+    width: 58rem !important;
     height: 40rem;
     transform: scale(0.6);
     margin-left: -0.25rem;
@@ -2277,11 +2493,10 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 30rem !important;
+    height: 55vh !important;
     #end-prompt-grid {
-      margin-top: 8rem;
+      margin-top: 3.5rem;
       grid-template-columns: 1fr;
-      transform: scale(1.4);
 
       > #clara-profile-container {
         margin-top: -1.5rem;
@@ -2293,13 +2508,9 @@ footer {
         }
       }
 
-      > #end-prompt-text-container {
-        padding: 0rem 6rem;
-      }
-
       #end-prompt-close {
         margin-top: 0.25rem;
-        width: 2.1rem;
+        width: 2.25rem;
       }
     }
   }
@@ -2307,19 +2518,19 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 45vh;
+    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
-      width: 86.5%;
+      width: 85.8%;
       height: 65%;
       margin-left: 1.5rem;
       font-size: 1rem;
@@ -2329,13 +2540,13 @@ footer {
       margin-left: 2.26rem;
     }
     .icon {
-      width: 2rem;
+      width: 1.25rem;
     }
   }
 
   #clara-random {
     position: fixed;
-    bottom: 4%;
+    bottom: 5%;
     margin-right: 0.68rem;
     width: 8rem;
     height: 8rem;
@@ -2349,6 +2560,35 @@ footer {
       font-size: 1rem;
     }
   }
+
+  /* Touch Button */
+
+  .touch-button-container {
+    #enter-button {
+      width: 5.75rem;
+      height: 5.75rem;
+      display: block;
+      position: fixed;
+      top: 12%;
+      right: 7%;
+    }
+    #s-button {
+      width: 4rem;
+      height: 4rem;
+      display: block;
+      position: fixed;
+      top: 28%;
+      right: 3%;
+    }
+  }
+
+  /* Help Modal */
+  .help-container {
+    left: 9%;
+    width: 32rem;
+  }
+
+  /* Footer */
 
   footer {
     height: 2.5rem;
@@ -2359,10 +2599,8 @@ footer {
 }
 
 @media screen and (min-width: 652px) and (max-width: 672px) {
-  body {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
+  /* Top/Cover */
+
   .cover {
     position: fixed;
     top: 0;
@@ -2375,6 +2613,14 @@ footer {
       margin-top: -1.25rem;
     }
   }
+
+  /* Body */
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   .morse-grid-container {
     overflow: hidden;
     margin-top: -2rem;
@@ -2385,7 +2631,7 @@ footer {
     gap: 0;
   }
   .morse-grid-column {
-    width: 27rem;
+    width: 61rem !important;
     height: 40rem;
     transform: scale(0.6);
     margin-left: -0.25rem;
@@ -2414,11 +2660,10 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 30rem !important;
+    height: 52vh !important;
     #end-prompt-grid {
-      margin-top: 8rem;
+      margin-top: 4.5rem;
       grid-template-columns: 1fr;
-      transform: scale(1.4);
 
       > #clara-profile-container {
         margin-top: -1.5rem;
@@ -2430,13 +2675,9 @@ footer {
         }
       }
 
-      > #end-prompt-text-container {
-        padding: 0rem 6rem;
-      }
-
       #end-prompt-close {
         margin-top: 0.25rem;
-        width: 2.1rem;
+        width: 2.25rem;
       }
     }
   }
@@ -2444,19 +2685,19 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 45vh;
+    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
-      width: 86.85%;
+      width: 85.8%;
       height: 65%;
       margin-left: 1.5rem;
       font-size: 1rem;
@@ -2466,13 +2707,13 @@ footer {
       margin-left: 2.26rem;
     }
     .icon {
-      width: 2rem;
+      width: 1.25rem;
     }
   }
 
   #clara-random {
     position: fixed;
-    bottom: 4%;
+    bottom: 5%;
     margin-right: 0.68rem;
     width: 8rem;
     height: 8rem;
@@ -2486,6 +2727,35 @@ footer {
       font-size: 1rem;
     }
   }
+
+  /* Touch Button */
+
+  .touch-button-container {
+    #enter-button {
+      width: 5.75rem;
+      height: 5.75rem;
+      display: block;
+      position: fixed;
+      top: 12%;
+      right: 7%;
+    }
+    #s-button {
+      width: 4rem;
+      height: 4rem;
+      display: block;
+      position: fixed;
+      top: 28%;
+      right: 3%;
+    }
+  }
+
+  /* Help Modal */
+  .help-container {
+    left: 9%;
+    width: 34rem;
+  }
+
+  /* Footer */
 
   footer {
     height: 2.5rem;
@@ -2496,10 +2766,8 @@ footer {
 }
 
 @media screen and (min-width: 672px) and (max-width: 700px) {
-  body {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
+  /* Top/Cover */
+
   .cover {
     position: fixed;
     top: 0;
@@ -2512,6 +2780,14 @@ footer {
       margin-top: -1.25rem;
     }
   }
+
+  /* Body */
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   .morse-grid-container {
     overflow: hidden;
     margin-top: -2rem;
@@ -2522,7 +2798,7 @@ footer {
     gap: 0;
   }
   .morse-grid-column {
-    width: 27rem;
+    width: 64rem !important;
     height: 40rem;
     transform: scale(0.6);
     margin-left: -0.25rem;
@@ -2551,11 +2827,10 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 30rem !important;
+    height: 52vh !important;
     #end-prompt-grid {
-      margin-top: 8rem;
+      margin-top: 4.5rem;
       grid-template-columns: 1fr;
-      transform: scale(1.4);
 
       > #clara-profile-container {
         margin-top: -1.5rem;
@@ -2567,13 +2842,9 @@ footer {
         }
       }
 
-      > #end-prompt-text-container {
-        padding: 0rem 6rem;
-      }
-
       #end-prompt-close {
         margin-top: 0.25rem;
-        width: 2.1rem;
+        width: 2.25rem;
       }
     }
   }
@@ -2581,19 +2852,19 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 45vh;
+    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
-      width: 87.35%;
+      width: 85.8%;
       height: 65%;
       margin-left: 1.5rem;
       font-size: 1rem;
@@ -2603,13 +2874,13 @@ footer {
       margin-left: 2.26rem;
     }
     .icon {
-      width: 2rem;
+      width: 1.25rem;
     }
   }
 
   #clara-random {
     position: fixed;
-    bottom: 4%;
+    bottom: 5%;
     margin-right: 0.68rem;
     width: 8rem;
     height: 8rem;
@@ -2623,6 +2894,35 @@ footer {
       font-size: 1rem;
     }
   }
+
+  /* Touch Button */
+
+  .touch-button-container {
+    #enter-button {
+      width: 5.75rem;
+      height: 5.75rem;
+      display: block;
+      position: fixed;
+      top: 12%;
+      right: 7%;
+    }
+    #s-button {
+      width: 4rem;
+      height: 4rem;
+      display: block;
+      position: fixed;
+      top: 28%;
+      right: 3%;
+    }
+  }
+
+  /* Help Modal */
+  .help-container {
+    left: 9%;
+    width: 34rem;
+  }
+
+  /* Footer */
 
   footer {
     height: 2.5rem;
@@ -2633,10 +2933,8 @@ footer {
 }
 
 @media screen and (min-width: 700px) and (max-width: 730px) {
-  body {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
+  /* Top/Cover */
+
   .cover {
     position: fixed;
     top: 0;
@@ -2649,6 +2947,14 @@ footer {
       margin-top: -1.25rem;
     }
   }
+
+  /* Body */
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   .morse-grid-container {
     overflow: hidden;
     margin-top: -2rem;
@@ -2659,7 +2965,7 @@ footer {
     gap: 0;
   }
   .morse-grid-column {
-    width: 27rem;
+    width: 67rem !important;
     height: 40rem;
     transform: scale(0.6);
     margin-left: -0.25rem;
@@ -2688,11 +2994,10 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 30rem !important;
+    height: 52vh !important;
     #end-prompt-grid {
-      margin-top: 8rem;
+      margin-top: 4.5rem;
       grid-template-columns: 1fr;
-      transform: scale(1.4);
 
       > #clara-profile-container {
         margin-top: -1.5rem;
@@ -2704,13 +3009,9 @@ footer {
         }
       }
 
-      > #end-prompt-text-container {
-        padding: 0rem 6rem;
-      }
-
       #end-prompt-close {
         margin-top: 0.25rem;
-        width: 2.1rem;
+        width: 2.25rem;
       }
     }
   }
@@ -2718,35 +3019,34 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 45vh;
+    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
-      width: 88.15%;
+      width: 85.8%;
       height: 65%;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-top: -0.25rem;
       margin-left: 2.26rem;
     }
     .icon {
-      width: 2rem;
+      width: 1.25rem;
     }
   }
 
   #clara-random {
     position: fixed;
-    bottom: 4%;
+    bottom: 5%;
     margin-right: 0.68rem;
     width: 8rem;
     height: 8rem;
@@ -2760,6 +3060,35 @@ footer {
       font-size: 1rem;
     }
   }
+
+  /* Touch Button */
+
+  .touch-button-container {
+    #enter-button {
+      width: 5.75rem;
+      height: 5.75rem;
+      display: block;
+      position: fixed;
+      top: 12%;
+      right: 7%;
+    }
+    #s-button {
+      width: 4rem;
+      height: 4rem;
+      display: block;
+      position: fixed;
+      top: 28%;
+      right: 3%;
+    }
+  }
+
+  /* Help Modal */
+  .help-container {
+    left: 9%;
+    width: 36rem;
+  }
+
+  /* Footer */
 
   footer {
     height: 2.5rem;
@@ -2771,10 +3100,8 @@ footer {
 
 // Medium to Large Devices like tablets to laptops.
 @media screen and (min-width: 730px) and (max-width: 770px) {
-  body {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
+  /* Top/Cover */
+
   .cover {
     position: fixed;
     top: 0;
@@ -2787,6 +3114,14 @@ footer {
       margin-top: -1.25rem;
     }
   }
+
+  /* Body */
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   .morse-grid-container {
     overflow: hidden;
     margin-top: -2rem;
@@ -2797,7 +3132,7 @@ footer {
     gap: 0;
   }
   .morse-grid-column {
-    width: 27rem;
+    width: 70rem !important;
     height: 40rem;
     transform: scale(0.6);
     margin-left: -0.25rem;
@@ -2826,11 +3161,10 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 30rem !important;
+    height: 52vh !important;
     #end-prompt-grid {
-      margin-top: 8rem;
+      margin-top: 4.5rem;
       grid-template-columns: 1fr;
-      transform: scale(1.4);
 
       > #clara-profile-container {
         margin-top: -1.5rem;
@@ -2842,13 +3176,9 @@ footer {
         }
       }
 
-      > #end-prompt-text-container {
-        padding: 0rem 6rem;
-      }
-
       #end-prompt-close {
         margin-top: 0.25rem;
-        width: 2.1rem;
+        width: 2.25rem;
       }
     }
   }
@@ -2856,35 +3186,34 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 45vh;
+    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
-      width: 88.15%;
+      width: 87%;
       height: 65%;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-top: -0.25rem;
       margin-left: 2.26rem;
     }
     .icon {
-      width: 2rem;
+      width: 1.25rem;
     }
   }
 
   #clara-random {
     position: fixed;
-    bottom: 3.5%;
+    bottom: 5%;
     margin-right: 0.68rem;
     width: 8rem;
     height: 8rem;
@@ -2898,6 +3227,35 @@ footer {
       font-size: 1rem;
     }
   }
+
+  /* Touch Button */
+
+  .touch-button-container {
+    #enter-button {
+      width: 5.75rem;
+      height: 5.75rem;
+      display: block;
+      position: fixed;
+      top: 12%;
+      right: 7%;
+    }
+    #s-button {
+      width: 4rem;
+      height: 4rem;
+      display: block;
+      position: fixed;
+      top: 28%;
+      right: 3%;
+    }
+  }
+
+  /* Help Modal */
+  .help-container {
+    left: 9%;
+    width: 36rem;
+  }
+
+  /* Footer */
 
   footer {
     height: 2.5rem;
@@ -2908,10 +3266,8 @@ footer {
 }
 
 @media screen and (min-width: 770px) and (max-width: 800px) {
-  body {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
+  /* Top/Cover */
+
   .cover {
     position: fixed;
     top: 0;
@@ -2924,6 +3280,14 @@ footer {
       margin-top: -1.25rem;
     }
   }
+
+  /* Body */
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   .morse-grid-container {
     overflow: hidden;
     margin-top: -2rem;
@@ -2934,7 +3298,7 @@ footer {
     gap: 0;
   }
   .morse-grid-column {
-    width: 27rem;
+    width: 70rem !important;
     height: 40rem;
     transform: scale(0.6);
     margin-left: -0.25rem;
@@ -2963,11 +3327,10 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 30rem !important;
+    height: 52vh !important;
     #end-prompt-grid {
-      margin-top: 8rem;
+      margin-top: 4.5rem;
       grid-template-columns: 1fr;
-      transform: scale(1.4);
 
       > #clara-profile-container {
         margin-top: -1.5rem;
@@ -2979,13 +3342,9 @@ footer {
         }
       }
 
-      > #end-prompt-text-container {
-        padding: 0rem 6rem;
-      }
-
       #end-prompt-close {
         margin-top: 0.25rem;
-        width: 2.1rem;
+        width: 2.25rem;
       }
     }
   }
@@ -2993,150 +3352,13 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 45vh;
+    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.75rem;
-      margin: 1rem 2rem;
-    }
-
-    > textarea {
-      margin-top: -1rem;
-      width: 88.15%;
-      height: 65%;
-      margin-left: 1.5rem;
-      font-size: 1rem;
-    }
-    #icon-container {
-      margin-top: -0.25rem;
-      margin-left: 2.26rem;
-    }
-    .icon {
-      width: 2rem;
-    }
-  }
-
-  #clara-random {
-    position: fixed;
-    bottom: 4%;
-    margin-right: 0.68rem;
-    width: 8rem;
-    height: 8rem;
-
-    > div {
-      margin-top: -0.85rem;
-      margin-left: -0.75rem;
-    }
-
-    #clara-random-text {
-      font-size: 1rem;
-    }
-  }
-
-  footer {
-    height: 2.5rem;
-    position: fixed;
-    bottom: 0;
-    z-index: 20;
-  }
-}
-
-@media screen and (min-width: 800px) and (max-width: 850px) {
-  body {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-  .cover {
-    position: fixed;
-    top: 0;
-    z-index: 120;
-    height: 0.1rem;
-
-    #cover-image {
-      width: 9.25rem;
-      height: 2.75rem;
-      margin-top: -1.25rem;
-    }
-  }
-  .morse-grid-container {
-    overflow: hidden;
-    margin-top: -2rem;
-  }
-  .morse-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.25fr;
-    gap: 0;
-  }
-  .morse-grid-column {
-    width: 27rem;
-    height: 40rem;
-    transform: scale(0.6);
-    margin-left: -0.25rem;
-    overflow: hidden;
-  }
-
-  #morse-grid-column-two {
-    margin-top: -14rem;
-    margin-bottom: -3rem;
-  }
-
-  .input {
-    > h3 {
-      font-size: 3.5rem;
-    }
-
-    > textarea {
-      padding-bottom: 0.5rem;
-    }
-  }
-
-  .clara {
-    width: 20rem;
-    height: 20rem;
-    z-index: 100;
-  }
-  .end-prompt {
-    position: fixed;
-    height: 30rem !important;
-    #end-prompt-grid {
-      margin-top: 8rem;
-      grid-template-columns: 1fr;
-      transform: scale(1.4);
-
-      > #clara-profile-container {
-        margin-top: -1.5rem;
-        margin-bottom: -1.5rem;
-
-        > img {
-          width: 8rem;
-          height: 8rem;
-        }
-      }
-
-      > #end-prompt-text-container {
-        padding: 0rem 6rem;
-      }
-
-      #end-prompt-close {
-        margin-top: 0.25rem;
-        width: 2.1rem;
-      }
-    }
-  }
-  #output-container {
-    transform: scale(0.98);
-    position: fixed;
-    width: 95vw;
-    height: 45vh;
-    top: 25%;
-    left: 1%;
-
-    z-index: 1;
-    > h3 {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       margin: 1rem 2rem;
     }
 
@@ -3148,17 +3370,16 @@ footer {
       font-size: 1rem;
     }
     #icon-container {
-      margin-top: -0.25rem;
       margin-left: 2.26rem;
     }
     .icon {
-      width: 2rem;
+      width: 1.25rem;
     }
   }
 
   #clara-random {
     position: fixed;
-    bottom: 4%;
+    bottom: 5%;
     margin-right: 0.68rem;
     width: 8rem;
     height: 8rem;
@@ -3172,6 +3393,201 @@ footer {
       font-size: 1rem;
     }
   }
+
+  /* Touch Button */
+
+  .touch-button-container {
+    #enter-button {
+      width: 5.75rem;
+      height: 5.75rem;
+      display: block;
+      position: fixed;
+      top: 12%;
+      right: 7%;
+    }
+    #s-button {
+      width: 4rem;
+      height: 4rem;
+      display: block;
+      position: fixed;
+      top: 28%;
+      right: 3%;
+    }
+  }
+
+  /* Help Modal */
+  .help-container {
+    left: 9%;
+    width: 38rem;
+  }
+
+  /* Footer */
+
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 850px) {
+  /* Top/Cover */
+
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+
+  /* Body */
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 70rem !important;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+    height: 52vh !important;
+    #end-prompt-grid {
+      margin-top: 4.5rem;
+      grid-template-columns: 1fr;
+
+      > #clara-profile-container {
+        margin-top: -1.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.25rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    height: 60vh !important;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.5rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 87%;
+      height: 65%;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-left: 2.26rem;
+    }
+    .icon {
+      width: 1.25rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  /* Touch Button */
+
+  .touch-button-container {
+    #enter-button {
+      width: 5.75rem;
+      height: 5.75rem;
+      display: block;
+      position: fixed;
+      top: 12%;
+      right: 7%;
+    }
+    #s-button {
+      width: 4rem;
+      height: 4rem;
+      display: block;
+      position: fixed;
+      top: 28%;
+      right: 3%;
+    }
+  }
+
+  /* Help Modal */
+  .help-container {
+    left: 9%;
+    width: 38rem;
+  }
+
+  /* Footer */
 
   footer {
     height: 2.5rem;
@@ -3182,10 +3598,8 @@ footer {
 }
 
 @media screen and (min-width: 850px) and (max-width: 900px) {
-  body {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
+  /* Top/Cover */
+
   .cover {
     position: fixed;
     top: 0;
@@ -3198,6 +3612,14 @@ footer {
       margin-top: -1.25rem;
     }
   }
+
+  /* Body */
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   .morse-grid-container {
     overflow: hidden;
     margin-top: -2rem;
@@ -3208,7 +3630,7 @@ footer {
     gap: 0;
   }
   .morse-grid-column {
-    width: 27rem;
+    width: 73rem !important;
     height: 40rem;
     transform: scale(0.6);
     margin-left: -0.25rem;
@@ -3237,11 +3659,10 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 30rem !important;
+    height: 52vh !important;
     #end-prompt-grid {
-      margin-top: 8rem;
+      margin-top: 4.5rem;
       grid-template-columns: 1fr;
-      transform: scale(1.4);
 
       > #clara-profile-container {
         margin-top: -1.5rem;
@@ -3253,13 +3674,9 @@ footer {
         }
       }
 
-      > #end-prompt-text-container {
-        padding: 0rem 6rem;
-      }
-
       #end-prompt-close {
         margin-top: 0.25rem;
-        width: 2.1rem;
+        width: 2.25rem;
       }
     }
   }
@@ -3267,35 +3684,34 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 45vh;
+    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
-      width: 90%;
+      width: 87%;
       height: 65%;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-top: -0.25rem;
       margin-left: 2.26rem;
     }
     .icon {
-      width: 2rem;
+      width: 1.25rem;
     }
   }
 
   #clara-random {
     position: fixed;
-    bottom: 4%;
+    bottom: 5%;
     margin-right: 0.68rem;
     width: 8rem;
     height: 8rem;
@@ -3309,6 +3725,35 @@ footer {
       font-size: 1rem;
     }
   }
+
+  /* Touch Button */
+
+  .touch-button-container {
+    #enter-button {
+      width: 5.75rem;
+      height: 5.75rem;
+      display: block;
+      position: fixed;
+      top: 12%;
+      right: 7%;
+    }
+    #s-button {
+      width: 4rem;
+      height: 4rem;
+      display: block;
+      position: fixed;
+      top: 28%;
+      right: 3%;
+    }
+  }
+
+  /* Help Modal */
+  .help-container {
+    left: 9%;
+    width: 40rem;
+  }
+
+  /* Footer */
 
   footer {
     height: 2.5rem;
@@ -3319,10 +3764,8 @@ footer {
 }
 
 @media screen and (min-width: 900px) and (max-width: 950px) {
-  body {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
+  /* Top/Cover */
+
   .cover {
     position: fixed;
     top: 0;
@@ -3335,6 +3778,14 @@ footer {
       margin-top: -1.25rem;
     }
   }
+
+  /* Body */
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   .morse-grid-container {
     overflow: hidden;
     margin-top: -2rem;
@@ -3345,7 +3796,7 @@ footer {
     gap: 0;
   }
   .morse-grid-column {
-    width: 27rem;
+    width: 76rem !important;
     height: 40rem;
     transform: scale(0.6);
     margin-left: -0.25rem;
@@ -3374,11 +3825,10 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 30rem !important;
+    height: 52vh !important;
     #end-prompt-grid {
-      margin-top: 8rem;
+      margin-top: 4.5rem;
       grid-template-columns: 1fr;
-      transform: scale(1.4);
 
       > #clara-profile-container {
         margin-top: -1.5rem;
@@ -3390,13 +3840,9 @@ footer {
         }
       }
 
-      > #end-prompt-text-container {
-        padding: 0rem 6rem;
-      }
-
       #end-prompt-close {
         margin-top: 0.25rem;
-        width: 2.1rem;
+        width: 2.25rem;
       }
     }
   }
@@ -3404,35 +3850,34 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 45vh;
+    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
-      width: 90.5%;
+      width: 87%;
       height: 65%;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-top: -0.25rem;
       margin-left: 2.26rem;
     }
     .icon {
-      width: 2rem;
+      width: 1.25rem;
     }
   }
 
   #clara-random {
     position: fixed;
-    bottom: 4%;
+    bottom: 5%;
     margin-right: 0.68rem;
     width: 8rem;
     height: 8rem;
@@ -3446,6 +3891,35 @@ footer {
       font-size: 1rem;
     }
   }
+
+  /* Touch Button */
+
+  .touch-button-container {
+    #enter-button {
+      width: 5.75rem;
+      height: 5.75rem;
+      display: block;
+      position: fixed;
+      top: 12%;
+      right: 7%;
+    }
+    #s-button {
+      width: 4rem;
+      height: 4rem;
+      display: block;
+      position: fixed;
+      top: 28%;
+      right: 3%;
+    }
+  }
+
+  /* Help Modal */
+  .help-container {
+    left: 9%;
+    width: 42rem;
+  }
+
+  /* Footer */
 
   footer {
     height: 2.5rem;

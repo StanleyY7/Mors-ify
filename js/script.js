@@ -349,6 +349,25 @@ window.addEventListener("DOMContentLoaded", () => {
   enterButton.addEventListener("click", startClaraViaTouchButtons);
   sButton.addEventListener("click", endClaraViaTouchButtons);
 
+  /* Help Modal */
+  const helpClose = document.querySelector("#help-close");
+  const helpContainer = document.querySelector(".help-container");
+
+  const hideHelp = () => {
+    helpContainer.style.display = "none";
+    claraMin.style.transform = "scale(1)";
+    claraMin.style.filter = "brightness(100%)";
+  };
+
+  const displayHelp = () => {
+    claraMin.style.transform = "scale(1.08)";
+    claraMin.style.filter = "brightness(120%)";
+    helpContainer.style.display = "block";
+  };
+
+  helpClose.addEventListener("click", hideHelp);
+  claraMin.addEventListener("click", displayHelp);
+
   /* Draggable Elements */
 
   const draggableElements = document.querySelectorAll(".draggable");
