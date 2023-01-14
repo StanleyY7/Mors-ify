@@ -1,8 +1,6 @@
 # Project: Mors•ify (Morse Code Translator)
 
-Link
-
-Repo Link
+Link https://stanleyy7.github.io/Mors-ify/
 
 ![image](https://user-images.githubusercontent.com/119549394/211766257-dadbbf7e-8b4a-46ee-a051-7193ee958c1b.png)
 
@@ -15,6 +13,7 @@ The main aim of this project was to expand on previous knowledge around HTML & S
 - A responsive UI.
 - Ability to translate text to morse code (with proper spacing).
 - Ability to translate morse code to text (with proper spacing).
+- Use of tests.
 
 ## MVP
 
