@@ -7074,7 +7074,9 @@ footer {
 
 @media screen and (min-width: 1830px) and (max-width: 2000px) and (min-height: 1250px) {
   /* Top/Cover */
-
+  .cover {
+    width: 101.75vw;
+  }
   #cover-image {
     margin-left: 4rem;
   }
@@ -7209,6 +7211,7 @@ footer {
 
 @media screen and (min-width: 2000px) and (max-width: 2119px) {
   /* Top/Cover */
+
   .cover {
     width: 102vw;
   }
@@ -7342,6 +7345,9 @@ footer {
 
 @media screen and (min-width: 2119px) and (max-width: 2312px) {
   /* Top/Cover */
+  .cover {
+    width: 101vw;
+  }
   #cover-image {
     margin-left: 4rem;
   }
@@ -7462,6 +7468,9 @@ footer {
 
 @media screen and (min-width: 2312px) and (max-width: 2500px) {
   /* Top/Cover */
+  .cover {
+    width: 101vw;
+  }
   #cover-image {
     margin-left: 4rem;
   }
@@ -7580,6 +7589,9 @@ footer {
 
 @media screen and (min-width: 2500px) {
   /* Top/Cover */
+  .cover {
+    width: 101vw;
+  }
   #cover-image {
     margin-left: 4rem;
   }
