@@ -35,7 +35,7 @@ strong {
   font-weight: 400;
 }
 
-// Top
+/* Top/cover */
 
 .cover {
   background-color: $mainColor;
@@ -80,7 +80,7 @@ strong {
   left: 0;
 }
 
-// Content
+/*  Body */
 .morse-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -141,7 +141,7 @@ strong {
   position: absolute;
   top: 15.5%;
   left: 20%;
-  height: 72.5vh;
+
   width: 60vw;
   background-color: $modalColor;
   backdrop-filter: blur(1.6rem);
@@ -179,43 +179,10 @@ strong {
   }
 }
 
-#output-container-for-morse {
-  @extend #output-container;
-}
-#icon-container-morse {
-  @extend #icon-container;
-}
-// Clara
-
-.clara {
-  width: 35rem;
-  height: 35rem;
-}
-
-// End
-
-footer {
-  width: 100vw;
-  height: 12vh;
-  background-color: #918ef4;
-}
-
-#clara-next {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  display: none;
-}
-
-#clara-middle {
-  @extend .intro-image;
-  display: none;
-}
-
 .end-prompt {
   @extend #output-container;
   display: block;
-  height: 15rem;
+  height: min-content;
   width: 45rem;
   text-align: center;
   display: none;
@@ -232,10 +199,39 @@ footer {
       }
     }
 
+    #end-prompt-text-container {
+      margin: 2rem;
+      > h3 {
+        padding: 0.5rem;
+      }
+      > p {
+        padding: 0.5rem;
+      }
+    }
+
     #end-prompt-close {
       padding: 0.5rem;
     }
   }
+}
+
+// Clara
+
+.clara {
+  width: 35rem;
+  height: 35rem;
+}
+
+#clara-next {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+
+#clara-middle {
+  @extend .intro-image;
+  display: none;
 }
 
 #clara-random {
@@ -276,16 +272,6 @@ footer {
   }
 }
 
-#end-prompt-text-container {
-  margin: 2rem;
-  > h3 {
-    padding: 0.5rem;
-  }
-  > p {
-    padding: 0.5rem;
-  }
-}
-
 /* Touch Buttons */
 .touch-button-container {
   #enter-button {
@@ -317,9 +303,10 @@ footer {
   position: fixed;
   top: 20%;
   left: 50%;
-
+  z-index: 120;
   width: 10rem;
   border-radius: 1rem;
+  border: 0.1rem groove rgba(0, 0, 0, 0.445);
   background-color: $modalColor;
   display: none;
   height: min-content;
@@ -346,6 +333,14 @@ footer {
       width: 1.5rem;
     }
   }
+}
+
+/* Footer */
+
+footer {
+  width: 100vw;
+  height: 12vh;
+  background-color: #918ef4;
 }
 
 // Effects
@@ -474,8 +469,9 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 25rem !important;
+
     #end-prompt-grid {
+      margin-top: 2rem;
       grid-template-columns: 1fr;
 
       > #clara-profile-container {
@@ -497,8 +493,8 @@ footer {
   #output-container {
     transform: scale(0.98);
     position: fixed;
+    height: min-content;
     width: 95vw;
-    height: 52vh;
     top: 25%;
     left: 1%;
 
@@ -511,15 +507,17 @@ footer {
     > textarea {
       margin-top: -1rem;
       width: 70%;
-      height: 62.5%;
+      height: 12rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
+      margin-top: -1rem;
       margin-left: 2rem;
     }
     .icon {
-      width: 1rem;
+      margin: 0.5rem 0rem;
+      width: 0.75rem;
     }
   }
 
@@ -563,7 +561,6 @@ footer {
   /* Help Modal */
   .help-container {
     left: 20%;
-    height: min-content;
 
     #help-content-grid {
       > h3 {
@@ -660,9 +657,8 @@ footer {
 
   .end-prompt {
     position: fixed;
-    height: 62vh !important;
     #end-prompt-grid {
-      margin-top: -2rem;
+      margin-top: -1rem;
       grid-template-columns: 1fr;
 
       > #clara-profile-container {
@@ -686,7 +682,6 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 47vh;
     top: 25%;
     left: 1%;
 
@@ -699,17 +694,17 @@ footer {
     > textarea {
       margin-top: -1rem;
       width: 70%;
-      height: 65%;
+      height: 12rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
-
     #icon-container {
-      margin-top: -0.5rem;
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 1rem;
+      margin: 0.5rem 0rem;
+      width: 0.75rem;
     }
   }
 
@@ -825,8 +820,9 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 59vh !important;
+
     #end-prompt-grid {
+      margin-top: 1rem;
       grid-template-columns: 1fr;
       > #clara-profile-container {
         margin-top: 2rem;
@@ -849,7 +845,6 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 47vh;
     top: 25%;
     left: 1%;
 
@@ -861,18 +856,18 @@ footer {
 
     > textarea {
       margin-top: -1rem;
-      width: 70%;
-      height: 65%;
+      width: 71.5%;
+      height: 12rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
-
     #icon-container {
-      margin-top: -0.5rem;
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 1rem;
+      margin: 0.5rem 0rem;
+      width: 0.75rem;
     }
   }
 
@@ -992,9 +987,9 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 59vh !important;
     #end-prompt-grid {
       grid-template-columns: 1fr;
+      margin-top: 1rem;
 
       > #clara-profile-container {
         margin-top: 2rem;
@@ -1017,29 +1012,29 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 45vh;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1rem;
+      font-size: 1.1rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
       width: 73%;
-      height: 62%;
+      height: 12rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-top: -0.25rem;
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 1rem;
+      margin: 0.5rem 0rem;
+      width: 0.75rem;
     }
   }
 
@@ -1158,8 +1153,8 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 59vh !important;
     #end-prompt-grid {
+      margin-top: 0.75rem;
       grid-template-columns: 1fr;
 
       > #clara-profile-container {
@@ -1183,7 +1178,6 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 45vh;
     top: 25%;
     left: 1%;
 
@@ -1195,19 +1189,18 @@ footer {
 
     > textarea {
       margin-top: -1rem;
-      width: 73%;
-      height: 62%;
+      width: 75%;
+      height: 12rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
-
     #icon-container {
-      margin-top: -0.5rem !important;
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
-
     .icon {
-      width: 1rem;
+      margin: 0.5rem 0rem;
+      width: 0.75rem;
     }
   }
 
@@ -1266,7 +1259,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 385px) and (max-width: 435px) {
+@media screen and (min-width: 385px) and (max-width: 415px) {
   /* Top/Cover */
 
   .cover {
@@ -1329,6 +1322,7 @@ footer {
     position: fixed;
 
     #end-prompt-grid {
+      margin-top: 2rem;
       grid-template-columns: 1fr;
       transform: scale(0.95);
 
@@ -1352,29 +1346,195 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 50vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
+      margin: 1rem 2rem;
+    }
+
+    > textarea {
+      margin-top: -1rem;
+      width: 78%;
+      height: 12rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
+    }
+    .icon {
+      margin: 0.5rem 0rem;
+      width: 0.75rem;
+    }
+  }
+
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
+    }
+  }
+
+  /* Touch Button */
+
+  .touch-button-container {
+    #enter-button {
+      width: 5.75rem;
+      height: 5.75rem;
+      display: block;
+      position: fixed;
+      top: 12%;
+      right: 7%;
+    }
+    #s-button {
+      width: 4rem;
+      height: 4rem;
+      display: block;
+      position: fixed;
+      top: 28%;
+      right: 3%;
+    }
+  }
+
+  /* Help Modal */
+  .help-container {
+    left: 10%;
+    width: 19rem;
+  }
+
+  /* Footer */
+  footer {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 415px) and (max-width: 435px) {
+  /* Top/Cover */
+
+  .cover {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    height: 0.1rem;
+
+    #cover-image {
+      width: 9.25rem;
+      height: 2.75rem;
+      margin-top: -1.25rem;
+    }
+  }
+
+  /* Body */
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .morse-grid-container {
+    overflow: hidden;
+    margin-top: -2rem;
+  }
+  .morse-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 0;
+  }
+  .morse-grid-column {
+    width: 37rem;
+    height: 40rem;
+    transform: scale(0.6);
+    margin-left: -0.25rem;
+    overflow: hidden;
+  }
+
+  #morse-grid-column-two {
+    margin-top: -14rem;
+    margin-bottom: -3rem;
+  }
+
+  .input {
+    > h3 {
+      font-size: 3.5rem;
+    }
+
+    > textarea {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .clara {
+    width: 20rem;
+    height: 20rem;
+    z-index: 100;
+  }
+  .end-prompt {
+    position: fixed;
+
+    #end-prompt-grid {
+      margin-top: 2.5rem;
+      grid-template-columns: 1fr;
+      transform: scale(0.95);
+
+      > #clara-profile-container {
+        margin-top: 0.5rem;
+        margin-bottom: -1.5rem;
+
+        > img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      #end-prompt-close {
+        margin-top: 0.25rem;
+        width: 2.25rem;
+      }
+    }
+  }
+  #output-container {
+    transform: scale(0.98);
+    position: fixed;
+    width: 95vw;
+    top: 25%;
+    left: 1%;
+
+    z-index: 1;
+    > h3 {
+      font-size: 1.2rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
       width: 79%;
-      height: 65%;
+      height: 12rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-top: -0.5rem;
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 1rem;
+      margin: 0.5rem 0rem;
+      width: 0.75rem;
     }
   }
 
@@ -1495,8 +1655,10 @@ footer {
   }
   .end-prompt {
     position: fixed;
+
     #end-prompt-grid {
       grid-template-columns: 1fr;
+      margin-top: 1rem;
 
       > #clara-profile-container {
         margin-top: 2rem;
@@ -1518,32 +1680,31 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 50vh;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
-      width: 80.5%;
-      height: 65%;
+      width: 80.75%;
+      height: 12rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-top: -0.5rem;
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
+      margin: 0.5rem 0rem;
       width: 1rem;
     }
   }
-
   #clara-random {
     position: fixed;
     bottom: 5%;
@@ -1659,9 +1820,10 @@ footer {
 
   .end-prompt {
     position: fixed;
-    height: 56vh !important;
+
     #end-prompt-grid {
       grid-template-columns: 1fr;
+      margin-top: 1.5rem;
 
       > #clara-profile-container {
         margin-top: 2rem;
@@ -1684,28 +1846,28 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 52vh;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
-      width: 80.5%;
-      height: 65%;
+      width: 81%;
+      height: 12rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-top: -0.25rem;
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
+      margin: 0.5rem 0rem;
       width: 1rem;
     }
   }
@@ -1826,9 +1988,9 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 55vh !important;
+
     #end-prompt-grid {
-      margin-top: 3rem;
+      margin-top: 5rem;
       grid-template-columns: 1fr;
 
       > #clara-profile-container {
@@ -1851,7 +2013,6 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 60vh !important;
     top: 25%;
     left: 1%;
 
@@ -1863,17 +2024,18 @@ footer {
 
     > textarea {
       margin-top: -1rem;
-      width: 82.75%;
-      height: 65%;
+      width: 83.25%;
+      height: 12rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-top: -0.25rem;
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 1.5rem;
+      margin: 0.5rem 0rem;
+      width: 1rem;
     }
   }
 
@@ -1992,9 +2154,9 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 55vh !important;
+
     #end-prompt-grid {
-      margin-top: 3.5rem;
+      margin-top: 4rem;
       grid-template-columns: 1fr;
 
       > #clara-profile-container {
@@ -2017,7 +2179,6 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 60vh !important;
     top: 25%;
     left: 1%;
 
@@ -2030,16 +2191,17 @@ footer {
     > textarea {
       margin-top: -1rem;
       width: 84.5%;
-      height: 65%;
+      height: 12rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-top: -0.25rem;
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 1.5rem;
+      margin: 0.5rem 0rem;
+      width: 1rem;
     }
   }
 
@@ -2159,9 +2321,8 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 55vh !important;
     #end-prompt-grid {
-      margin-top: 3.5rem;
+      margin-top: 5rem;
       grid-template-columns: 1fr;
 
       > #clara-profile-container {
@@ -2184,7 +2345,6 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 60vh !important;
     top: 25%;
     left: 1%;
 
@@ -2196,20 +2356,20 @@ footer {
 
     > textarea {
       margin-top: -1rem;
-      width: 85.8%;
-      height: 65%;
+      width: 85.25%;
+      height: 12rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-top: -0.25rem;
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 1.5rem;
+      margin: 0.5rem 0rem;
+      width: 1rem;
     }
   }
-
   #clara-random {
     position: fixed;
     bottom: 5%;
@@ -2326,9 +2486,8 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 55vh !important;
     #end-prompt-grid {
-      margin-top: 3.5rem;
+      margin-top: 5.25rem;
       grid-template-columns: 1fr;
 
       > #clara-profile-container {
@@ -2351,7 +2510,6 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 60vh !important;
     top: 25%;
     left: 1%;
 
@@ -2363,17 +2521,34 @@ footer {
 
     > textarea {
       margin-top: -1rem;
-      width: 85.8%;
-      height: 65%;
+      width: 86%;
+      height: 12rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-top: -0.25rem;
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 1.5rem;
+      margin: 0.5rem 0rem;
+      width: 1.25rem;
+    }
+  }
+  #clara-random {
+    position: fixed;
+    bottom: 5%;
+    margin-right: 0.68rem;
+    width: 8rem;
+    height: 8rem;
+
+    > div {
+      margin-top: -0.85rem;
+      margin-left: -0.75rem;
+    }
+
+    #clara-random-text {
+      font-size: 1rem;
     }
   }
 
@@ -2493,9 +2668,9 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 55vh !important;
+
     #end-prompt-grid {
-      margin-top: 3.5rem;
+      margin-top: 5.25rem;
       grid-template-columns: 1fr;
 
       > #clara-profile-container {
@@ -2518,7 +2693,6 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 60vh !important;
     top: 25%;
     left: 1%;
 
@@ -2530,20 +2704,20 @@ footer {
 
     > textarea {
       margin-top: -1rem;
-      width: 85.8%;
-      height: 65%;
+      width: 86.5%;
+      height: 12rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-top: -0.25rem;
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
+      margin: 0.5rem 0rem;
       width: 1.25rem;
     }
   }
-
   #clara-random {
     position: fixed;
     bottom: 5%;
@@ -2660,9 +2834,9 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 52vh !important;
+
     #end-prompt-grid {
-      margin-top: 4.5rem;
+      margin-top: 4.75rem;
       grid-template-columns: 1fr;
 
       > #clara-profile-container {
@@ -2685,7 +2859,6 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 60vh !important;
     top: 25%;
     left: 1%;
 
@@ -2697,16 +2870,17 @@ footer {
 
     > textarea {
       margin-top: -1rem;
-      width: 85.8%;
-      height: 65%;
+      width: 87.5%;
+      height: 12rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-top: -0.25rem;
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
+      margin: 0.5rem 0rem;
       width: 1.25rem;
     }
   }
@@ -2827,7 +3001,7 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 52vh !important;
+
     #end-prompt-grid {
       margin-top: 4.5rem;
       grid-template-columns: 1fr;
@@ -2852,7 +3026,6 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 60vh !important;
     top: 25%;
     left: 1%;
 
@@ -2864,20 +3037,20 @@ footer {
 
     > textarea {
       margin-top: -1rem;
-      width: 85.8%;
-      height: 65%;
+      width: 87.75%;
+      height: 13rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-top: -0.25rem;
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
+      margin: 0.5rem 0rem;
       width: 1.25rem;
     }
   }
-
   #clara-random {
     position: fixed;
     bottom: 5%;
@@ -2994,7 +3167,6 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 52vh !important;
     #end-prompt-grid {
       margin-top: 4.5rem;
       grid-template-columns: 1fr;
@@ -3015,11 +3187,11 @@ footer {
       }
     }
   }
+
   #output-container {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 60vh !important;
     top: 25%;
     left: 1%;
 
@@ -3031,15 +3203,17 @@ footer {
 
     > textarea {
       margin-top: -1rem;
-      width: 85.8%;
-      height: 65%;
+      width: 88.25%;
+      height: 13rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
+      margin: 0.5rem 0rem;
       width: 1.25rem;
     }
   }
@@ -3161,7 +3335,7 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 52vh !important;
+
     #end-prompt-grid {
       margin-top: 4.5rem;
       grid-template-columns: 1fr;
@@ -3186,7 +3360,6 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 60vh !important;
     top: 25%;
     left: 1%;
 
@@ -3198,33 +3371,18 @@ footer {
 
     > textarea {
       margin-top: -1rem;
-      width: 88.8%;
-      height: 65%;
+      width: 88.75%;
+      height: 13rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
+      margin: 0.5rem 0rem;
       width: 1.25rem;
-    }
-  }
-
-  #clara-random {
-    position: fixed;
-    bottom: 5%;
-    margin-right: 0.68rem;
-    width: 8rem;
-    height: 8rem;
-
-    > div {
-      margin-top: -0.85rem;
-      margin-left: -0.75rem;
-    }
-
-    #clara-random-text {
-      font-size: 1rem;
     }
   }
 
@@ -3327,7 +3485,7 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 52vh !important;
+
     #end-prompt-grid {
       margin-top: 4.5rem;
       grid-template-columns: 1fr;
@@ -3348,49 +3506,34 @@ footer {
       }
     }
   }
+
   #output-container {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
       width: 89%;
-      height: 65%;
+      height: 14rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
+      margin: 0.5rem 0rem;
       width: 1.25rem;
-    }
-  }
-
-  #clara-random {
-    position: fixed;
-    bottom: 5%;
-    margin-right: 0.68rem;
-    width: 8rem;
-    height: 8rem;
-
-    > div {
-      margin-top: -0.85rem;
-      margin-left: -0.75rem;
-    }
-
-    #clara-random-text {
-      font-size: 1rem;
     }
   }
 
@@ -3493,9 +3636,9 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 52vh !important;
+
     #end-prompt-grid {
-      margin-top: 4.5rem;
+      margin-top: 4.55rem;
       grid-template-columns: 1fr;
 
       > #clara-profile-container {
@@ -3518,27 +3661,28 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
       width: 89.6%;
-      height: 65%;
+      height: 14rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
+      margin: 0.5rem 0rem;
       width: 1.25rem;
     }
   }
@@ -3659,7 +3803,7 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 52vh !important;
+
     #end-prompt-grid {
       margin-top: 4.5rem;
       grid-template-columns: 1fr;
@@ -3684,31 +3828,31 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
       width: 90.4%;
-      height: 65%;
+      height: 14rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
+      margin: 0.5rem 0rem;
       width: 1.25rem;
     }
   }
-
   #clara-random {
     position: fixed;
     bottom: 5%;
@@ -3825,7 +3969,7 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 52vh !important;
+
     #end-prompt-grid {
       margin-top: 4.5rem;
       grid-template-columns: 1fr;
@@ -3850,27 +3994,28 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
-      width: 90.7%;
-      height: 65%;
+      width: 90.25%;
+      height: 15rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
+      margin: 0.5rem 0rem;
       width: 1.25rem;
     }
   }
@@ -3991,7 +4136,7 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 52vh !important;
+
     #end-prompt-grid {
       margin-top: 4.5rem;
       grid-template-columns: 1fr;
@@ -4016,31 +4161,31 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
       width: 91.4%;
-      height: 65%;
+      height: 15rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
+      margin: 0.5rem 0rem;
       width: 1.25rem;
     }
   }
-
   #clara-random {
     position: fixed;
     bottom: 5%;
@@ -4157,11 +4302,12 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 52vh !important;
+
     #end-prompt-grid {
-      margin-top: 4.5rem;
+      margin-top: 4.75rem;
       grid-template-columns: 1fr;
       transform: scale(1.05);
+      margin-bottom: 0.25rem;
 
       > #clara-profile-container {
         margin-top: -1.5rem;
@@ -4183,27 +4329,28 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
       width: 91.6%;
-      height: 65%;
+      height: 15rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
+      margin: 0.5rem 0rem;
       width: 1.25rem;
     }
   }
@@ -4324,7 +4471,6 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 52vh !important;
 
     #end-prompt-grid {
       margin-top: 4.5rem;
@@ -4351,28 +4497,29 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
-      width: 91.8%;
-      height: 65%;
+      width: 92%;
+      height: 16rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 1.25rem;
+      margin: 0.5rem 0rem;
+      width: 1.5rem;
     }
   }
 
@@ -4492,7 +4639,6 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 52vh !important;
 
     #end-prompt-grid {
       margin-top: 4.5rem;
@@ -4519,28 +4665,29 @@ footer {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
       width: 92.5%;
-      height: 65%;
+      height: 16rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 1.25rem;
+      margin: 0.5rem 0rem;
+      width: 1.5rem;
     }
   }
 
@@ -4660,7 +4807,6 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 52vh !important;
 
     #end-prompt-grid {
       margin-top: 4.5rem;
@@ -4683,32 +4829,34 @@ footer {
       }
     }
   }
+
   #output-container {
     transform: scale(0.98);
     position: fixed;
     width: 95vw;
-    height: 60vh !important;
     top: 25%;
     left: 1%;
 
     z-index: 1;
     > h3 {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       margin: 1rem 2rem;
     }
 
     > textarea {
       margin-top: -1rem;
       width: 92.75%;
-      height: 65%;
+      height: 17rem;
       margin-left: 1.5rem;
       font-size: 1rem;
     }
     #icon-container {
-      margin-left: 2.26rem;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 1.25rem;
+      margin: 0.5rem 0rem;
+      width: 1.5rem;
     }
   }
 
@@ -4813,26 +4961,36 @@ footer {
   }
 
   #output-container {
-    height: 75vh;
-    width: 63vw;
+    transform: scale(0.98);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 2.75rem;
-      margin-left: 3rem;
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 71.5%;
-      width: 84.75%;
-      margin-left: 3rem;
+      margin-top: -1rem;
+      width: 85%;
+      height: 18rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 2rem;
+      margin: 0.5rem 0rem;
+      width: 1.25rem;
     }
   }
 
   .end-prompt {
-    height: 35vh;
     width: 50vw;
     top: 22%;
     left: 30%;
@@ -4941,26 +5099,36 @@ footer {
   }
 
   #output-container {
-    height: 65vh;
-    width: 63vw;
+    transform: scale(1.2);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 2.75rem;
-      margin-left: 3rem;
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 74%;
-      width: 84.75%;
-      margin-left: 3rem;
+      margin-top: -1rem;
+      width: 85%;
+      height: 26rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 2.5rem;
+      margin: 0.5rem 0rem;
+      width: 1.85rem;
     }
   }
 
   .end-prompt {
-    height: 27vh;
     width: 50vw;
     top: 22%;
     left: 30%;
@@ -5047,8 +5215,8 @@ footer {
 
   .clara {
     z-index: 120;
-    width: 55rem;
-    height: 55rem;
+    width: 40rem;
+    height: 40rem;
   }
 
   .clara-minimised-container {
@@ -5069,32 +5237,42 @@ footer {
   }
 
   #output-container {
-    height: 75vh;
-    width: 63vw;
+    transform: scale(1.25);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 2.5rem;
-      margin-left: 3rem;
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 71.5%;
-      width: 84.75%;
-      margin-left: 3rem;
+      margin-top: -1rem;
+      width: 86%;
+      height: 18rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
     }
-
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
+    }
     .icon {
-      width: 1.75rem;
+      margin: 0.5rem 0rem;
+      width: 1.25rem;
     }
   }
 
   .end-prompt {
-    height: 25vh;
-    width: 45vw;
+    width: 47vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
-      margin-left: 7rem;
+      margin-left: 3rem;
+      margin-top: 1rem;
 
       width: 17rem;
       height: 17rem;
@@ -5198,32 +5376,42 @@ footer {
   }
 
   #output-container {
-    height: 65vh;
-    width: 63vw;
+    transform: scale(1.25);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 2.75rem;
-      margin-left: 3rem;
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 71.5%;
-      width: 84.75%;
-      margin-left: 3rem;
+      margin-top: -1rem;
+      width: 86%;
+      height: 18rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 2rem;
+      margin: 0.5rem 0rem;
+      width: 1.25rem;
     }
   }
 
   .end-prompt {
-    height: 30vh;
     width: 50vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
       margin-left: 3rem;
-      margin-top: 2rem;
+      margin-top: 1.75rem;
       width: 17rem;
       height: 17rem;
     }
@@ -5326,26 +5514,36 @@ footer {
   }
 
   #output-container {
-    height: 65vh;
-    width: 63vw;
+    transform: scale(1.25);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 3rem;
-      margin-left: 3rem;
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 74%;
-      width: 84.75%;
-      margin-left: 3rem;
+      margin-top: -1rem;
+      width: 86%;
+      height: 24rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 2rem;
+      margin: 0.5rem 0rem;
+      width: 1.5rem;
     }
   }
 
   .end-prompt {
-    height: 27vh;
     width: 50vw;
     top: 20%;
     left: 30%;
@@ -5453,26 +5651,36 @@ footer {
   }
 
   #output-container {
-    height: 70vh;
-    width: 63vw;
+    transform: scale(1.25);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 2.75rem;
-      margin-left: 3rem;
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 72.5%;
-      width: 84.75%;
-      margin-left: 4rem;
+      margin-top: -1rem;
+      width: 88%;
+      height: 18rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 1.75rem;
+      margin: 0.5rem 0rem;
+      width: 1.25rem;
     }
   }
 
   .end-prompt {
-    height: 29vh;
     width: 45vw;
     top: 20%;
     left: 30%;
@@ -5580,31 +5788,42 @@ footer {
   }
 
   #output-container {
-    height: 65vh;
-    width: 63vw;
+    transform: scale(1.25);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 2.75rem;
-      margin-left: 3rem;
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 72.5%;
-      width: 84.75%;
-      margin-left: 4rem;
+      margin-top: -1rem;
+      width: 88%;
+      height: 20rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 2.25rem;
+      margin: 0.5rem 0rem;
+      width: 1.5rem;
     }
   }
 
   .end-prompt {
-    height: 27vh;
     width: 45vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
-      margin-left: 7rem;
+      margin-left: 3rem;
+      margin-top: 1rem;
 
       width: 17rem;
       height: 17rem;
@@ -5706,26 +5925,36 @@ footer {
   }
 
   #output-container {
-    height: 65vh;
-    width: 63vw;
+    transform: scale(1.25);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 3rem;
-      margin-left: 3rem;
+      font-size: 2rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 72.5%;
-      width: 84.75%;
-      margin-left: 4rem;
+      margin-top: -1rem;
+      width: 88%;
+      height: 24rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 2.5rem;
+      margin: 0.5rem 0rem;
+      width: 1.75rem;
     }
   }
 
   .end-prompt {
-    height: 25vh;
     width: 45vw;
     top: 20%;
     left: 30%;
@@ -5832,26 +6061,36 @@ footer {
   }
 
   #output-container {
-    height: 73vh;
-    width: 63vw;
+    transform: scale(1.25);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 2.75rem;
-      margin-left: 3rem;
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 72.5%;
-      width: 83.75%;
-      margin-left: 4rem;
+      margin-top: -1rem;
+      width: 88.5%;
+      height: 18rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 1.75rem;
+      margin: 0.5rem 0rem;
+      width: 1.5rem;
     }
   }
 
   .end-prompt {
-    height: 31vh;
     width: 45vw;
     top: 20%;
     left: 30%;
@@ -5959,26 +6198,36 @@ footer {
   }
 
   #output-container {
-    height: 65vh;
-    width: 63vw;
+    transform: scale(1.25);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 2.75rem;
-      margin-left: 3rem;
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 72.5%;
-      width: 83.75%;
-      margin-left: 4rem;
+      margin-top: -1rem;
+      width: 88.5%;
+      height: 20rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 2.25rem;
+      margin: 0.5rem 0rem;
+      width: 1.5rem;
     }
   }
 
   .end-prompt {
-    height: 27vh;
     width: 45vw;
     top: 20%;
     left: 30%;
@@ -6086,26 +6335,36 @@ footer {
   }
 
   #output-container {
-    height: 65vh;
-    width: 63vw;
+    transform: scale(1.25);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 3rem;
-      margin-left: 3rem;
+      font-size: 2rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 72.5%;
-      width: 84.5%;
-      margin-left: 4rem;
+      margin-top: -1rem;
+      width: 88.5%;
+      height: 24rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 2.5rem;
+      margin: 0.5rem 0rem;
+      width: 1.75rem;
     }
   }
 
   .end-prompt {
-    height: 25vh;
     width: 45vw;
     top: 20%;
     left: 30%;
@@ -6212,26 +6471,36 @@ footer {
   }
 
   #output-container {
-    height: 73vh;
-    width: 63vw;
+    transform: scale(1.25);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 2.75rem;
-      margin-left: 3rem;
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 72.5%;
-      width: 84.5%;
-      margin-left: 4rem;
+      margin-top: -1rem;
+      width: 89.75%;
+      height: 18rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 1.75rem;
+      margin: 0.5rem 0rem;
+      width: 1.5rem;
     }
   }
 
   .end-prompt {
-    height: 31vh;
     width: 45vw;
     top: 20%;
     left: 30%;
@@ -6339,26 +6608,36 @@ footer {
   }
 
   #output-container {
-    height: 65vh;
-    width: 63vw;
+    transform: scale(1.25);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 2.75rem;
-      margin-left: 3rem;
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 72.5%;
-      width: 84.5%;
-      margin-left: 4rem;
+      margin-top: -1rem;
+      width: 89.75%;
+      height: 20rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 2.25rem;
+      margin: 0.5rem 0rem;
+      width: 1.5rem;
     }
   }
 
   .end-prompt {
-    height: 27vh;
     width: 45vw;
     top: 20%;
     left: 30%;
@@ -6465,32 +6744,42 @@ footer {
   }
 
   #output-container {
-    height: 65vh;
-    width: 63vw;
+    transform: scale(1.25);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 3rem;
-      margin-left: 3rem;
+      font-size: 2rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 72.5%;
-      width: 84.5%;
-      margin-left: 4rem;
+      margin-top: -1rem;
+      width: 89.75%;
+      height: 24rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 2.5rem;
+      margin: 0.5rem 0rem;
+      width: 1.75rem;
     }
   }
 
   .end-prompt {
-    height: 25vh;
     width: 45vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
       margin-left: 3rem;
-      margin-top: 2rem;
+      margin-top: 1rem;
       width: 17rem;
       height: 17rem;
     }
@@ -6591,26 +6880,35 @@ footer {
   }
 
   #output-container {
-    height: 73vh;
-    width: 63vw;
+    transform: scale(1.25);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 2.75rem;
-      margin-left: 3rem;
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 72.5%;
-      width: 82%;
-      margin-left: 4rem;
+      margin-top: -1rem;
+      width: 90%;
+      height: 18rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 1.75rem;
+      margin: 0.5rem 0rem;
+      width: 1.5rem;
     }
   }
-
   .end-prompt {
-    height: 31vh;
     width: 45vw;
     top: 20%;
     left: 30%;
@@ -6717,32 +7015,42 @@ footer {
   }
 
   #output-container {
-    height: 65vh;
-    width: 63vw;
+    transform: scale(1.25);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 2.75rem;
-      margin-left: 3rem;
+      font-size: 1.75rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 72.5%;
-      width: 82%;
-      margin-left: 4rem;
+      margin-top: -1rem;
+      width: 90%;
+      height: 20rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 2.25rem;
+      margin: 0.5rem 0rem;
+      width: 1.5rem;
     }
   }
 
   .end-prompt {
-    height: 27vh;
     width: 45vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
       margin-left: 3rem;
-      margin-top: 1rem;
+      margin-top: 0.5rem;
       width: 17rem;
       height: 17rem;
     }
@@ -6843,32 +7151,41 @@ footer {
   }
 
   #output-container {
-    height: 65vh;
-    width: 63vw;
+    transform: scale(1.25);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 3rem;
-      margin-left: 3rem;
+      font-size: 2rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 72.5%;
-      width: 82%;
-      margin-left: 4rem;
+      margin-top: -1rem;
+      width: 90%;
+      height: 24rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 2.5rem;
+      margin: 0.5rem 0rem;
+      width: 1.75rem;
     }
   }
-
   .end-prompt {
-    height: 25vh;
     width: 45vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
       margin-left: 3rem;
-      margin-top: 2rem;
+      margin-top: 1rem;
       width: 17rem;
       height: 17rem;
     }
@@ -6971,32 +7288,39 @@ footer {
   }
 
   #output-container {
-    height: 65vh;
-    width: 63vw;
+    transform: scale(1.25);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 3rem;
-      margin-left: 3rem;
+      font-size: 2rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 72.5%;
-      width: 87%;
-      margin-left: 4rem;
+      margin-top: -1rem;
+      width: 91.25%;
+      height: 20rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 2.5rem;
+      margin: 0.5rem 0rem;
+      width: 1.75rem;
     }
   }
-
   .end-prompt {
-    height: 25vh;
     width: 45vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
-      margin-left: 3rem;
-      margin-top: 2rem;
       width: 17rem;
       height: 17rem;
     }
@@ -7088,31 +7412,42 @@ footer {
   }
 
   #output-container {
-    height: 74vh;
-    width: 63vw;
+    transform: scale(1.25);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 4rem;
-      margin-left: 3rem;
+      font-size: 2.25rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 75%;
-      width: 83.7%;
+      margin-top: -1rem;
+      width: 91.75%;
+      height: 20rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 2.5rem;
+      margin: 0.5rem 0rem;
+      width: 2rem;
     }
   }
 
   .end-prompt {
-    height: 30vh;
     width: 40vw;
     top: 20%;
     left: 30%;
     #clara-profile-container {
-      margin-left: 5rem;
-      margin-top: 4rem;
+      margin-left: 3rem;
+      margin-top: 2rem;
     }
   }
 
@@ -7197,31 +7532,41 @@ footer {
   }
 
   #output-container {
-    height: 74vh;
-    width: 63vw;
+    transform: scale(1.25);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 4rem;
-      margin-left: 3rem;
+      font-size: 2.5rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 75%;
-      width: 84.55%;
+      margin-top: -1rem;
+      width: 92.25%;
+      height: 20rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 3rem;
+      margin: 0.5rem 0rem;
+      width: 2.25rem;
     }
   }
-
   .end-prompt {
-    height: 30vh;
     width: 40vw;
     top: 20%;
     left: 30%;
     #clara-profile-container {
-      margin-left: 7rem;
-      margin-top: 4rem;
+      margin-left: 3rem;
+      margin-top: 2rem;
     }
   }
   #end-prompt-text-container {
@@ -7302,30 +7647,41 @@ footer {
   }
 
   #output-container {
-    height: 70vh;
-    width: 63vw;
+    transform: scale(1.25);
+    position: fixed;
+    width: 45vw;
+    top: 25%;
+    left: 25%;
 
+    z-index: 1;
     > h3 {
-      font-size: 4rem;
-      margin-left: 3rem;
+      font-size: 2.5rem;
+      margin: 1rem 2rem;
     }
 
     > textarea {
-      height: 75%;
-      width: 86.25%;
+      margin-top: -1rem;
+      width: 92.75%;
+      height: 24rem;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+    #icon-container {
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
     .icon {
-      width: 3rem;
+      margin: 0.5rem 0rem;
+      width: 2.25rem;
     }
   }
 
   .end-prompt {
-    height: 25vh;
     width: 40vw;
     top: 20%;
     left: 30%;
     #clara-profile-container {
-      margin-left: 5rem;
+      margin-left: 3rem;
       margin-top: 2rem;
       > img {
         width: 24rem;
