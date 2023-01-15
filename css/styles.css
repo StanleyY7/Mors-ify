@@ -480,9 +480,9 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 25rem !important;
   }
   .end-prompt #end-prompt-grid {
+    margin-top: 2rem;
     grid-template-columns: 1fr;
   }
   .end-prompt #end-prompt-grid > #clara-profile-container {
@@ -636,10 +636,9 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 62vh !important;
   }
   .end-prompt #end-prompt-grid {
-    margin-top: -2rem;
+    margin-top: -1rem;
     grid-template-columns: 1fr;
   }
   .end-prompt #end-prompt-grid > #clara-profile-container {
@@ -775,9 +774,9 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 59vh !important;
   }
   .end-prompt #end-prompt-grid {
+    margin-top: 1rem;
     grid-template-columns: 1fr;
   }
   .end-prompt #end-prompt-grid > #clara-profile-container {
@@ -914,10 +913,10 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 59vh !important;
   }
   .end-prompt #end-prompt-grid {
     grid-template-columns: 1fr;
+    margin-top: 1rem;
   }
   .end-prompt #end-prompt-grid > #clara-profile-container {
     margin-top: 2rem;
@@ -1053,9 +1052,9 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 59vh !important;
   }
   .end-prompt #end-prompt-grid {
+    margin-top: 0.75rem;
     grid-template-columns: 1fr;
   }
   .end-prompt #end-prompt-grid > #clara-profile-container {
@@ -1194,6 +1193,7 @@ footer {
     position: fixed;
   }
   .end-prompt #end-prompt-grid {
+    margin-top: 2rem;
     grid-template-columns: 1fr;
     transform: scale(0.95);
   }
@@ -1333,6 +1333,7 @@ footer {
     position: fixed;
   }
   .end-prompt #end-prompt-grid {
+    margin-top: 2.5rem;
     grid-template-columns: 1fr;
     transform: scale(0.95);
   }
@@ -1473,6 +1474,7 @@ footer {
   }
   .end-prompt #end-prompt-grid {
     grid-template-columns: 1fr;
+    margin-top: 1rem;
   }
   .end-prompt #end-prompt-grid > #clara-profile-container {
     margin-top: 2rem;
@@ -1608,10 +1610,10 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 56vh !important;
   }
   .end-prompt #end-prompt-grid {
     grid-template-columns: 1fr;
+    margin-top: 1.5rem;
   }
   .end-prompt #end-prompt-grid > #clara-profile-container {
     margin-top: 2rem;
@@ -1747,10 +1749,9 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 55vh !important;
   }
   .end-prompt #end-prompt-grid {
-    margin-top: 3rem;
+    margin-top: 5rem;
     grid-template-columns: 1fr;
   }
   .end-prompt #end-prompt-grid > #clara-profile-container {
@@ -1887,10 +1888,9 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 55vh !important;
   }
   .end-prompt #end-prompt-grid {
-    margin-top: 3.5rem;
+    margin-top: 4rem;
     grid-template-columns: 1fr;
   }
   .end-prompt #end-prompt-grid > #clara-profile-container {
@@ -2027,10 +2027,9 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 55vh !important;
   }
   .end-prompt #end-prompt-grid {
-    margin-top: 3.5rem;
+    margin-top: 5rem;
     grid-template-columns: 1fr;
   }
   .end-prompt #end-prompt-grid > #clara-profile-container {
@@ -2167,10 +2166,9 @@ footer {
   }
   .end-prompt {
     position: fixed;
-    height: 55vh !important;
   }
   .end-prompt #end-prompt-grid {
-    margin-top: 3.5rem;
+    margin-top: 5.5rem;
     grid-template-columns: 1fr;
   }
   .end-prompt #end-prompt-grid > #clara-profile-container {
