@@ -4255,7 +4255,6 @@ footer {
     width: 1.25rem;
   }
   .end-prompt {
-    height: 35vh;
     width: 50vw;
     top: 22%;
     left: 30%;
@@ -4372,7 +4371,6 @@ footer {
     width: 1.85rem;
   }
   .end-prompt {
-    height: 27vh;
     width: 50vw;
     top: 22%;
     left: 30%;
@@ -4489,13 +4487,13 @@ footer {
     width: 1.25rem;
   }
   .end-prompt {
-    height: 25vh;
-    width: 45vw;
+    width: 47vw;
     top: 20%;
     left: 30%;
   }
   .end-prompt > #end-prompt-grid > #clara-profile-container > img {
-    margin-left: 7rem;
+    margin-left: 3rem;
+    margin-top: 1rem;
     width: 17rem;
     height: 17rem;
   }
@@ -4605,14 +4603,13 @@ footer {
     width: 1.25rem;
   }
   .end-prompt {
-    height: 30vh;
     width: 50vw;
     top: 20%;
     left: 30%;
   }
   .end-prompt > #end-prompt-grid > #clara-profile-container > img {
     margin-left: 3rem;
-    margin-top: 2rem;
+    margin-top: 1.75rem;
     width: 17rem;
     height: 17rem;
   }
@@ -4722,7 +4719,6 @@ footer {
     width: 1.5rem;
   }
   .end-prompt {
-    height: 27vh;
     width: 50vw;
     top: 20%;
     left: 30%;
@@ -4839,7 +4835,6 @@ footer {
     width: 1.25rem;
   }
   .end-prompt {
-    height: 29vh;
     width: 45vw;
     top: 20%;
     left: 30%;
@@ -4956,13 +4951,13 @@ footer {
     width: 1.5rem;
   }
   .end-prompt {
-    height: 27vh;
     width: 45vw;
     top: 20%;
     left: 30%;
   }
   .end-prompt > #end-prompt-grid > #clara-profile-container > img {
-    margin-left: 7rem;
+    margin-left: 3rem;
+    margin-top: 1rem;
     width: 17rem;
     height: 17rem;
   }
@@ -5072,7 +5067,6 @@ footer {
     width: 1.75rem;
   }
   .end-prompt {
-    height: 25vh;
     width: 45vw;
     top: 20%;
     left: 30%;
