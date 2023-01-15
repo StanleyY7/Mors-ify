@@ -243,6 +243,7 @@ strong {
   bottom: 4%;
   height: 10rem;
   display: none;
+  z-index: 200;
 
   #clara-random-text {
     margin-top: 3.5rem;
@@ -4917,9 +4918,7 @@ footer {
 // Large Devices like desktop monitors
 @media screen and (min-width: 1201px) and (max-width: 1250px) and (max-height: 1250px) {
   /* Top/Cover */
-  .cover {
-    width: 102vw;
-  }
+
   #cover-image {
     margin-left: 4rem;
   }
@@ -4995,7 +4994,7 @@ footer {
     top: 22%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
-      margin-left: 2rem;
+      margin-left: 2.5rem;
       margin-top: 2rem;
       width: 17rem;
       height: 17rem;
@@ -5055,9 +5054,7 @@ footer {
 
 @media screen and (min-width: 1200px) and (max-width: 1250px) and (min-height: 1250px) {
   /* Top/Cover */
-  .cover {
-    width: 102vw;
-  }
+
   #cover-image {
     margin-left: 4rem;
   }
@@ -5133,7 +5130,7 @@ footer {
     top: 22%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
-      margin-left: 2rem;
+      margin-left: 2.5rem;
       margin-top: 2rem;
       width: 17rem;
       height: 17rem;
@@ -5192,9 +5189,7 @@ footer {
 }
 @media screen and (min-width: 1250px) and (max-width: 1450px) and (max-height: 1050px) {
   /* Top/Cover */
-  .cover {
-    width: 102vw;
-  }
+
   #cover-image {
     margin-left: 4rem;
   }
@@ -5271,7 +5266,7 @@ footer {
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
-      margin-left: 3rem;
+      margin-left: 2rem;
       margin-top: 1rem;
 
       width: 17rem;
@@ -5332,9 +5327,7 @@ footer {
 }
 @media screen and (min-width: 1250px) and (max-width: 1450px) and (min-height: 1050px) and (max-height: 1250px) {
   /* Top/Cover */
-  .cover {
-    width: 102vw;
-  }
+
   #cover-image {
     margin-left: 4rem;
   }
@@ -5410,8 +5403,8 @@ footer {
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
-      margin-left: 3rem;
-      margin-top: 1.75rem;
+      margin-left: 2rem;
+      margin-top: 1rem;
       width: 17rem;
       height: 17rem;
     }
@@ -5470,9 +5463,6 @@ footer {
 
 @media screen and (min-width: 1250px) and (max-width: 1450px) and (min-height: 1250px) {
   /* Top/Cover */
-  .cover {
-    width: 102vw;
-  }
   #cover-image {
     margin-left: 4rem;
   }
@@ -5548,8 +5538,8 @@ footer {
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
-      margin-left: 3rem;
-      margin-top: 2rem;
+      margin-left: 2rem;
+      margin-top: 1rem;
       width: 17rem;
       height: 17rem;
     }
@@ -5608,9 +5598,7 @@ footer {
 
 @media screen and (min-width: 1450px) and (max-width: 1570px) and (max-height: 1050px) {
   /* Top/Cover */
-  .cover {
-    width: 102vw;
-  }
+
   #cover-image {
     margin-left: 4rem;
   }
@@ -5681,7 +5669,7 @@ footer {
   }
 
   .end-prompt {
-    width: 45vw;
+    width: 43vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
@@ -5745,9 +5733,7 @@ footer {
 
 @media screen and (min-width: 1450px) and (max-width: 1570px) and (min-height: 1050px) and (max-height: 1250px) {
   /* Top/Cover */
-  .cover {
-    width: 102vw;
-  }
+
   #cover-image {
     margin-left: 4rem;
   }
@@ -5818,7 +5804,7 @@ footer {
   }
 
   .end-prompt {
-    width: 45vw;
+    width: 43vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
@@ -5882,9 +5868,7 @@ footer {
 
 @media screen and (min-width: 1450px) and (max-width: 1570px) and (min-height: 1250px) {
   /* Top/Cover */
-  .cover {
-    width: 102vw;
-  }
+
   #cover-image {
     margin-left: 4rem;
   }
@@ -5955,7 +5939,7 @@ footer {
   }
 
   .end-prompt {
-    width: 45vw;
+    width: 43vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
@@ -6018,9 +6002,7 @@ footer {
 
 @media screen and (min-width: 1570px) and (max-width: 1700px) and (max-height: 1050px) {
   /* Top/Cover */
-  .cover {
-    width: 102vw;
-  }
+
   #cover-image {
     margin-left: 4rem;
   }
@@ -6091,12 +6073,12 @@ footer {
   }
 
   .end-prompt {
-    width: 45vw;
+    width: 43vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
       margin-left: 3rem;
-      margin-top: 1rem;
+      margin-top: 0.5rem;
 
       width: 17rem;
       height: 17rem;
@@ -6155,9 +6137,6 @@ footer {
 
 @media screen and (min-width: 1570px) and (max-width: 1700px) and (min-height: 1050px) and (max-height: 1250px) {
   /* Top/Cover */
-  .cover {
-    width: 102vw;
-  }
   #cover-image {
     margin-left: 4rem;
   }
@@ -6228,12 +6207,12 @@ footer {
   }
 
   .end-prompt {
-    width: 45vw;
+    width: 43vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
       margin-left: 3rem;
-      margin-top: 1rem;
+      margin-top: 0.5rem;
 
       width: 17rem;
       height: 17rem;
@@ -6292,9 +6271,7 @@ footer {
 
 @media screen and (min-width: 1570px) and (max-width: 1700px) and (min-height: 1250px) {
   /* Top/Cover */
-  .cover {
-    width: 102vw;
-  }
+
   #cover-image {
     margin-left: 4rem;
   }
@@ -6365,12 +6342,12 @@ footer {
   }
 
   .end-prompt {
-    width: 45vw;
+    width: 43vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
       margin-left: 2rem;
-      margin-top: 1rem;
+      margin-top: 0.75rem;
       width: 17rem;
       height: 17rem;
     }
@@ -6428,9 +6405,7 @@ footer {
 
 @media screen and (min-width: 1700px) and (max-width: 1830px) and (max-height: 1050px) {
   /* Top/Cover */
-  .cover {
-    width: 102vw;
-  }
+
   #cover-image {
     margin-left: 4rem;
   }
@@ -6501,12 +6476,12 @@ footer {
   }
 
   .end-prompt {
-    width: 45vw;
+    width: 43vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
-      margin-left: 3rem;
-      margin-top: 1rem;
+      margin-left: 2rem;
+      margin-top: 0.75rem;
 
       width: 17rem;
       height: 17rem;
@@ -6565,9 +6540,7 @@ footer {
 
 @media screen and (min-width: 1700px) and (max-width: 1830px) and (min-height: 1050px) and (max-height: 1250px) {
   /* Top/Cover */
-  .cover {
-    width: 102vw;
-  }
+
   #cover-image {
     margin-left: 4rem;
   }
@@ -6638,12 +6611,12 @@ footer {
   }
 
   .end-prompt {
-    width: 45vw;
+    width: 43vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
-      margin-left: 3rem;
-      margin-top: 1rem;
+      margin-left: 2rem;
+      margin-top: 0.5rem;
       width: 17rem;
       height: 17rem;
     }
@@ -6701,9 +6674,7 @@ footer {
 
 @media screen and (min-width: 1700px) and (max-width: 1830px) and (min-height: 1250px) {
   /* Top/Cover */
-  .cover {
-    width: 102vw;
-  }
+
   #cover-image {
     margin-left: 4rem;
   }
@@ -6774,12 +6745,12 @@ footer {
   }
 
   .end-prompt {
-    width: 45vw;
+    width: 43vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
-      margin-left: 3rem;
-      margin-top: 1rem;
+      margin-left: 2rem;
+      margin-top: 0.5rem;
       width: 17rem;
       height: 17rem;
     }
@@ -6837,9 +6808,7 @@ footer {
 
 @media screen and (min-width: 1830px) and (max-width: 2000px) and (max-height: 1050px) {
   /* Top/Cover */
-  .cover {
-    width: 102vw;
-  }
+
   #cover-image {
     margin-left: 4rem;
   }
@@ -6909,12 +6878,12 @@ footer {
     }
   }
   .end-prompt {
-    width: 45vw;
+    width: 43vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
-      margin-left: 3rem;
-      margin-top: 1rem;
+      margin-left: 2rem;
+      margin-top: 0.75rem;
 
       width: 17rem;
       height: 17rem;
@@ -6973,9 +6942,7 @@ footer {
 
 @media screen and (min-width: 1830px) and (max-width: 2000px) and (min-height: 1050px) and (max-height: 1250px) {
   /* Top/Cover */
-  .cover {
-    width: 102vw;
-  }
+
   #cover-image {
     margin-left: 4rem;
   }
@@ -7045,11 +7012,11 @@ footer {
   }
 
   .end-prompt {
-    width: 45vw;
+    width: 43vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
-      margin-left: 3rem;
+      margin-left: 2rem;
       margin-top: 0.5rem;
       width: 17rem;
       height: 17rem;
@@ -7109,7 +7076,7 @@ footer {
 @media screen and (min-width: 1830px) and (max-width: 2000px) and (min-height: 1250px) {
   /* Top/Cover */
   .cover {
-    width: 102vw;
+    width: 101.75vw;
   }
   #cover-image {
     margin-left: 4rem;
@@ -7180,12 +7147,12 @@ footer {
     }
   }
   .end-prompt {
-    width: 45vw;
+    width: 43vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
-      margin-left: 3rem;
-      margin-top: 1rem;
+      margin-left: 2rem;
+      margin-top: 0.5rem;
       width: 17rem;
       height: 17rem;
     }
@@ -7245,6 +7212,7 @@ footer {
 
 @media screen and (min-width: 2000px) and (max-width: 2119px) {
   /* Top/Cover */
+
   .cover {
     width: 102vw;
   }
@@ -7317,7 +7285,7 @@ footer {
     }
   }
   .end-prompt {
-    width: 45vw;
+    width: 43vw;
     top: 20%;
     left: 30%;
     > #end-prompt-grid > #clara-profile-container > img {
@@ -7378,6 +7346,9 @@ footer {
 
 @media screen and (min-width: 2119px) and (max-width: 2312px) {
   /* Top/Cover */
+  .cover {
+    width: 101vw;
+  }
   #cover-image {
     margin-left: 4rem;
   }
@@ -7498,6 +7469,9 @@ footer {
 
 @media screen and (min-width: 2312px) and (max-width: 2500px) {
   /* Top/Cover */
+  .cover {
+    width: 101vw;
+  }
   #cover-image {
     margin-left: 4rem;
   }
@@ -7616,6 +7590,9 @@ footer {
 
 @media screen and (min-width: 2500px) {
   /* Top/Cover */
+  .cover {
+    width: 101vw;
+  }
   #cover-image {
     margin-left: 4rem;
   }
@@ -7677,7 +7654,7 @@ footer {
   }
 
   .end-prompt {
-    width: 40vw;
+    width: 35vw;
     top: 20%;
     left: 30%;
     #clara-profile-container {

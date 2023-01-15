@@ -183,10 +183,17 @@ window.addEventListener("DOMContentLoaded", () => {
       .join(" ");
 
     let text = mappedMorseArr.toLowerCase();
-    const textBeingcopied = text;
 
-    document.getElementById("output").value = text;
-    return textBeingcopied;
+    const textBeingcopied = text.replace(/\s+/g, (m) =>
+      m.length === 1 ? "" : m
+    );
+
+    document.getElementById("output").value = textBeingcopied.replace(
+      / {2,}/g,
+      " "
+    );
+
+    return textBeingcopied.replace(/ {2,}/g, " ");
   };
 
   const hideOutput = () => {
@@ -297,6 +304,9 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     } else if (event.key === "s") {
       claraStart.remove();
+      claraNext.remove();
+      claraMiddle.remove();
+      endPrompt.remove();
       claraMinContainer.style.display = "block";
     }
   };
