@@ -123,8 +123,7 @@ const opposite = {
   "----.": 9,
 };
 
-// Function for decrypting the message
-function morseToText(input) {
+const morseToText = (input) => {
   let trueInput = input;
 
   let morseArr = trueInput.split(" ");
@@ -149,7 +148,7 @@ function morseToText(input) {
   );
 
   return textBeingcopied.replace(/ {2,}/g, " ");
-}
+};
 
 describe("testing morseToText", () => {
   it("should convert morse code input into text", () => {
