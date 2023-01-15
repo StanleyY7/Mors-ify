@@ -142,19 +142,19 @@ function morseToText(input) {
     })
     .join(" ");
 
-  let text = mappedMorseArr
-    .toLowerCase()
-    .replace(/^\s$/)
-    .replace(/\s\s+/g, " ");
-  const textBeingcopied = text;
+  let text = mappedMorseArr.toLowerCase();
 
-  return textBeingcopied;
+  const textBeingcopied = text.replace(/\s+/g, (m) =>
+    m.length === 1 ? "" : m
+  );
+
+  return textBeingcopied.replace(/ {2,}/g, " ");
 }
 
 describe("testing morseToText", () => {
   it("should convert morse code input into text", () => {
     let input = "- . ... -   - . ... -";
     let text = morseToText(input);
-    expect(text).toBe("t e s t t e s t");
+    expect(text).toBe("test test");
   });
 });
