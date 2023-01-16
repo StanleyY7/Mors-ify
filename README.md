@@ -2,8 +2,6 @@
 
 Link https://stanleyy7.github.io/Mors-ify/
 
-![morsifyDisplay](https://user-images.githubusercontent.com/119549394/212578907-c5961f09-cb66-475b-85b8-871960862293.png)
-
 ## Outline
 
 The main aim of this project was to expand on previous knowledge around HTML & SCSS/CSS whilst also building upon newly aquired knowledge in Javascript. This project involved creating a Morse Code Translator from scratch and designing the front-end for it with no reference images provided. This project required the front-end to be scalable, responsive and useable on a variety of devices/viewports.
