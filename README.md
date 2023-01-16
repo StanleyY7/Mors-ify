@@ -1,8 +1,6 @@
 # Project: Mors•ify (Morse Code Translator)
 
-Link
-
-Repo Link
+Link https://stanleyy7.github.io/Mors-ify/
 
 ![image](https://user-images.githubusercontent.com/119549394/211766257-dadbbf7e-8b4a-46ee-a051-7193ee958c1b.png)
 
