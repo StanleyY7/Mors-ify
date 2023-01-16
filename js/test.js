@@ -136,7 +136,7 @@ const morseToText = (input) => {
           .map((b) => opposite[b])
           .join("");
       } else {
-        return x;
+        return x + " ";
       }
     })
     .join(" ");
@@ -153,6 +153,11 @@ const morseToText = (input) => {
 describe("testing morseToText", () => {
   it("should convert morse code input into text", () => {
     let input = "- . ... -   - . ... -";
+    let text = morseToText(input);
+    expect(text).toBe("test test");
+  });
+  it("should return text input as text", () => {
+    let input = "test test";
     let text = morseToText(input);
     expect(text).toBe("test test");
   });
