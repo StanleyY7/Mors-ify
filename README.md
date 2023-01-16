@@ -2,7 +2,7 @@
 
 Link https://stanleyy7.github.io/Mors-ify/
 
-![image](https://user-images.githubusercontent.com/119549394/211766257-dadbbf7e-8b4a-46ee-a051-7193ee958c1b.png)
+![morsifyDisplay](https://user-images.githubusercontent.com/119549394/212578907-c5961f09-cb66-475b-85b8-871960862293.png)
 
 ## Outline
 
