@@ -177,7 +177,7 @@ window.addEventListener("DOMContentLoaded", () => {
             .map((b) => opposite[b])
             .join("");
         } else {
-          return x;
+          return x + " ";
         }
       })
       .join(" ");
