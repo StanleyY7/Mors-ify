@@ -324,7 +324,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const sButton = document.querySelector("#s-button");
 
   const startClaraViaTouchButtons = (event) => {
-    sButton.remove();
+    sButton.classList.add("fade-out");
     claraStart.remove();
     claraNext.style.display = "block";
     enterButton.addEventListener("click", (event) => {
@@ -335,8 +335,8 @@ window.addEventListener("DOMContentLoaded", () => {
           if (event.type === "click") {
             claraMiddle.remove();
             endPrompt.style.display = "block";
-            sButton.remove();
-            enterButton.remove();
+            sButton.classList.add("fade-out");
+            enterButton.classList.add("fade-out");
             enterButton.addEventListener("click", (event) => {
               if (event.type === "click") {
                 endPrompt.remove();
@@ -352,8 +352,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const endClaraViaTouchButtons = () => {
     claraStart.remove();
     claraMinContainer.style.display = "block";
-    enterButton.remove();
-    sButton.remove();
+    enterButton.classList.add("fade-out");
+    sButton.classList.add("fade-out");
   };
 
   enterButton.addEventListener("click", startClaraViaTouchButtons);

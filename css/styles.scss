@@ -341,7 +341,7 @@ strong {
 footer {
   width: 100vw;
   height: 12vh;
-  background-color: #918ef4;
+  background-color: $mainColor;
 }
 
 // Effects
@@ -375,21 +375,9 @@ footer {
 }
 
 .fade-out {
-  animation: fade-out 1.5s ease-in-out;
-  animation-fill-mode: forwards;
+  opacity: 0;
+  transition: opacity 5s ease;
 }
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(1.5rem);
-  }
-}
-
 .fade-in-down {
   animation: fade-in-down 2.75s ease;
 }
