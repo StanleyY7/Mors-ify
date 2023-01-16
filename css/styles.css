@@ -4194,13 +4194,13 @@ footer {
 }
 @media screen and (min-width: 1201px) and (max-width: 1250px) and (max-height: 1250px) {
   /* Top/Cover */
-  #cover-image {
-    margin-left: 4rem;
+  .cover {
+    width: 100.25vw;
   }
   /* Body */
   .morse-grid-container {
-    margin-top: -13rem;
-    margin-left: 4rem;
+    margin-top: -15.75rem;
+    margin-left: 2rem;
     transform: scale(0.75);
   }
   .morse-grid-column {
@@ -4307,14 +4307,11 @@ footer {
 }
 @media screen and (min-width: 1200px) and (max-width: 1250px) and (min-height: 1250px) {
   /* Top/Cover */
-  #cover-image {
-    margin-left: 4rem;
-  }
   /* Body */
   .morse-grid-container {
     margin-top: -13rem;
-    margin-left: 4rem;
-    transform: scale(0.75);
+    margin-left: 2rem;
+    transform: scale(0.74);
   }
   .morse-grid-column {
     margin-top: 15rem;
@@ -4420,18 +4417,16 @@ footer {
 }
 @media screen and (min-width: 1250px) and (max-width: 1450px) and (max-height: 1050px) {
   /* Top/Cover */
-  #cover-image {
-    margin-left: 4rem;
-  }
   /* Body */
   .morse-grid-container {
     margin-top: -15rem;
-    margin-left: 4rem;
+    margin-left: 2rem;
     transform: scale(0.77);
   }
   .morse-grid-column {
     margin-top: 15rem;
     margin-left: 1rem;
+    width: 52.5rem;
   }
   .clara {
     z-index: 120;
@@ -4533,18 +4528,16 @@ footer {
 }
 @media screen and (min-width: 1250px) and (max-width: 1450px) and (min-height: 1050px) and (max-height: 1250px) {
   /* Top/Cover */
-  #cover-image {
-    margin-left: 4rem;
-  }
   /* Body */
   .morse-grid-container {
     margin-top: -13rem;
-    margin-left: 5rem;
-    transform: scale(0.79);
+    margin-left: 2rem;
+    transform: scale(0.78);
   }
   .morse-grid-column {
     margin-top: 15rem;
     margin-left: 1rem;
+    width: 53rem;
   }
   .clara {
     z-index: 120;
@@ -4646,18 +4639,16 @@ footer {
 }
 @media screen and (min-width: 1250px) and (max-width: 1450px) and (min-height: 1250px) {
   /* Top/Cover */
-  #cover-image {
-    margin-left: 4rem;
-  }
   /* Body */
   .morse-grid-container {
     margin-top: -13rem;
     margin-left: 3rem;
-    transform: scale(0.79);
+    transform: scale(0.8);
   }
   .morse-grid-column {
     margin-top: 15rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
+    width: 52rem;
   }
   .clara {
     z-index: 120;
@@ -4759,18 +4750,16 @@ footer {
 }
 @media screen and (min-width: 1450px) and (max-width: 1570px) and (max-height: 1050px) {
   /* Top/Cover */
-  #cover-image {
-    margin-left: 4rem;
-  }
   /* Body */
   .morse-grid-container {
     margin-top: -13rem;
-    margin-left: 4rem;
+    margin-left: 2rem;
     transform: scale(0.8);
   }
   .morse-grid-column {
     margin-top: 12.5rem;
     margin-left: 1rem;
+    width: 56rem;
   }
   .clara {
     z-index: 120;
@@ -4872,18 +4861,16 @@ footer {
 }
 @media screen and (min-width: 1450px) and (max-width: 1570px) and (min-height: 1050px) and (max-height: 1250px) {
   /* Top/Cover */
-  #cover-image {
-    margin-left: 4rem;
-  }
   /* Body */
   .morse-grid-container {
     margin-top: -13rem;
-    margin-left: 4rem;
-    transform: scale(0.9);
+    margin-left: 2rem;
+    transform: scale(0.88);
   }
   .morse-grid-column {
     margin-top: 15rem;
     margin-left: 1rem;
+    width: 52rem;
   }
   .clara {
     z-index: 120;
@@ -4985,18 +4972,16 @@ footer {
 }
 @media screen and (min-width: 1450px) and (max-width: 1570px) and (min-height: 1250px) {
   /* Top/Cover */
-  #cover-image {
-    margin-left: 4rem;
-  }
   /* Body */
   .morse-grid-container {
     margin-top: -13rem;
-    margin-left: 4rem;
-    transform: scale(0.9);
+    margin-left: 2rem;
+    transform: scale(0.88);
   }
   .morse-grid-column {
     margin-top: 15rem;
     margin-left: 1rem;
+    width: 52rem;
   }
   .clara {
     z-index: 120;
@@ -5098,18 +5083,16 @@ footer {
 }
 @media screen and (min-width: 1570px) and (max-width: 1700px) and (max-height: 1050px) {
   /* Top/Cover */
-  #cover-image {
-    margin-left: 4rem;
-  }
   /* Body */
   .morse-grid-container {
     margin-top: -13rem;
-    margin-left: 4rem;
-    transform: scale(0.9);
+    margin-left: 2rem;
+    transform: scale(0.92);
   }
   .morse-grid-column {
-    margin-top: 15rem;
+    margin-top: 14rem;
     margin-left: 1rem;
+    width: 52rem;
   }
   .clara {
     z-index: 120;
@@ -5211,18 +5194,16 @@ footer {
 }
 @media screen and (min-width: 1570px) and (max-width: 1700px) and (min-height: 1050px) and (max-height: 1250px) {
   /* Top/Cover */
-  #cover-image {
-    margin-left: 4rem;
-  }
   /* Body */
   .morse-grid-container {
     margin-top: -13rem;
-    margin-left: 4rem;
-    transform: scale(0.96);
+    margin-left: 2.25rem;
+    transform: scale(0.94);
   }
   .morse-grid-column {
     margin-top: 15rem;
     margin-left: 1rem;
+    width: 52rem;
   }
   .clara {
     z-index: 120;
@@ -5324,18 +5305,16 @@ footer {
 }
 @media screen and (min-width: 1570px) and (max-width: 1700px) and (min-height: 1250px) {
   /* Top/Cover */
-  #cover-image {
-    margin-left: 4rem;
-  }
   /* Body */
   .morse-grid-container {
     margin-top: -13rem;
-    margin-left: 4rem;
-    transform: scale(0.9);
+    margin-left: 2.25rem;
+    transform: scale(0.92);
   }
   .morse-grid-column {
     margin-top: 15rem;
     margin-left: 1rem;
+    width: 52rem;
   }
   .clara {
     z-index: 120;
@@ -5437,9 +5416,6 @@ footer {
 }
 @media screen and (min-width: 1700px) and (max-width: 1830px) and (max-height: 1050px) {
   /* Top/Cover */
-  #cover-image {
-    margin-left: 4rem;
-  }
   /* Body */
   .morse-grid-container {
     margin-top: -13rem;
@@ -5550,9 +5526,6 @@ footer {
 }
 @media screen and (min-width: 1700px) and (max-width: 1830px) and (min-height: 1050px) and (max-height: 1250px) {
   /* Top/Cover */
-  #cover-image {
-    margin-left: 4rem;
-  }
   /* Body */
   .morse-grid-container {
     margin-top: -13rem;
@@ -5664,9 +5637,6 @@ footer {
 }
 @media screen and (min-width: 1700px) and (max-width: 1830px) and (min-height: 1250px) {
   /* Top/Cover */
-  #cover-image {
-    margin-left: 4rem;
-  }
   /* Body */
   .morse-grid-container {
     margin-top: -13rem;
@@ -5778,9 +5748,6 @@ footer {
 }
 @media screen and (min-width: 1830px) and (max-width: 2000px) and (max-height: 1050px) {
   /* Top/Cover */
-  #cover-image {
-    margin-left: 4rem;
-  }
   /* Body */
   .morse-grid-container {
     margin-top: -13rem;
@@ -5789,7 +5756,8 @@ footer {
   }
   .morse-grid-column {
     margin-top: 15rem;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
+    width: 61.5rem;
   }
   .clara {
     z-index: 120;
@@ -5891,9 +5859,6 @@ footer {
 }
 @media screen and (min-width: 1830px) and (max-width: 2000px) and (min-height: 1050px) and (max-height: 1250px) {
   /* Top/Cover */
-  #cover-image {
-    margin-left: 4rem;
-  }
   /* Body */
   .morse-grid-container {
     margin-top: -13rem;
@@ -5901,7 +5866,8 @@ footer {
   }
   .morse-grid-column {
     margin-top: 15rem;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
+    width: 56.75rem;
   }
   .clara {
     z-index: 120;
@@ -6006,9 +5972,6 @@ footer {
   .cover {
     width: 101.75vw;
   }
-  #cover-image {
-    margin-left: 4rem;
-  }
   /* Body */
   .morse-grid-container {
     margin-top: -13rem;
@@ -6018,6 +5981,7 @@ footer {
   .morse-grid-column {
     margin-top: 15rem;
     margin-left: 1rem;
+    width: 51.5rem;
   }
   .clara {
     z-index: 120;
@@ -6122,9 +6086,6 @@ footer {
   .cover {
     width: 102vw;
   }
-  #cover-image {
-    margin-left: 4rem;
-  }
   /* Body */
   .morse-grid-container {
     margin-top: -13rem;
@@ -6134,6 +6095,7 @@ footer {
   .morse-grid-column {
     margin-top: 15rem;
     margin-left: 1rem;
+    width: 57rem;
   }
   .clara {
     z-index: 120;
@@ -6236,9 +6198,6 @@ footer {
   .cover {
     width: 101vw;
   }
-  #cover-image {
-    margin-left: 4rem;
-  }
   /* Body */
   .morse-grid-container {
     margin-top: -3rem;
@@ -6246,8 +6205,9 @@ footer {
   .morse-grid-container .morse-grid-column {
     margin-top: 12rem;
     transform: scale(1.2);
-    margin-left: 8rem;
+    margin-left: 8.5rem;
     margin-right: 4rem;
+    width: 55.5rem;
   }
   .clara {
     z-index: 20;
@@ -6340,18 +6300,18 @@ footer {
   .cover {
     width: 101vw;
   }
-  #cover-image {
-    margin-left: 4rem;
-  }
   /* Body */
   .morse-grid-container {
     margin-top: -3rem;
+    margin-left: 1rem;
+    margin-right: -2rem;
   }
   .morse-grid-container .morse-grid-column {
     margin-top: 15rem;
-    transform: scale(1.4);
-    margin-left: 13rem;
+    transform: scale(1.25);
+    margin-left: 8rem;
     margin-right: 9rem;
+    width: 55rem;
   }
   .clara {
     z-index: 20;
@@ -6442,10 +6402,7 @@ footer {
 @media screen and (min-width: 2500px) {
   /* Top/Cover */
   .cover {
-    width: 101vw;
-  }
-  #cover-image {
-    margin-left: 4rem;
+    width: 101.25vw;
   }
   /* Body */
   .morse-grid-column {
@@ -6453,6 +6410,7 @@ footer {
     transform: scale(1.54);
     margin-left: 16.5rem;
     margin-right: 12.5rem;
+    width: 48rem;
   }
   .clara {
     z-index: 20;
