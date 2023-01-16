@@ -30,6 +30,10 @@ The main requirements for this project were:
 
 ## Summary
 
+I achieved the requirements for this project by first designing how I wanted the website to look like, I then worked on implementing the MVP requirements and doing media queries (at basic layout level) until it was fully responsive. From there, I added additional features to the UI to make it more "unique". After that, I completed media queries from the bottom (galaxy fold) up (4k resolution). I also created the necessary tests as per the MVP requirements and made sure that my additional features worked as well by testing it extensively while completing media queries. 
+
+The main challenges experienced whilst completing this project was creating the code/logic to convert morse code into text as well as creating the copy feature for the project (as there was a delay from where the user presses the copy button and for the actual output to then be copied to the clipboard). To resolve these challenges, I looked at available resources online and I also tested out different solutions. As an example for the copy feature, I experimented with using alert() to notify the user that it can take some time to copy, to eventually making the final solution to that problem which was using a combination of setTimeout() and modals, more specifically I made an alert modal to the user first that it was copying, the copying then starts/ends, whilst a setTimeout then runs to ensure user is only alerted via another model after the copying has finished, whilst I also made sure that the modals fit the theme of the website and doesn't hinder UX. 
+
 ## Tech Stack
 
 - HTML
