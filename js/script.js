@@ -378,6 +378,17 @@ window.addEventListener("DOMContentLoaded", () => {
   helpClose.addEventListener("click", hideHelp);
   claraMin.addEventListener("click", displayHelp);
 
+  /* Close All */
+
+  const closeAll = (event) => {
+    if (event.key === "Escape") {
+      helpContainer.style.display = "none";
+      outputContainer.style.display = "none";
+    }
+  };
+
+  body.addEventListener("keydown", closeAll);
+
   /* Draggable Elements */
 
   const draggableElements = document.querySelectorAll(".draggable");
