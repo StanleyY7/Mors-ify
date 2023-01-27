@@ -265,6 +265,8 @@ strong {
   position: fixed;
   top: 5%;
   transition: 0.5s ease;
+  z-index: 250;
+  padding-bottom: 0.05rem;
 }
 .touch-button-container #enter-button:hover {
   transform: scale(1.05);
@@ -276,6 +278,8 @@ strong {
   position: fixed;
   top: 5%;
   transition: 0.5s ease;
+  z-index: 250;
+  padding-top: 0.05rem;
 }
 .touch-button-container #s-button:hover {
   transform: scale(1.05);
