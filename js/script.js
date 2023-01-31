@@ -101,7 +101,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const randomQuoteArray = [
     "Hello World!",
     "MORS•IFY!!!",
-    "Exterminate!",
+    "Exterminate!!",
     "Testing....",
     "Excelsior!!!",
     "Rosebud....",
@@ -318,6 +318,20 @@ window.addEventListener("DOMContentLoaded", () => {
 
   body.addEventListener("keypress", startClara);
   endPromptClose.addEventListener("click", hideEndPrompt);
+
+  /* Clara Min Hover */
+
+  const toggleClaraMin = (event) => {
+    if (event === "mouseover") {
+      claraMin.style.transform = "scale (1.08)";
+      claraMin.style.filter = "grayscale(0%) brightness(120%)";
+    }
+    claraMin.style.transform = "scale (1)";
+    claraMin.style.filter = "grayscale(0%) brightness(100%)";
+  };
+
+  claraMin.addEventListener("mouseover", toggleClaraMin);
+  claraMin.addEventListener("mouseout", toggleClaraMin);
 
   /* Touch Buttons */
   const enterButton = document.querySelector("#enter-button");
