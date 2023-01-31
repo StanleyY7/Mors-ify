@@ -1,5 +1,8 @@
 // Text To Morse Test
 
+import { convertMorseToText } from "./function";
+import { convertTextToMorse } from "./function";
+
 const mapping = {
   A: ".-",
   B: "-...",
