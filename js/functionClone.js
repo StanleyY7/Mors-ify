@@ -43,8 +43,10 @@ const opposite = Object.entries(mapping).reduce((acc, [key, value]) => {
   return acc;
 }, {});
 
-const convertTextToMorse = () => {
-  let input = document.getElementById("input-text").value.toUpperCase();
+const convertTextToMorse = (testInput) => {
+  let input =
+    testInput.toUpperCase() ||
+    document.getElementById("input-text").value.toUpperCase();
 
   let textArr = input.split("");
 
@@ -60,13 +62,11 @@ const convertTextToMorse = () => {
 
   const morseBeingCopied = code;
 
-  document.getElementById("output").value = code;
-
   return morseBeingCopied;
 };
 
-const convertMorseToText = () => {
-  let input = document.getElementById("input-morse").value;
+const convertMorseToText = (testInput) => {
+  let input = testInput || document.getElementById("input-morse").value;
 
   let morseArr = input.split(" ");
 
@@ -89,12 +89,7 @@ const convertMorseToText = () => {
     m.length === 1 ? "" : m
   );
 
-  document.getElementById("output").value = textBeingcopied.replace(
-    / {2,}/g,
-    " "
-  );
-
   return textBeingcopied.replace(/ {2,}/g, " ");
 };
 
-export { convertTextToMorse, convertMorseToText };
+module.exports = { convertMorseToText, convertTextToMorse };

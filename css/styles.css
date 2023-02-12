@@ -36,7 +36,6 @@ strong {
 .cover {
   background-color: #918ef4;
   width: 100vw;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
@@ -116,7 +115,6 @@ strong {
 .submit {
   margin-top: 1rem;
   font-size: 2rem;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 0.5rem;
@@ -174,7 +172,6 @@ strong {
 
 .end-prompt {
   display: block;
-  height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
   width: 45rem;
@@ -296,7 +293,6 @@ strong {
   border: 0.1rem groove rgba(0, 0, 0, 0.445);
   background-color: rgba(145, 142, 244, 0.662745098);
   display: none;
-  height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
 }
@@ -328,19 +324,7 @@ footer {
 }
 
 .fade-in-up {
-  -webkit-animation: fade-in-up 2.75s ease backwards;
-          animation: fade-in-up 2.75s ease backwards;
-}
-
-@-webkit-keyframes fade-in-up {
-  0% {
-    transform: translate(0px, 100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0px, 0);
-    opacity: 1;
-  }
+  animation: fade-in-up 2.75s ease backwards;
 }
 
 @keyframes fade-in-up {
@@ -354,19 +338,7 @@ footer {
   }
 }
 .fade-in-right {
-  -webkit-animation: fade-in-right 2.5s ease-in-out;
-          animation: fade-in-right 2.5s ease-in-out;
-}
-
-@-webkit-keyframes fade-in-right {
-  0% {
-    opacity: 0;
-    transform: translateX(300px);
-  }
-  100% {
-    transform: translate(0px, 0);
-    opacity: 1;
-  }
+  animation: fade-in-right 2.5s ease-in-out;
 }
 
 @keyframes fade-in-right {
@@ -385,19 +357,7 @@ footer {
 }
 
 .fade-in-down {
-  -webkit-animation: fade-in-down 2.75s ease;
-          animation: fade-in-down 2.75s ease;
-}
-
-@-webkit-keyframes fade-in-down {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  animation: fade-in-down 2.75s ease;
 }
 
 @keyframes fade-in-down {
@@ -482,7 +442,6 @@ footer {
   #output-container, .end-prompt {
     transform: scale(0.98);
     position: fixed;
-    height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
     width: 95vw;
