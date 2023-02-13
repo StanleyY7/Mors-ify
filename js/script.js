@@ -1,5 +1,5 @@
-import { convertTextToMorse } from "./function.js";
-import { convertMorseToText } from "./function.js";
+import { convertTextToMorse, convertMorseToText } from "./function.js";
+
 window.addEventListener("DOMContentLoaded", () => {
   /* Global Variables */
   const textSubmit = document.querySelector("#text-submit");
@@ -10,46 +10,6 @@ window.addEventListener("DOMContentLoaded", () => {
   const body = document.querySelector("body");
   const copyMorseButton = document.querySelector("#copy-morse-button");
   const copyTextButton = document.querySelector("#copy-text-button");
-
-  const opposite = {
-    ".-": "A",
-    "-...": "B",
-    "-.-.": "C",
-    "-..": "D",
-    ".": "E",
-    "..-.": "F",
-    "--.": "G",
-    "....": "H",
-    "..": "I",
-    ".---": "J",
-    "-.-": "K",
-    ".-..": "L",
-    "--": "M",
-    "-.": "N",
-    "---": "O",
-    ".--.": "P",
-    "--.-": "Q",
-    ".-.": "R",
-    "...": "S",
-    "-": "T",
-    "..-": "U",
-    ".--": "W",
-    "...-": "V",
-    "-..-": "X",
-    "-.--": "Y",
-    "--..": "Z",
-
-    "-----": 0,
-    ".----": 1,
-    "..---": 2,
-    "...--": 3,
-    "....-": 4,
-    ".....": 5,
-    "-....": 6,
-    "--...": 7,
-    "---..": 8,
-    "----.": 9,
-  };
 
   /* Functions */
 
