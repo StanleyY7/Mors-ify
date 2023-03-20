@@ -14,8 +14,10 @@ jobs:
 
     - name: Install dependencies
       run: |
+        cd Mors-ify
         npm install
         
     - name: Run tests
       run: |
+        cd Mors-ify
         npm run test
